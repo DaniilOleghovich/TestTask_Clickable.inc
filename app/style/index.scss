@@ -1,0 +1,405 @@
+@font-face{
+font-family: "Parimatch";
+src: local("Parimatch"), url("../fonts/Parimatch-Bold.woff") format("woff");
+font-weight: bold;
+}
+@font-face{
+font-family: "Parimatch";
+src: local("Parimatch"), url("../fonts/Parimatch-Light.woff") format("woff");
+font-weight: normal;
+}
+@font-face{
+font-family: "Parimatch";
+src: local("Parimatch"), url("../fonts/ParimatchMedium.woff") format("woff");
+font-weight: 500;
+}
+
+//// Small tablets and large smartphones (landscape view)
+//$screen-sm-min: 576px;
+//
+//// Small tablets (portrait view)
+//$screen-md-min: 768px;
+//
+//// Tablets and small desktops
+//$screen-lg-min: 992px;
+//
+//// Large tablets and desktops
+//$screen-xl-min: 1200px;
+//
+//// Small devices
+//@mixin sm {
+//  @media (min-width: #{$screen-sm-min}) {
+//    @content;
+//  }
+//}
+//
+//// Medium devices
+//@mixin md {
+//  @media (min-width: #{$screen-md-min}) {
+//    @content;
+//  }
+//}
+//
+//// Large devices
+//@mixin lg {
+//  @media (min-width: #{$screen-lg-min}) {
+//    @content;
+//  }
+//}
+//
+//// Extra large devices
+//@mixin xl {
+//  @media (min-width: #{$screen-xl-min}) {
+//    @content;
+//  }
+//}
+
+
+@mixin rwd($screen) {
+  @media (max-width: $screen+'px') {
+    @content;
+  }
+}
+
+
+//@include rwd(1400) {
+//  max-width: 900px;
+//}
+
+
+body {
+  width: 100%;
+  margin: 0 auto;
+  font-family: "Parimatch", serif
+  }
+
+div {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.content {
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+  background: #f8ff13 url("../img/bg1.png") no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  box-sizing: border-box;
+  z-index: 0;
+
+  .plus-wrap {
+    width: 100%;
+    height: auto;
+    position: absolute;
+    overflow: hidden;
+    margin: 0 auto;
+    padding-top: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .plus {
+      position: relative;
+      width: 22px;
+      height: 22px;
+      margin-left: 25px;
+
+      .vertical {
+        width: 2px;
+        height: 22px;
+        background: #000;
+        position: absolute;
+        left: 10px;
+      }
+      .horizontal {
+        width: 22px;
+        height: 2px;
+        background: #000;
+        position: absolute;
+        top: 10px;
+      }
+    }
+  }
+
+  .plus-rotate {
+    width: 100%;
+    height: auto;
+    position: absolute;
+    overflow: hidden;
+    top: 22.8%;
+    left: 35%;
+    padding-top: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    -moz-transform: rotate(-77deg); /* Для Firefox */
+    -ms-transform: rotate(-77deg); /* Для IE */
+    -webkit-transform: rotate(-77deg); /* Для Safari, Chrome, iOS */
+    -o-transform: rotate(-77deg); /* Для Opera */
+    transform: rotate(-77deg);
+
+    .plus {
+      -moz-transform: rotate(-15deg); /* Для Firefox */
+      -ms-transform: rotate(-15deg); /* Для IE */
+      -webkit-transform: rotate(-15deg); /* Для Safari, Chrome, iOS */
+      -o-transform: rotate(-15deg); /* Для Opera */
+      transform: rotate(-15deg);
+    }
+  }
+
+  &-header {
+    width: 100%;
+    max-width: 2235px;
+    margin: 20px auto 0 auto;
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+
+    .logo {
+      overflow: hidden;
+      img {
+        width: 100%;
+      }
+    }
+
+    .trophey-wrapper {
+      display: flex;
+      align-items: center;
+
+      .trophey-left__title {
+        width: 185px;
+        text-align: right;
+        text-transform: uppercase;
+
+        h1 {
+          font-size: 27px;
+          letter-spacing: 1px;
+          color: #110c0a;
+          font-weight: bold;
+          margin: 0;
+        }
+        p {
+          font-size: 23px;
+          letter-spacing: 1px;
+          color: #110c0a;
+          font-weight: bold;
+          margin: 0;
+        }
+      }
+
+      .trophey-img {
+        margin: 0 20px;
+        overflow: hidden;
+
+        img {
+          width: 100%;
+          max-width: 100%;
+          height: 110px;
+        }
+      }
+
+      .trophey-right__title {
+        width: 95px;
+        text-align: left;
+        text-transform: uppercase;
+
+        h1 {
+          font-size: 27px;
+          letter-spacing: 1px;
+          color: #110c0a;
+          font-weight: bold;
+          margin: 0;
+        }
+        p {
+          font-size: 23px;
+          letter-spacing: 1px;
+          color: #110c0a;
+          font-weight: bold;
+          margin: 0;
+        }
+      }
+    }
+  }
+
+  &-main {
+    width: 100%;
+    max-width: 1440px;
+    margin: 70px auto 0 auto;
+    //overflow: hidden;
+
+    .main-title {
+      width: 353px;
+      height: 48px;
+      position: relative;
+      margin-left: 13.8%;
+      text-align: center;
+      &::before {
+        content: '';
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        position: absolute;
+        z-index: -1;
+        background: #7f8300;
+        -moz-transform: skew(-15deg); /* Для Firefox */
+        -ms-transform: skew(-15deg); /* Для IE */
+        -webkit-transform: skew(-15deg); /* Для Safari, Chrome, iOS */
+        -o-transform: skew(-15deg); /* Для Opera */
+        transform: skew(-15deg);
+      }
+      .strip {
+        position: absolute;
+        width: 80px;
+        height: 1px;
+        top: 85%;
+        left: -9%;
+        background: #ffffff;
+      }
+      .square {
+        position: absolute;
+        width: 17px;
+        height: 17px;
+        background: rgba(17, 12, 10, .8);;
+        top: -15%;
+        right: 5%;
+        -moz-transform: skew(-15deg); /* Для Firefox */
+        -ms-transform: skew(-15deg); /* Для IE */
+        -webkit-transform: skew(-15deg); /* Для Safari, Chrome, iOS */
+        -o-transform: skew(-15deg); /* Для Opera */
+        transform: skew(-15deg);
+      }
+      p {
+        margin: 0;
+        font-size: 32px;
+        line-height: 42px;
+        letter-spacing: 1px;
+        color: #ffffff;
+        font-weight: bold;
+        text-align: center;
+      }
+    }
+
+    .main-bonus {
+      margin-left: 6%;
+      width: 100%;
+
+      &__effects {
+        width: 100%;
+        position: relative;
+
+        .strip {
+          position: absolute;
+
+          &__first {
+            width: 267px;
+            height: 1px;
+            background-color: #d8de12;
+            top: 20%;
+            left: 1.5%;
+          }
+          &__second {
+            width: 106px;
+            height: 1px;
+            background-color: #d5db14;
+            bottom: 32%;
+            left: 28%;
+          }
+        }
+
+        .square {
+          position: absolute;
+          background: rgba(17, 12, 10, .8);;
+          -moz-transform: skew(-15deg); /* Для Firefox */
+          -ms-transform: skew(-15deg); /* Для IE */
+          -webkit-transform: skew(-15deg); /* Для Safari, Chrome, iOS */
+          -o-transform: skew(-15deg); /* Для Opera */
+          transform: skew(-15deg);
+
+          &__first {
+            width: 110px;
+            height: 17px;
+            background: rgba(220, 226, 20, 1);
+            bottom: 11.5%;
+            left: -6%;
+          }
+          &__second {
+            width: 44px;
+            height: 7px;
+            background: #ffffff;
+            bottom: 32%;
+            left: 15%;
+          }
+          &__third {
+            width: 17px;
+            height: 13px;
+            background: rgba(126, 130, 0, .8);
+            top: 30%;
+            left: 21.2%;
+          }
+        }
+
+        .plus {
+          position: absolute;
+          width: 19px;
+          height: 19px;
+          top: 55%;
+          left: 7.5%;
+
+          .vertical {
+            width: 2px;
+            height: 19px;
+            background: #fff;
+            //position: absolute;
+            margin-left: 8.5px;
+          }
+          .horizontal {
+            width: 19px;
+            height: 2px;
+            background: #fff;
+            //position: absolute;
+            margin-top: -9.5px;
+          }
+        }
+        p {
+          font-size: 211px;
+          color: #110c0a;
+          font-weight: bold;
+          margin: 0;
+          text-transform: uppercase;
+          line-height: 211px;
+        }
+      }
+
+      p:nth-child(1) {
+        font-size: 211px;
+        color: #110c0a;
+        font-weight: bold;
+        margin: 0;
+        text-transform: uppercase;
+        line-height: 211px;
+      }
+      p:nth-child(2) {
+        font-size: 211px;
+        color: #110c0a;
+        font-weight: bold;
+        margin: 0 0 0 15%;
+        line-height: 130px;
+      }
+      p:nth-child(3) {
+        font-size: 102px;
+        color: #7f8300;
+        font-weight: 500;
+        margin: 0;
+        line-height: 180px;
+        text-transform: uppercase;
+      }
+    }
+  }
+}
+
