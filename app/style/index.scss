@@ -131,7 +131,7 @@ div {
     position: absolute;
     overflow: hidden;
     top: 22.8%;
-    left: 35%;
+    left: 33.5%;
     padding-top: 20px;
     display: flex;
     justify-content: center;
@@ -286,10 +286,10 @@ div {
     }
 
     .main-bonus {
-      margin-left: 6%;
+      padding-left: 6%;
       width: 100%;
 
-      &__effects {
+      &__effects.bonus{
         width: 100%;
         position: relative;
 
@@ -308,7 +308,7 @@ div {
             height: 1px;
             background-color: #d5db14;
             bottom: 32%;
-            left: 28%;
+            left: 29%;
           }
         }
 
@@ -333,14 +333,14 @@ div {
             height: 7px;
             background: #ffffff;
             bottom: 32%;
-            left: 15%;
+            left: 16%;
           }
           &__third {
             width: 17px;
             height: 13px;
             background: rgba(126, 130, 0, .8);
             top: 30%;
-            left: 21.2%;
+            left: 22.8%;
           }
         }
 
@@ -349,7 +349,7 @@ div {
           width: 19px;
           height: 19px;
           top: 55%;
-          left: 7.5%;
+          left: 8%;
 
           .vertical {
             width: 2px;
@@ -376,21 +376,103 @@ div {
         }
       }
 
-      p:nth-child(1) {
-        font-size: 211px;
-        color: #110c0a;
-        font-weight: bold;
-        margin: 0;
-        text-transform: uppercase;
-        line-height: 211px;
+      &__effects.gift{
+        width: 100%;
+        position: relative;
+        padding-left: 15%;
+
+        .strip {
+          position: absolute;
+
+          &__first {
+            width: 198px;
+            height: 1px;
+            background: #d7dd17;
+            bottom: 0;
+            left: 13.5%;
+          }
+          &__second {
+            width: 44px;
+            height: 1px;
+            background: #ffffff;
+            bottom: 43%;
+            left: 43.5%;
+          }
+        }
+
+        .square {
+          position: absolute;
+          background: rgba(17, 12, 10, .8);;
+          -moz-transform: skew(-15deg); /* Для Firefox */
+          -ms-transform: skew(-15deg); /* Для IE */
+          -webkit-transform: skew(-15deg); /* Для Safari, Chrome, iOS */
+          -o-transform: skew(-15deg); /* Для Opera */
+          transform: skew(-15deg);
+
+          &__first {
+            width: 44px;
+            height: 19px;
+            background: #ffffff;
+            top: -8.5%;
+            left: 30.5%;
+          }
+          &__second {
+            width: 35px;
+            height: 28px;
+            background: rgba(126, 130, 0, .8);
+            bottom: 32%;
+            left: 36.5%;
+          }
+          &__third {
+            width: 110px;
+            height: 17px;
+            background: #eff52f;
+            top: -10%;
+            left: 48.8%;
+            z-index: 1;
+          }
+          &__fourth {
+            width: 11px;
+            height: 8px;
+            background: rgba(126, 130, 0, .8);
+            top: 1%;
+            left: 50%;
+            z-index: 2;
+          }
+        }
+
+        .plus {
+          position: absolute;
+          width: 19px;
+          height: 19px;
+          bottom: -2.5%;
+          left: 39.3%;
+
+          .vertical {
+            width: 2px;
+            height: 19px;
+            background: #fff;
+            margin-left: 8.5px;
+          }
+          .horizontal {
+            width: 19px;
+            height: 2px;
+            background: #fff;
+            margin-top: -9.5px;
+          }
+        }
+
+        p {
+          font-size: 211px;
+          color: #110c0a;
+          font-weight: bold;
+          letter-spacing: 4px;
+          margin: 0;
+          line-height: 130px;
+        }
       }
-      p:nth-child(2) {
-        font-size: 211px;
-        color: #110c0a;
-        font-weight: bold;
-        margin: 0 0 0 15%;
-        line-height: 130px;
-      }
+
+
       p:nth-child(3) {
         font-size: 102px;
         color: #7f8300;
