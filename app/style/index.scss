@@ -1,18 +1,68 @@
+
 @font-face{
-font-family: "Parimatch";
-src: local("Parimatch"), url("../fonts/Parimatch-Bold.woff") format("woff");
-font-weight: bold;
+  font-family: "Parimatch";
+  src: local("Parimatch"), url("../fonts/Parimatch-Bold.woff") format("woff");
+  font-weight: bold;
 }
 @font-face{
-font-family: "Parimatch";
-src: local("Parimatch"), url("../fonts/Parimatch-Light.woff") format("woff");
-font-weight: normal;
+  font-family: "Parimatch";
+  src: local("Parimatch"), url("../fonts/Parimatch-Light.woff") format("woff");
+  font-weight: normal;
 }
 @font-face{
-font-family: "Parimatch";
-src: local("Parimatch"), url("../fonts/ParimatchMedium.woff") format("woff");
-font-weight: 500;
+  font-family: "Parimatch";
+  src: local("Parimatch"), url("../fonts/ParimatchMedium.woff") format("woff");
+  font-weight: 500;
 }
+
+//html {
+//  width: 100%;
+//}
+//body {
+//  width: 100%;
+//  margin: 0 auto;
+//  font-family: "Parimatch", serif
+//}
+//
+//.wrapper {
+//  width: 100%;
+//
+//  .main {
+//    width: 100%;
+//    max-width: 2560px;
+//    margin: 0 auto;
+//
+//    &-header {
+//      width: 100%;
+//      max-width: 2240px;
+//      margin: 0 auto;
+//      display: flex;
+//      justify-content: space-between;
+//
+//      .logo {
+//        width: 50%;
+//        max-width: 400px;
+//
+//        img {
+//          width: 100%;
+//        }
+//      }
+//      .trophey {
+//        width: 50%;
+//        max-width: 400px;
+//
+//        img {
+//          width: 100%;
+//        }
+//      }
+//    }
+//  }
+//
+//  .footer {
+//    width: 100%;
+//    max-width: 2560px;
+//  }
+//}
 
 @mixin glitchCopy {
   content: attr(data-text);
@@ -107,12 +157,14 @@ font-weight: 500;
 //  max-width: 900px;
 //}
 
-
+html {
+  width: 100%;
+}
 body {
   width: 100%;
   margin: 0 auto;
   font-family: "Parimatch", serif
-  }
+}
 
 div {
   -webkit-box-sizing: border-box;
@@ -120,130 +172,9 @@ div {
   box-sizing: border-box;
 }
 
-//// Ignore all of this, scroll down until you see the next comment.
-//// I just like my eye candy.
-//@import url('https://fonts.googleapis.com/css?family=Montserrat:100');
-//
-//
-//html, body, h1 {
-//  padding: 0;
-//  margin: 0;
-//  font-family: 'Montserrat', sans-serif;
-//}
-
-//#app {
-//  background: rgb(10,10,10);
-//  height: 100vh;
-//  width: 100%;
-//  margin: 100%;
-//  padding: 0;
-//  display: flex;
-//  flex-direction: column;
-//  justify-content: center;
-//  align-items: center;
-//  background: linear-gradient(rgba(10,10,10,.6),rgba(0,0,0,.9)), repeating-linear-gradient(0, transparent, transparent 2px, black 3px, black 3px),
-//  url('https://images.unsplash.com/photo-1506399558188-acca6f8cbf41?ixlib=rb-0.3.5&q=85&fm=jpg&crop=entropy&cs=srgb&ixid=eyJhcHBfaWQiOjE0NTg5fQ&s=7118759521e3184778a3b5e010e202c6');
-//  background-size: cover;
-//  background-position: center;
-//  z-index: 1;
-//}
-//
-//#wrapper2 {
-//  text-align: center;
-//}
-//
-//.sub {
-//  color: rgb(100,220,220);
-//  letter-spacing: 1em;
-//}
-//
-//// Here's the meat and potatoes.
-//
-///* Our mixin positions a copy of our text
-//directly on our existing text, while
-//also setting content to the appropriate
-//text set in the data-text attribute. */
-//@mixin glitchCopy {
-//  content: attr(data-text);
-//  position: absolute;
-//  top: 0;
-//  left: 0;
-//  width: 100%;
-//  height: 100%;
-//}
-//
-//.glitch {
-//  position: relative;
-//  color: white;
-//  font-size: 4em;
-//  letter-spacing: .5em;
-//  /* Animation provies a slight random skew. Check bottom of doc
-//  for more information on how to random skew. */
-//  animation: glitch-skew 1s infinite linear alternate-reverse;
-//
-//  // Creates a copy before our text.
-//  &::before{
-//    // Duplicates our text with the mixin.
-//    @include glitchCopy;
-//    // Scoots text slightly to the left for the color offset.
-//    left: 2px;
-//    // Creates the color 'shadow' that happens on the glitch.
-//    text-shadow: -2px 0 #ff00c1;
-//    /* Creates an initial clip for our glitch. This works in
-//    a typical top,right,bottom,left fashion and creates a mask
-//    to only show a certain part of the glitch at a time. */
-//    clip: rect(44px, 450px, 56px, 0);
-//    /* Runs our glitch-anim defined below to run in a 5s loop, infinitely,
-//    with an alternating animation to keep things fresh. */
-//    animation: glitch-anim 5s infinite linear alternate-reverse;
-//  }
-//
-//  // Creates a copy after our text. Note comments from ::before.
-//  &::after {
-//    @include glitchCopy;
-//    left: -2px;
-//    text-shadow: -2px 0 #00fff9, 2px 2px #ff00c1;
-//    animation: glitch-anim2 1s infinite linear alternate-reverse;
-//  }
-//}
-//
-///* Creates an animation with 20 steaps. For each step, it calculates
-//a percentage for the specific step. It then generates a random clip
-//box to be used for the random glitch effect. Also adds a very subtle
-//skew to change the 'thickness' of the glitch.*/
-//@keyframes glitch-anim {
-//  $steps: 20;
-//  @for $i from 0 through $steps {
-//    #{percentage($i*(1/$steps))} {
-//      clip: rect(random(100)+px, 9999px, random(100)+px, 0);
-//      transform: skew((random(100) / 100) + deg);
-//    }
-//  }
-//}
-//
-//// Same deal, just duplicated for ultra randomness.
-//@keyframes glitch-anim2 {
-//  $steps: 20;
-//  @for $i from 0 through $steps {
-//    #{percentage($i*(1/$steps))} {
-//      clip: rect(random(100)+px, 9999px, random(100)+px, 0);
-//      transform: skew((random(100) / 100) + deg);
-//    }
-//  }
-//}
-//
-//// Does the same deal as before, but now only skews. Used for main text.
-//@keyframes glitch-skew {
-//  $steps: 10;
-//  @for $i from 0 through $steps {
-//    #{percentage($i*(1/$steps))} {
-//      transform: skew((random(10) - 5) + deg);
-//    }
-//  }
-//}
-
 .content {
   width: 100%;
+  //height: 100vh;
   position: relative;
   overflow: hidden;
   background: #f8ff13 url("../img/bg1.png") no-repeat center center fixed;
@@ -393,13 +324,15 @@ div {
     width: 100%;
     max-width: 1440px;
     margin: 70px auto 0 auto;
+    padding-left: 6%;
     //overflow: hidden;
 
     .main-title {
-      width: 353px;
+      width: 100%;
+      max-width: 353px;
       height: 48px;
       position: relative;
-      margin-left: 13.8%;
+      margin-left: 6.8%;
       text-align: center;
       &::before {
         content: '';
@@ -449,7 +382,7 @@ div {
     }
 
     .main-bonus {
-      padding-left: 6%;
+      //padding-left: 6%;
       width: 100%;
 
       &__effects.bonus{
@@ -471,7 +404,7 @@ div {
             height: 1px;
             background-color: #d5db14;
             bottom: 32%;
-            left: 29%;
+            left: 30.5%;
           }
         }
 
@@ -496,14 +429,14 @@ div {
             height: 7px;
             background: #ffffff;
             bottom: 32%;
-            left: 16%;
+            left: 17%;
           }
           &__third {
             width: 17px;
             height: 13px;
             background: rgba(126, 130, 0, .8);
             top: 30%;
-            left: 22.8%;
+            left: 23.8%;
           }
         }
 
@@ -512,7 +445,7 @@ div {
           width: 19px;
           height: 19px;
           top: 55%;
-          left: 8%;
+          left: 8.5%;
 
           .vertical {
             width: 2px;
@@ -577,7 +510,7 @@ div {
             height: 1px;
             background: #ffffff;
             bottom: 43%;
-            left: 43.5%;
+            left: 44.5%;
           }
         }
 
@@ -595,21 +528,21 @@ div {
             height: 19px;
             background: #ffffff;
             top: -8.5%;
-            left: 30.5%;
+            left: 31.5%;
           }
           &__second {
             width: 35px;
             height: 28px;
             background: rgba(126, 130, 0, .8);
             bottom: 32%;
-            left: 36.5%;
+            left: 37.5%;
           }
           &__third {
             width: 110px;
             height: 17px;
             background: #eff52f;
             top: -10%;
-            left: 48.8%;
+            left: 50.8%;
             z-index: 1;
           }
           &__fourth {
@@ -617,7 +550,7 @@ div {
             height: 8px;
             background: rgba(126, 130, 0, .8);
             top: 1%;
-            left: 50%;
+            left: 52%;
             z-index: 2;
           }
         }
@@ -627,7 +560,7 @@ div {
           width: 19px;
           height: 19px;
           bottom: -2.5%;
-          left: 39.3%;
+          left: 41.3%;
 
           .vertical {
             width: 2px;
@@ -702,86 +635,224 @@ div {
       }
     }
 
-      .wrap {
-        -moz-transform: skew(-15deg); /* Для Firefox */
-        -ms-transform: skew(-15deg); /* Для IE */
-        -webkit-transform: skew(-15deg); /* Для Safari, Chrome, iOS */
-        -o-transform: skew(-15deg); /* Для Opera */
-        transform: skew(-15deg);
-        z-index: 5;
+    .wrap {
+      -moz-transform: skew(-15deg); /* Для Firefox */
+      -ms-transform: skew(-15deg); /* Для IE */
+      -webkit-transform: skew(-15deg); /* Для Safari, Chrome, iOS */
+      -o-transform: skew(-15deg); /* Для Opera */
+      transform: skew(-15deg);
+      z-index: 5;
 
-        .main-btn__registration {
+      .main-btn__registration {
+        width: 649px;
+        height: 142px;
+        background: #110c0a;
+        text-align: center;
+        z-index: 1;
+
+        .invisible {
+          position: absolute;
+          width: 670px;
+          height: 163px;
+          bottom: -10px;
+          left: -10px;
+          background: rgba(255, 255, 255, 0);
+          z-index: -1;
+        }
+
+        .yellow {
+          position: absolute;
           width: 649px;
           height: 142px;
-          background: #110c0a;
-          text-align: center;
-          z-index: 1;
-
-          .invisible {
-            position: absolute;
-            width: 670px;
-            height: 163px;
-            bottom: -10px;
-            left: -10px;
-            background: rgba(255, 255, 255, 0);
-            z-index: -1;
-          }
-
-          .yellow {
-            position: absolute;
-            width: 649px;
-            height: 142px;
-            top: -10px;
-            left: -10px;
-            background-color: #7f8300;
-            z-index: -3;
-            transition: .5s
-          }
-
-          .white {
-            position: absolute;
-            width: 649px;
-            height: 142px;
-            top: 10px;
-            left: 10px;
-            background-color: #fff;
-            z-index: -5;
-            transition: all.5s
-          }
-
-          a {
-            display: block;
-            width: 100%;
-            height: 100%;
-            font-size: 48px;
-            letter-spacing: 1px;
-            line-height: 142px;
-            color: #f8ff13;
-            font-weight: bold;
-            text-decoration: none;
-            text-transform: uppercase;
-            transition: all.5s;
-            -moz-transform: skew(15deg); /* Для Firefox */
-            -ms-transform: skew(15deg); /* Для IE */
-            -webkit-transform: skew(15deg); /* Для Safari, Chrome, iOS */
-            -o-transform: skew(15deg); /* Для Opera */
-            transform: skew(15deg);
-          }
-          a:hover {
-            font-size: 50px;
-          }
+          top: -10px;
+          left: -10px;
+          background-color: #7f8300;
+          z-index: -3;
+          transition: .5s
         }
 
-        .main-btn__registration:hover {
-          background: #141414;
+        .white {
+          position: absolute;
+          width: 649px;
+          height: 142px;
+          top: 10px;
+          left: 10px;
+          background-color: #fff;
+          z-index: -5;
+          transition: all.5s
         }
 
-        .main-btn__registration:hover .yellow,
-        .main-btn__registration:hover .white {
-          top: 0;
-          left: 0;
+        a {
+          display: block;
+          width: 100%;
+          height: 100%;
+          font-size: 48px;
+          letter-spacing: 1px;
+          line-height: 142px;
+          color: #f8ff13;
+          font-weight: bold;
+          text-decoration: none;
+          text-transform: uppercase;
+          transition: all.5s;
+          -moz-transform: skew(15deg); /* Для Firefox */
+          -ms-transform: skew(15deg); /* Для IE */
+          -webkit-transform: skew(15deg); /* Для Safari, Chrome, iOS */
+          -o-transform: skew(15deg); /* Для Opera */
+          transform: skew(15deg);
+        }
+        a:hover {
+          font-size: 50px;
         }
       }
+
+      .main-btn__registration:hover {
+        background: #141414;
+      }
+
+      .main-btn__registration:hover .yellow,
+      .main-btn__registration:hover .white {
+        top: 0;
+        left: 0;
+      }
+    }
+    .main-steps {
+      width: 100%;
+      margin-top: 115px;
+      margin-bottom: 95px;
+      padding-right: 6%;
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      align-items: center;
+
+      .step {
+        width: 30%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-transform: uppercase;
+
+        .block-wrap{
+          -moz-transform: skew(-15deg); /* Для Firefox */
+          -ms-transform: skew(-15deg); /* Для IE */
+          -webkit-transform: skew(-15deg); /* Для Safari, Chrome, iOS */
+          -o-transform: skew(-15deg); /* Для Opera */
+          transform: skew(-15deg);
+
+          .block {
+            width: 93px;
+            height: 73px;
+            margin-right: 15px;
+            background: #ffffff;
+            text-align: center;
+            font-size: 42px;
+            letter-spacing: 1px;
+            line-height: 73px;
+            color: #110c0a;
+            font-weight: bold;
+
+            .square {
+              position: absolute;
+              z-index: -1;
+
+              &-block1__first {
+                width: 69px;
+                height: 55px;
+                background-color: #110c0a;
+                top: -5px;
+                left: -1px;
+              }
+              &-block1__second{
+                width: 21px;
+                height: 17px;
+                background-color: rgba(126, 130, 0, .8);
+                bottom: -10px;
+                left: 50px;
+                z-index: 2;
+              }
+              &-block2__first {
+                width: 37px;
+                height: 31px;
+                background-color: #7e8200;
+                top: -2px;
+                right: 14px;
+              }
+              &-block2__second {
+                width: 24px;
+                height: 19px;
+                background-color: #110c0a;
+                z-index: 2;
+                bottom: 12px;
+                left: -12px;
+              }
+              &-block3__first {
+                width: 68px;
+                height: 52px;
+                background-color: #110c0a;
+                bottom: -3px;
+                left: 0;
+              }
+              &-block3__second {
+                width: 21px;
+                height: 17px;
+                background-color: rgba(126, 130, 0, .8);
+                z-index: 2;
+                bottom: 10px;
+                left: -6px;
+              }
+            }
+            span {
+              display: block;
+              font-size: 42px;
+              //letter-spacing: 1px;
+              line-height: 73px;
+              color: #110c0a;
+              font-weight: bold;
+              -moz-transform: skew(15deg); /* Для Firefox */
+              -ms-transform: skew(15deg); /* Для IE */
+              -webkit-transform: skew(15deg); /* Для Safari, Chrome, iOS */
+              -o-transform: skew(15deg); /* Для Opera */
+              transform: skew(15deg);
+            }
+          }
+          .block2 {
+            .plus {
+              position: absolute;
+              width: 19px;
+              height: 19px;
+              bottom: 0;
+              right: 0;
+              -moz-transform: skew(15deg); /* Для Firefox */
+              -ms-transform: skew(15deg); /* Для IE */
+              -webkit-transform: skew(15deg); /* Для Safari, Chrome, iOS */
+              -o-transform: skew(15deg); /* Для Opera */
+              transform: skew(15deg);
+              z-index: 1;
+
+              .vertical {
+                width: 2px;
+                height: 19px;
+                background: #000;
+                margin-left: 8.5px;
+              }
+              .horizontal {
+                width: 19px;
+                height: 2px;
+                background: #000;
+                margin-top: -9.5px;
+              }
+            }
+          }
+        }
+
+        p {
+          margin: 0;
+          font-size: 38px;
+          letter-spacing: 0;
+          color: #110c0a;
+          font-weight: 500;
+        }
+      }
+    }
   }
 }
-
