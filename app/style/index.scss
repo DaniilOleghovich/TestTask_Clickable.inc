@@ -185,6 +185,61 @@ div {
   box-sizing: border-box;
   z-index: 0;
 
+  .dirt-bg {
+    position: absolute;
+    width: 103%;
+    //min-width: 900px;
+    z-index: -1;
+    bottom: 0;
+    left: -20px;
+    overflow: hidden;
+
+    img {
+      width: 100%;
+    }
+  }
+
+  .pubg-bg {
+    position: absolute;
+    width: 40%;
+    min-width: 900px;
+    z-index: -1;
+    bottom: 0;
+    left: -30px;
+    overflow: hidden;
+
+    img {
+      width: 100%;
+    }
+  }
+  .jugg-bg {
+    position: absolute;
+    width: 28%;
+    min-width: 690px;
+    z-index: -10;
+    bottom: 80px;
+    //left: 1210px;
+    right: 625px;
+    overflow: hidden;
+
+    img {
+      width: 100%;
+    }
+  }
+  .tracer-bg {
+    position: absolute;
+    width: 28%;
+    min-width: 630px;
+    z-index: -10;
+    bottom: 85px;
+    right: -150px;
+    overflow: hidden;
+
+    img {
+      width: 100%;
+    }
+  }
+
   .plus-wrap {
     width: 100%;
     height: auto;
@@ -242,6 +297,67 @@ div {
       -webkit-transform: rotate(-15deg); /* Для Safari, Chrome, iOS */
       -o-transform: rotate(-15deg); /* Для Opera */
       transform: rotate(-15deg);
+    }
+  }
+
+  .plus-wrap__left {
+    position: absolute;
+    width: 100%;
+    max-width: 600px;
+    height: 50%;
+    bottom: 70px;
+    z-index: -5;
+
+    .plus-wrap {
+      display: flex;
+      height: auto;
+
+      .plus {
+        position: relative;
+        width: 22px;
+        height: 22px;
+        margin-left: 25px;
+
+        .vertical {
+          width: 2px;
+          height: 22px;
+          background: #000;
+          position: absolute;
+          left: 10px;
+        }
+        .horizontal {
+          width: 22px;
+          height: 2px;
+          background: #000;
+          position: absolute;
+          top: 10px;
+        }
+      }
+    }
+    .plus-rotate {
+      width: 100%;
+      height: auto;
+      position: absolute;
+      overflow: hidden;
+      top: 325px;
+      left: 210px;
+      //padding-top: 20px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      -moz-transform: rotate(-77deg); /* Для Firefox */
+      -ms-transform: rotate(-77deg); /* Для IE */
+      -webkit-transform: rotate(-77deg); /* Для Safari, Chrome, iOS */
+      -o-transform: rotate(-77deg); /* Для Opera */
+      transform: rotate(-77deg);
+
+      .plus {
+        -moz-transform: rotate(-15deg); /* Для Firefox */
+        -ms-transform: rotate(-15deg); /* Для IE */
+        -webkit-transform: rotate(-15deg); /* Для Safari, Chrome, iOS */
+        -o-transform: rotate(-15deg); /* Для Opera */
+        transform: rotate(-15deg);
+      }
     }
   }
 
@@ -717,9 +833,9 @@ div {
     }
     .main-steps {
       width: 100%;
-      margin-top: 115px;
+      margin-top: 210px;
       margin-bottom: 95px;
-      padding-right: 6%;
+      padding-right: 77px;
       display: flex;
       justify-content: space-between;
       flex-wrap: wrap;
