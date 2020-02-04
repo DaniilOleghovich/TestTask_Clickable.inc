@@ -584,7 +584,7 @@ div {
             bottom: 11.5%;
             left: -6%;
           }
-          &__second {
+          &__second2 {
             width: 44px;
             height: 7px;
             background: #ffffff;
@@ -690,7 +690,7 @@ div {
             top: -8.5%;
             left: 31.5%;
           }
-          &__second {
+          &__second3 {
             width: 35px;
             height: 28px;
             background: rgba(126, 130, 0, .8);
@@ -936,56 +936,56 @@ div {
             color: #110c0a;
             font-weight: bold;
 
-            .square {
+            &-square {
               position: absolute;
               z-index: -1;
-
-              &-block1__first {
-                width: 69px;
-                height: 55px;
-                background-color: #110c0a;
-                top: -5px;
-                left: -1px;
-              }
-              &-block1__second{
-                width: 21px;
-                height: 17px;
-                background-color: rgba(126, 130, 0, .8);
-                bottom: -10px;
-                left: 50px;
-                z-index: 2;
-              }
-              &-block2__first {
-                width: 37px;
-                height: 31px;
-                background-color: #7e8200;
-                top: -2px;
-                right: 14px;
-              }
-              &-block2__second {
-                width: 24px;
-                height: 19px;
-                background-color: #110c0a;
-                z-index: 2;
-                bottom: 12px;
-                left: -12px;
-              }
-              &-block3__first {
-                width: 68px;
-                height: 52px;
-                background-color: #110c0a;
-                bottom: -3px;
-                left: 0;
-              }
-              &-block3__second {
-                width: 21px;
-                height: 17px;
-                background-color: rgba(126, 130, 0, .8);
-                z-index: 2;
-                bottom: 10px;
-                left: -6px;
-              }
             }
+            .square-block1__first {
+              width: 69px;
+              height: 55px;
+              background-color: #110c0a;
+              top: -5px;
+              left: -1px;
+            }
+            .square-block1__second{
+              width: 21px;
+              height: 17px;
+              background-color: rgba(126, 130, 0, .8);
+              bottom: -10px;
+              left: 50px;
+              z-index: 2;
+            }
+            .square-block2__first {
+              width: 37px;
+              height: 31px;
+              background-color: #7e8200;
+              top: -2px;
+              right: 14px;
+            }
+            .square-block2__second {
+              width: 24px;
+              height: 19px;
+              background-color: #110c0a;
+              z-index: 2;
+              bottom: 12px;
+              left: -12px;
+            }
+            .square-block3__first {
+              width: 68px;
+              height: 52px;
+              background-color: #110c0a;
+              bottom: -3px;
+              left: 0;
+            }
+            .square-block3__second {
+              width: 21px;
+              height: 17px;
+              background-color: rgba(126, 130, 0, .8);
+              z-index: 2;
+              bottom: 10px;
+              left: -6px;
+            }
+
             span {
               display: block;
               font-size: 42px;
@@ -1060,77 +1060,75 @@ div {
   width: 100%;
   background: #000;
   display: flex;
+  justify-content: space-between;
   align-items: center;
   padding: 21px 90px;
+  @include rwd(1921) {
+    padding: 21px 65px;
+  }
 
   &-pay {
-    width: 18.6%;
-    //margin-right: 555px;
-    margin-right: 17%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     box-sizing: border-box;
     padding: 0;
+    @include rwd(1921) {
+      //margin-right: 16%;
+    }
 
-    ul {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      //flex-wrap: wrap;
-      margin: 0;
+    &__visa {
+      min-width: 46px;
+    }
 
-      li {
-        margin-right: 40px;
-        text-decoration: none;
-        list-style: none;
+    &__mastercard {
+      min-width: 40px;
+    }
 
-        &:nth-child(1) {
-          min-width: 46px;
-        }
-        &:nth-child(2) {
-          min-width: 40px;
-        }
-        &:nth-child(3) {
-          min-width: 66px;
-        }
-        &:nth-child(4) {
-          min-width: 95px;
-        }
+    &__qiwi {
+      min-width: 66px;
+    }
 
-        img {
-          width: 100%;
-        }
+    &__ymoney {
+      min-width: 95px;
+    }
+
+    & > div {
+      margin-right: 40px;
+      @include rwd(1921) {
+        margin-right: 30px;
+      }
+
+      img {
+        width: 100%;
       }
     }
   }
+
   &-install {
-    //margin-right: 620px;
-    margin-right: 27%;
+    display: flex;
+    align-items: center;
     box-sizing: border-box;
-    padding-left: 5%;
-    width: 16%;
+    @include rwd(1921) {
+      //margin-right: 19%;
+    }
 
-    ul {
-      display: flex;
-      align-items: center;
-      padding: 0;
-      margin: 0;
+    & > div {
+      margin-right: 20px;
+      min-width: 179px;
+      @include rwd(1921) {
+        margin-right: 12px;
+      }
 
-      li {
-        min-width: 179px;
-
-        &:nth-child(1){
-          margin-right: 20px;
-        }
-        img {
-          width: 100%;
-        }
+      img {
+        width: 100%;
       }
     }
   }
+
   &-warning {
-    //margin-right: 200px;
-    margin-right: 5%;
+    margin-right: -20%;
     box-sizing: border-box;
-    padding-left: 3%;
     width: 2%;
 
     img {
@@ -1139,32 +1137,30 @@ div {
     }
   }
   &-social {
-    width: 6%;
+    display: flex;
+    align-items: center;
+    box-sizing: border-box;
+    //width: 6%;
 
-    a {
-      cursor: pointer;
-    }
+    & > div {
+      min-width: 39px;
 
-    ul {
-      display: flex;
-      align-items: center;
-      text-decoration: none;
-      list-style: none;
-      margin: 0;
+      a {
+        display: block;
+        width: 100%;
+        height: 100%;
 
-      li {
-
-        &:nth-child(1) {
-          margin-right: 27px;
-        }
-        &:nth-child(2) {
-          margin-right: 27px;
-        }
         img {
           width: 100%;
-          min-width: 39px;
         }
       }
+    }
+
+    &__vk {
+      margin-right: 25px;
+    }
+    &__twitter {
+      margin-right: 25px;
     }
   }
 }
