@@ -136,7 +136,6 @@ div {
   box-sizing: border-box;
   z-index: 0;
 
-
   .square {
     position: absolute;
     //background: rgba(17, 12, 10, .8);
@@ -152,6 +151,13 @@ div {
       background: #ffffff;
       bottom: 666px;
       left: 95px;
+
+      @include rwd(1921) {
+        width: 33px;
+        height: 14px;
+        bottom: 540px;
+        left: 60px;
+      }
     }
     &__second {
       width: 64px;
@@ -159,6 +165,13 @@ div {
       background: rgba(126, 130, 0, .8);
       top: 110px;
       right: 930px;
+
+      @include rwd(1921) {
+        width: 48px;
+        height: 39px;
+        top: 80px;
+        right: 725px;
+      }
     }
     &__third {
       width: 44px;
@@ -166,6 +179,13 @@ div {
       background: #ffffff;
       bottom: 585px;
       right: 500px;
+
+      @include rwd(1921) {
+        width: 33px;
+        height: 5px;
+        bottom: 545px;
+        right: 425px;
+      }
     }
     &__fourth {
       width: 100px;
@@ -173,188 +193,215 @@ div {
       background: #ffffff;
       bottom: 400px;
       right: 980px;
+
+      @include rwd(1921) {
+        width: 75px;
+        height: 1px;
+        bottom: 325px;
+        right: 800px;
+      }
     }
   }
 
-  .bullet-bg_1 {
-    position: absolute;
-    width: 4%;
-    min-width: 117px;
-    z-index: -1;
-    top: 220px;
-    left: 375px;
-    overflow: hidden;
+    .bullet-bg_1 {
+      position: absolute;
+      width: 4%;
+      min-width: 117px;
+      z-index: -1;
+      top: 220px;
+      left: 375px;
+      overflow: hidden;
 
-    img {
-      width: 100%;
+      @include rwd(1921) {
+        min-width: 70px;
+        top: 200px;
+        left: 395px;
+      }
+
+      img {
+        width: 100%;
+      }
     }
-  }
-  .bullet-bg_2 {
-    position: absolute;
-    width: 3%;
-    min-width: 91px;
-    z-index: -1;
-    bottom: 90px;
-    left: 565px;
-    overflow: hidden;
+    .bullet-bg_2 {
+      position: absolute;
+      width: 3%;
+      min-width: 91px;
+      z-index: -1;
+      bottom: 90px;
+      left: 565px;
+      overflow: hidden;
 
-    img {
-      width: 100%;
+      @include rwd(1921) {
+        min-width: 70px;
+        bottom: 20px;
+        left: 440px;
+      }
+
+      img {
+        width: 100%;
+      }
     }
-  }
-  .bullet-bg_3 {
-    position: absolute;
-    width: 1%;
-    min-width: 38px;
-    z-index: -1;
-    top: 350px;
-    left: 170px;
-    overflow: hidden;
+    .bullet-bg_3 {
+      position: absolute;
+      width: 1%;
+      min-width: 38px;
+      z-index: -1;
+      top: 350px;
+      left: 170px;
+      overflow: hidden;
 
-    img {
-      width: 100%;
+      @include rwd(1921) {
+        top: 300px;
+      }
+
+      img {
+        width: 100%;
+      }
     }
-  }
-  .bullet-bg_4 {
-    position: absolute;
-    width: 22px;
-    min-width: 22px;
-    z-index: -1;
-    bottom: 480px;
-    left: 630px;
-    overflow: hidden;
-
-    img {
-      width: 100%;
-    }
-  }
-
-  .dirt-bg {
-    position: absolute;
-    width: 103%;
-    //min-width: 900px;
-    z-index: -1;
-    bottom: 0;
-    left: -20px;
-    overflow: hidden;
-
-    img {
-      width: 100%;
-    }
-  }
-
-  .pubg-bg {
-    position: absolute;
-    width: 40%;
-    min-width: 900px;
-    z-index: -1;
-    bottom: 0;
-    left: -30px;
-    overflow: hidden;
-
-    img {
-      width: 100%;
-    }
-  }
-  .jugg-bg {
-    position: absolute;
-    width: 28%;
-    min-width: 690px;
-    z-index: -10;
-    bottom: 80px;
-    //left: 1210px;
-    right: 625px;
-    overflow: hidden;
-
-    img {
-      width: 100%;
-    }
-  }
-  .tracer-bg {
-    position: absolute;
-    width: 28%;
-    min-width: 630px;
-    z-index: -10;
-    bottom: 85px;
-    right: -150px;
-    overflow: hidden;
-
-    img {
-      width: 100%;
-    }
-  }
-
-  .plus-wrap {
-    width: 100%;
-    height: auto;
-    position: absolute;
-    overflow: hidden;
-    margin: 0 auto;
-    padding-top: 5px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
-    .plus {
-      position: relative;
+    .bullet-bg_4 {
+      position: absolute;
       width: 22px;
-      height: 22px;
-      margin-left: 25px;
+      min-width: 22px;
+      z-index: -1;
+      bottom: 480px;
+      left: 630px;
+      overflow: hidden;
 
-      .vertical {
-        width: 2px;
-        height: 22px;
-        background: #000;
-        position: absolute;
-        left: 10px;
+      @include rwd(1921) {
+        bottom: 295px;
+        left: 455px;
       }
-      .horizontal {
-        width: 22px;
-        height: 2px;
-        background: #000;
-        position: absolute;
-        top: 10px;
+
+      img {
+        width: 100%;
       }
     }
-  }
 
-  .plus-rotate {
-    width: 100%;
-    height: auto;
-    position: absolute;
-    overflow: hidden;
-    top: 22.8%;
-    left: 33.5%;
-    padding-top: 20px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    -moz-transform: rotate(-77deg); /* Для Firefox */
-    -ms-transform: rotate(-77deg); /* Для IE */
-    -webkit-transform: rotate(-77deg); /* Для Safari, Chrome, iOS */
-    -o-transform: rotate(-77deg); /* Для Opera */
-    transform: rotate(-77deg);
+    .dirt-bg {
+      position: absolute;
+      width: 103%;
+      //min-width: 900px;
+      z-index: -1;
+      bottom: 0;
+      left: -20px;
+      overflow: hidden;
 
-    .plus {
-      -moz-transform: rotate(-15deg); /* Для Firefox */
-      -ms-transform: rotate(-15deg); /* Для IE */
-      -webkit-transform: rotate(-15deg); /* Для Safari, Chrome, iOS */
-      -o-transform: rotate(-15deg); /* Для Opera */
-      transform: rotate(-15deg);
+      @include rwd(1921) {
+        width: 113%;
+      }
+
+      img {
+        width: 100%;
+      }
     }
-  }
 
-  .plus-wrap__left {
-    position: absolute;
-    width: 100%;
-    max-width: 600px;
-    height: 50%;
-    bottom: 70px;
-    z-index: -5;
+    .pubg-bg {
+      position: absolute;
+      width: 40%;
+      min-width: 900px;
+      z-index: -1;
+      bottom: 0;
+      left: -30px;
+      overflow: hidden;
+
+      @include rwd(1921) {
+        min-width: 825px;
+        bottom: -25px;
+      }
+
+      .plus {
+        position: absolute;
+        width: 19px;
+        height: 19px;
+        bottom: -2.5%;
+        left: 41.3%;
+
+        @include rwd(1921) {
+          width: 14px;
+          height: 14px;
+          bottom: 375px;
+          left: 20.5%;
+        }
+
+        .vertical {
+          width: 2px;
+          height: 19px;
+          background: #fff;
+          margin-left: 8.5px;
+
+          @include rwd(1921) {
+            width: 2px;
+            height: 14px;
+            margin-left: 6px;
+          }
+        }
+        .horizontal {
+          width: 19px;
+          height: 2px;
+          background: #fff;
+          margin-top: -9.5px;
+
+          @include rwd(1921) {
+            width: 14px;
+            height: 2px;
+            margin-top: -8px;
+          }
+        }
+      }
+
+      img {
+        width: 100%;
+      }
+    }
+    .jugg-bg {
+      position: absolute;
+      width: 28%;
+      min-width: 690px;
+      z-index: -10;
+      bottom: 80px;
+      right: 625px;
+      overflow: hidden;
+
+      @include rwd(1921) {
+        min-width: 540px;
+        right: 495px;
+        bottom: 100px;
+      }
+
+      img {
+        width: 100%;
+      }
+    }
+    .tracer-bg {
+      position: absolute;
+      width: 32%;
+      min-width: 630px;
+      z-index: -10;
+      bottom: 140px;
+      right: -185px;
+      overflow: hidden;
+
+      @include rwd(1921) {
+        min-width: 655px;
+        bottom: 80px;
+        right: -175px;
+      }
+
+      img {
+        width: 100%;
+      }
+    }
 
     .plus-wrap {
-      display: flex;
+      width: 100%;
       height: auto;
+      position: absolute;
+      overflow: hidden;
+      margin: 0 auto;
+      padding-top: 5px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
 
       .plus {
         position: relative;
@@ -362,12 +409,24 @@ div {
         height: 22px;
         margin-left: 25px;
 
+        @include rwd(1921) {
+          width: 14px;
+          height: 14px;
+          margin-left: 15px;
+        }
+
         .vertical {
           width: 2px;
           height: 22px;
           background: #000;
           position: absolute;
           left: 10px;
+
+          @include rwd(1921) {
+            width: 2px;
+            height: 14px;
+            left: 6px;
+          }
         }
         .horizontal {
           width: 22px;
@@ -375,792 +434,1231 @@ div {
           background: #000;
           position: absolute;
           top: 10px;
+
+          @include rwd(1921) {
+            width: 14px;
+            height: 2px;
+            top: 6px;
+          }
         }
       }
     }
-    .plus-rotate {
-      width: 100%;
-      height: auto;
-      position: absolute;
-      overflow: hidden;
-      top: 325px;
-      left: 210px;
-      //padding-top: 20px;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      -moz-transform: rotate(-77deg); /* Для Firefox */
-      -ms-transform: rotate(-77deg); /* Для IE */
-      -webkit-transform: rotate(-77deg); /* Для Safari, Chrome, iOS */
-      -o-transform: rotate(-77deg); /* Для Opera */
-      transform: rotate(-77deg);
 
-      .plus {
-        -moz-transform: rotate(-15deg); /* Для Firefox */
-        -ms-transform: rotate(-15deg); /* Для IE */
-        -webkit-transform: rotate(-15deg); /* Для Safari, Chrome, iOS */
-        -o-transform: rotate(-15deg); /* Для Opera */
-        transform: rotate(-15deg);
+    .plus-wrap__right {
+      position: absolute;
+      width: 100%;
+      max-width: 600px;
+      height: 50%;
+      top: 0;
+      right: 0;
+      z-index: -15;
+
+      .plus-rotate {
+        width: 100%;
+        height: auto;
+        position: absolute;
+        overflow: hidden;
+        top: 37.8%;
+        left: -20.5%;
+        padding-top: 20px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        -moz-transform: rotate(-77deg); /* Для Firefox */
+        -ms-transform: rotate(-77deg); /* Для IE */
+        -webkit-transform: rotate(-77deg); /* Для Safari, Chrome, iOS */
+        -o-transform: rotate(-77deg); /* Для Opera */
+        transform: rotate(-77deg);
+
+        @include rwd(1921) {
+          top: 28.5%;
+          left: -18.5%;
+        }
+
+        .plus {
+          margin-left: 25px;
+          width: 22px;
+          height: 22px;
+          -moz-transform: rotate(-15deg); /* Для Firefox */
+          -ms-transform: rotate(-15deg); /* Для IE */
+          -webkit-transform: rotate(-15deg); /* Для Safari, Chrome, iOS */
+          -o-transform: rotate(-15deg); /* Для Opera */
+          transform: rotate(-15deg);
+
+          @include rwd(1921) {
+            width: 14px;
+            height: 14px;
+            margin-left: 15px;
+          }
+
+          .vertical {
+            width: 2px;
+            height: 22px;
+            background: #000;
+            position: absolute;
+            left: 10px;
+
+            @include rwd(1921) {
+              height: 14px;
+              left: 6px;
+            }
+          }
+          .horizontal {
+            width: 22px;
+            height: 2px;
+            background: #000;
+            position: absolute;
+            top: 10px;
+
+            @include rwd(1921) {
+              width: 14px;
+              top: 6px;
+            }
+          }
+        }
+      }
+      .plus-wrap {
+        display: flex;
+        height: auto;
+        bottom: 40px;
+        left: 85px;
+
+        @include rwd(1921) {
+          bottom: 40px;
+          left: 85px;
+        }
+
+        .plus {
+          position: relative;
+          width: 22px;
+          height: 22px;
+          margin-left: 25px;
+
+          @include rwd(1921) {
+            width: 14px;
+            height: 14px;
+            margin-left: 15px;
+          }
+
+          .vertical {
+            width: 2px;
+            height: 22px;
+            background: #000;
+            position: absolute;
+            left: 10px;
+
+            @include rwd(1921) {
+              height: 14px;
+              left: 6px;
+            }
+          }
+          .horizontal {
+            width: 22px;
+            height: 2px;
+            background: #000;
+            position: absolute;
+            top: 10px;
+
+            @include rwd(1921) {
+              width: 14px;
+              top: 6px;
+            }
+          }
+        }
+      }
+    }
+
+    .plus-wrap__left {
+      position: absolute;
+      width: 100%;
+      max-width: 600px;
+      height: 50%;
+      bottom: 70px;
+      z-index: -5;
+
+      @include rwd(1921) {
+        left: -115px;
+        bottom: 130px;
+      }
+
+      .plus-wrap {
+        display: flex;
+        height: auto;
+
+        .plus {
+          position: relative;
+          width: 22px;
+          height: 22px;
+          margin-left: 25px;
+
+          @include rwd(1921) {
+            width: 14px;
+            height: 14px;
+            margin-left: 15px;
+          }
+
+          .vertical {
+            width: 2px;
+            height: 22px;
+            background: #000;
+            position: absolute;
+            left: 10px;
+
+            @include rwd(1921) {
+              height: 14px;
+              left: 6px;
+            }
+          }
+          .horizontal {
+            width: 22px;
+            height: 2px;
+            background: #000;
+            position: absolute;
+            top: 10px;
+
+            @include rwd(1921) {
+              width: 14px;
+              top: 6px;
+            }
+          }
+        }
+      }
+      .plus-rotate {
+        width: 100%;
+        height: auto;
+        position: absolute;
+        overflow: hidden;
+        top: 325px;
+        left: 210px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        -moz-transform: rotate(-77deg); /* Для Firefox */
+        -ms-transform: rotate(-77deg); /* Для IE */
+        -webkit-transform: rotate(-77deg); /* Для Safari, Chrome, iOS */
+        -o-transform: rotate(-77deg); /* Для Opera */
+        transform: rotate(-77deg);
+
+        @include rwd(1921) {
+          top: 225px;
+          left: 135px;
+        }
+
+        .plus {
+          -moz-transform: rotate(-15deg); /* Для Firefox */
+          -ms-transform: rotate(-15deg); /* Для IE */
+          -webkit-transform: rotate(-15deg); /* Для Safari, Chrome, iOS */
+          -o-transform: rotate(-15deg); /* Для Opera */
+          transform: rotate(-15deg);
+        }
+      }
+    }
+
+    &-header {
+      width: 100%;
+      max-width: 2235px;
+      margin: 20px auto 0 auto;
+      position: relative;
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-end;
+
+      @include rwd(1921) {
+        padding: 0 65px;
+      }
+
+      .logo {
+        overflow: hidden;
+        img {
+          width: 100%;
+        }
+      }
+
+      .trophey-wrapper {
+        display: flex;
+        align-items: center;
+
+        .trophey-left__title {
+          width: 185px;
+          text-align: right;
+          text-transform: uppercase;
+
+          h1 {
+            font-size: 27px;
+            letter-spacing: 1px;
+            color: #110c0a;
+            font-weight: bold;
+            margin: 0;
+
+            @include rwd(1921) {
+              font-size: 23px;
+            }
+          }
+          p {
+            font-size: 23px;
+            letter-spacing: 1px;
+            color: #110c0a;
+            font-weight: bold;
+            margin: 0;
+
+            @include rwd(1921) {
+              font-size: 19px;
+            }
+          }
+        }
+
+        .trophey-img {
+          margin: 0 20px;
+          overflow: hidden;
+
+          img {
+            width: 100%;
+            max-width: 100%;
+            height: 110px;
+          }
+        }
+
+        .trophey-right__title {
+          width: 95px;
+          text-align: left;
+          text-transform: uppercase;
+
+          h1 {
+            font-size: 27px;
+            letter-spacing: 1px;
+            color: #110c0a;
+            font-weight: bold;
+            margin: 0;
+
+            @include rwd(1921) {
+              font-size: 23px;
+            }
+          }
+          p {
+            font-size: 23px;
+            letter-spacing: 1px;
+            color: #110c0a;
+            font-weight: bold;
+            margin: 0;
+
+            @include rwd(1921) {
+              font-size: 19px;
+            }
+          }
+        }
+      }
+    }
+
+    &-main {
+      width: 100%;
+      max-width: 1440px;
+      margin: 70px auto 0 auto;
+      padding-left: 6%;
+      //overflow: hidden;
+
+      @include rwd(1921) {
+        margin: 20px 460px 0 460px;
+        padding-left: 35px;
+        //padding-right: 330px;
+      }
+
+      .main-title {
+        width: 100%;
+        max-width: 353px;
+        height: 48px;
+        position: relative;
+        margin-left: 6.8%;
+        text-align: center;
+        &::before {
+          content: '';
+          top: 0;
+          right: 0;
+          bottom: 0;
+          left: 0;
+          position: absolute;
+          z-index: -1;
+          background: #7f8300;
+          -moz-transform: skew(-15deg); /* Для Firefox */
+          -ms-transform: skew(-15deg); /* Для IE */
+          -webkit-transform: skew(-15deg); /* Для Safari, Chrome, iOS */
+          -o-transform: skew(-15deg); /* Для Opera */
+          transform: skew(-15deg);
+        }
+        .strip {
+          position: absolute;
+          width: 80px;
+          height: 1px;
+          top: 85%;
+          left: -9%;
+          background: #ffffff;
+        }
+        .square {
+          position: absolute;
+          width: 17px;
+          height: 17px;
+          background: rgba(17, 12, 10, .8);;
+          top: -15%;
+          right: 5%;
+          -moz-transform: skew(-15deg); /* Для Firefox */
+          -ms-transform: skew(-15deg); /* Для IE */
+          -webkit-transform: skew(-15deg); /* Для Safari, Chrome, iOS */
+          -o-transform: skew(-15deg); /* Для Opera */
+          transform: skew(-15deg);
+        }
+        p {
+          margin: 0;
+          font-size: 32px;
+          line-height: 42px;
+          letter-spacing: 1px;
+          color: #ffffff;
+          font-weight: bold;
+          text-align: center;
+        }
+      }
+
+      .main-bonus {
+        //padding-left: 6%;
+        width: 100%;
+        margin-bottom: -10px;
+
+        &__effects.bonus {
+          width: 100%;
+          position: relative;
+
+          .strip {
+            position: absolute;
+
+            &__first {
+              width: 267px;
+              height: 1px;
+              background-color: #d8de12;
+              top: 20%;
+              left: 1.5%;
+
+              @include rwd(1921) {
+                width: 200px;
+                left: 0.5%;
+              }
+            }
+            &__second {
+              width: 106px;
+              height: 1px;
+              background-color: #d5db14;
+              bottom: 32%;
+              left: 30.5%;
+
+              @include rwd(1921) {
+                width: 80px;
+                left: 21.5%;
+              }
+            }
+          }
+
+          .square {
+            position: absolute;
+            background: rgba(17, 12, 10, .8);;
+            -moz-transform: skew(-15deg); /* Для Firefox */
+            -ms-transform: skew(-15deg); /* Для IE */
+            -webkit-transform: skew(-15deg); /* Для Safari, Chrome, iOS */
+            -o-transform: skew(-15deg); /* Для Opera */
+            transform: skew(-15deg);
+
+            &__first {
+              width: 110px;
+              height: 17px;
+              background: rgba(220, 226, 20, 1);
+              bottom: 11.5%;
+              left: -6%;
+
+              @include rwd(1921) {
+                width: 82px;
+                height: 13px;
+                left: -4.5%;
+              }
+            }
+            &__second2 {
+              width: 44px;
+              height: 7px;
+              background: #ffffff;
+              bottom: 32%;
+              left: 17%;
+
+              @include rwd(1921) {
+                width: 33px;
+                height: 5px;
+                left: 11.5%;
+              }
+            }
+            &__third {
+              width: 17px;
+              height: 13px;
+              background: rgba(126, 130, 0, .8);
+              top: 30%;
+              left: 23.8%;
+
+              @include rwd(1921) {
+                width: 13px;
+                height: 10px;
+                left: 16.2%;
+              }
+            }
+          }
+
+          .plus {
+            position: absolute;
+            width: 19px;
+            height: 19px;
+            top: 55%;
+            left: 8.5%;
+
+            @include rwd(1921) {
+              top: 55%;
+              left: 5.5%;
+            }
+
+            .vertical {
+              width: 2px;
+              height: 19px;
+              background: #fff;
+              margin-left: 8.5px;
+            }
+            .horizontal {
+              width: 19px;
+              height: 2px;
+              background: #fff;
+              margin-top: -9.5px;
+            }
+          }
+          p {
+            position: relative;
+            font-size: 211px;
+            color: #110c0a;
+            font-weight: bold;
+            margin: 0;
+            text-transform: uppercase;
+            line-height: 211px;
+            animation: glitch-skew 1s infinite linear alternate-reverse;
+            z-index: -5;
+
+            @include rwd(1921) {
+              font-size: 158px;
+              line-height: 158px;
+            }
+
+            &::before {
+              @include glitchCopy;
+              left: 2px;
+              text-shadow: -1px 0 red;
+              clip: rect(0, 555px, 56px, 0);
+              animation: glitch-anim 2s infinite linear alternate-reverse;
+            }
+            &::after {
+              @include glitchCopy;
+              left: -2px;
+              text-shadow: -2px 0 #00fff9, 2px 2px #ff00c1;
+              clip: rect(0, 555px, 56px, 0);
+
+              animation: glitch-anim2 5s infinite linear alternate-reverse;
+            }
+          }
+        }
+
+        &__effects.gift {
+          width: 100%;
+          position: relative;
+          padding-left: 15%;
+
+          @include rwd(1921) {
+            padding-left: 11%;
+          }
+
+          .strip {
+            position: absolute;
+
+            &__first {
+              width: 198px;
+              height: 1px;
+              background: #d7dd17;
+              bottom: 0;
+              left: 13.5%;
+
+              @include rwd(1921) {
+                width: 148px;
+                bottom: 10px;
+                left: 10.5%;
+              }
+            }
+            &__second {
+              width: 44px;
+              height: 1px;
+              background: #ffffff;
+              bottom: 43%;
+              left: 44.5%;
+
+              @include rwd(1921) {
+                width: 33px;
+                left: 31.5%;
+              }
+            }
+          }
+
+          .square {
+            position: absolute;
+            background: rgba(17, 12, 10, .8);;
+            -moz-transform: skew(-15deg); /* Для Firefox */
+            -ms-transform: skew(-15deg); /* Для IE */
+            -webkit-transform: skew(-15deg); /* Для Safari, Chrome, iOS */
+            -o-transform: skew(-15deg); /* Для Opera */
+            transform: skew(-15deg);
+
+            &__first {
+              width: 44px;
+              height: 19px;
+              background: #ffffff;
+              top: -8.5%;
+              left: 31.5%;
+
+              @include rwd(1921) {
+                width: 33px;
+                height: 14px;
+                top: 10px;
+                left: 22%;
+              }
+            }
+            &__second3 {
+              width: 35px;
+              height: 28px;
+              background: rgba(126, 130, 0, .8);
+              bottom: 32%;
+              left: 37.5%;
+
+              @include rwd(1921) {
+                width: 26px;
+                height: 21px;
+                bottom: 32%;
+                left: 26.5%;
+              }
+            }
+            &__third {
+              width: 110px;
+              height: 17px;
+              background: #eff52f;
+              top: -10%;
+              left: 50.8%;
+              z-index: 1;
+
+              @include rwd(1921) {
+                width: 82px;
+                height: 13px;
+                top: 7px;
+                left: 35.8%;
+              }
+            }
+            &__fourth {
+              width: 11px;
+              height: 8px;
+              background: rgba(126, 130, 0, .8);
+              top: 1%;
+              left: 52%;
+              z-index: 2;
+
+              @include rwd(1921) {
+                width: 8px;
+                height: 6px;
+                top: 17px;
+                left: 37%;
+              }
+            }
+          }
+
+          .plus {
+            position: absolute;
+            width: 19px;
+            height: 19px;
+            bottom: -2.5%;
+            left: 41.3%;
+
+            @include rwd(1921) {
+              width: 14px;
+              height: 14px;
+              bottom: 10px;
+              left: 28.5%;
+            }
+
+            .vertical {
+              width: 2px;
+              height: 19px;
+              background: #fff;
+              margin-left: 8.5px;
+
+              @include rwd(1921) {
+                width: 2px;
+                height: 14px;
+                margin-left: 6px;
+              }
+            }
+            .horizontal {
+              width: 19px;
+              height: 2px;
+              background: #fff;
+              margin-top: -9.5px;
+
+              @include rwd(1921) {
+                width: 14px;
+                height: 2px;
+                margin-top: -8px;
+              }
+            }
+          }
+
+          p {
+            position: relative;
+            font-size: 211px;
+            color: #110c0a;
+            font-weight: bold;
+            letter-spacing: 4px;
+            margin: 0;
+            line-height: 130px;
+            animation: glitch-skew 1s infinite linear alternate-reverse;
+            z-index: -5;
+
+            @include rwd(1921) {
+              font-size: 158px;
+              line-height: 130px;
+              margin-top: -15px;
+            }
+
+            &::before {
+              @include glitchCopy;
+              left: 2px;
+              text-shadow: -1px 0 red;
+              clip: rect(0, 555px, 56px, 0);
+              animation: glitch-anim 2s infinite linear alternate-reverse;
+            }
+            &::after {
+              @include glitchCopy;
+              left: -2px;
+              text-shadow: -2px 0 #00fff9, 2px 2px #ff00c1;
+              clip: rect(0, 555px, 56px, 0);
+              animation: glitch-anim2 5s infinite linear alternate-reverse;
+            }
+          }
+        }
+
+        &__effects.registr {
+          width: 100%;
+          position: relative;
+
+          p {
+            position: relative;
+            font-size: 102px;
+            color: #7f8300;
+            font-weight: 500;
+            margin: 0;
+            line-height: 180px;
+            text-transform: uppercase;
+            animation: glitch-skew 1s infinite linear alternate-reverse;
+            z-index: -5;
+
+            @include rwd(1921) {
+              font-size: 77px;
+              margin-top: -15px;
+              //margin-bottom: -20px;
+            }
+
+            &::before {
+              @include glitchCopy;
+              left: 2px;
+              text-shadow: -1px 0 red;
+              clip: rect(0, 555px, 56px, 0);
+              animation: glitch-anim 2s infinite linear alternate-reverse;
+            }
+            &::after {
+              @include glitchCopy;
+              left: -2px;
+              text-shadow: -2px 0 #00fff9, 2px 2px #ff00c1;
+              clip: rect(0, 555px, 56px, 0);
+              animation: glitch-anim2 5s infinite linear alternate-reverse;
+            }
+          }
+        }
+      }
+
+      .wrap {
+        -moz-transform: skew(-15deg); /* Для Firefox */
+        -ms-transform: skew(-15deg); /* Для IE */
+        -webkit-transform: skew(-15deg); /* Для Safari, Chrome, iOS */
+        -o-transform: skew(-15deg); /* Для Opera */
+        transform: skew(-15deg);
+        z-index: 5;
+
+        @include rwd(1921) {
+          margin-left: 20px;
+        }
+
+        .main-btn__registration {
+          width: 649px;
+          height: 142px;
+          background: #110c0a;
+          text-align: center;
+          z-index: 1;
+
+          @include rwd(1921) {
+            width: 486px;
+            height: 106px;
+          }
+
+          .invisible {
+            position: absolute;
+            width: 670px;
+            height: 163px;
+            bottom: -10px;
+            left: -10px;
+            background: rgba(255, 255, 255, 0);
+            z-index: -1;
+
+            @include rwd(1921) {
+              width: 506px;
+              height: 126px;
+            }
+          }
+
+          .yellow {
+            position: absolute;
+            width: 649px;
+            height: 142px;
+            top: -10px;
+            left: -10px;
+            background-color: #7f8300;
+            z-index: -3;
+            transition: .5s;
+
+            @include rwd(1921) {
+              width: 486px;
+              height: 106px;
+            }
+          }
+
+          .white {
+            position: absolute;
+            width: 649px;
+            height: 142px;
+            top: 10px;
+            left: 10px;
+            background-color: #fff;
+            z-index: -5;
+            transition: all .5s;
+
+            @include rwd(1921) {
+              width: 486px;
+              height: 106px;
+            }
+          }
+          .plus {
+            position: absolute;
+            width: 19px;
+            height: 19px;
+            top: 20px;
+            left: 600px;
+            -moz-transform: skew(15deg); /* Для Firefox */
+            -ms-transform: skew(15deg); /* Для IE */
+            -webkit-transform: skew(15deg); /* Для Safari, Chrome, iOS */
+            -o-transform: skew(15deg); /* Для Opera */
+            transform: skew(15deg);
+
+            @include rwd(1921) {
+              width: 14px;
+              height: 14px;
+              top: 15px;
+              left: 460px;
+            }
+
+            .vertical {
+              width: 2px;
+              height: 19px;
+              background: #fff;
+              margin-left: 8.5px;
+
+              @include rwd(1921) {
+                height: 14px;
+                margin-left: 5.5px;
+              }
+            }
+            .horizontal {
+              width: 19px;
+              height: 2px;
+              background: #fff;
+              margin-top: -9.5px;
+
+              @include rwd(1921) {
+                width: 14px;
+                margin-top: -8.5px;
+              }
+            }
+          }
+
+          a {
+            display: block;
+            width: 100%;
+            height: 100%;
+            font-size: 48px;
+            letter-spacing: 1px;
+            line-height: 142px;
+            color: #f8ff13;
+            font-weight: bold;
+            text-decoration: none;
+            text-transform: uppercase;
+            transition: all .5s;
+            -moz-transform: skew(15deg); /* Для Firefox */
+            -ms-transform: skew(15deg); /* Для IE */
+            -webkit-transform: skew(15deg); /* Для Safari, Chrome, iOS */
+            -o-transform: skew(15deg); /* Для Opera */
+            transform: skew(15deg);
+
+            @include rwd(1921) {
+              font-size: 36px;
+              line-height: 102px;
+            }
+          }
+          a:hover {
+            font-size: 50px;
+
+            @include rwd(1921) {
+              font-size: 38px;
+            }
+          }
+        }
+
+        .main-btn__registration:hover {
+          background: #141414;
+        }
+
+        .main-btn__registration:hover .yellow,
+        .main-btn__registration:hover .white {
+          top: 0;
+          left: 0;
+        }
+      }
+      .main-steps {
+        width: 100%;
+        margin-top: 210px;
+        margin-bottom: 95px;
+        padding-right: 77px;
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        align-items: center;
+
+        @include rwd(1921) {
+          padding-right: 430px;
+          margin-top: 130px;
+          margin-bottom: 85px;
+        }
+
+        .step {
+          width: 30%;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          text-transform: uppercase;
+
+          .block-wrap {
+            -moz-transform: skew(-15deg); /* Для Firefox */
+            -ms-transform: skew(-15deg); /* Для IE */
+            -webkit-transform: skew(-15deg); /* Для Safari, Chrome, iOS */
+            -o-transform: skew(-15deg); /* Для Opera */
+            transform: skew(-15deg);
+
+            .block {
+              width: 93px;
+              height: 73px;
+              margin-right: 15px;
+              background: #ffffff;
+              text-align: center;
+
+              @include rwd(1921) {
+                width: 70px;
+                height: 55px;
+              }
+
+              &-square {
+                position: absolute;
+                z-index: -1;
+              }
+              .square-block1__first {
+                width: 69px;
+                height: 55px;
+                background-color: #110c0a;
+                top: -5px;
+                left: -1px;
+
+                @include rwd(1921) {
+                  width: 52px;
+                  height: 41px;
+                }
+              }
+              .square-block1__second {
+                width: 21px;
+                height: 17px;
+                background-color: rgba(126, 130, 0, .8);
+                bottom: -10px;
+                left: 50px;
+                z-index: 2;
+
+                @include rwd(1921) {
+                  width: 16px;
+                  height: 13px;
+                  bottom: -5px;
+                  left: 40px;
+                }
+              }
+              .square-block2__first {
+                width: 37px;
+                height: 31px;
+                background-color: #7e8200;
+                top: -2px;
+                right: 14px;
+
+                @include rwd(1921) {
+                  width: 28px;
+                  height: 23px;
+                }
+              }
+              .square-block2__second {
+                width: 24px;
+                height: 19px;
+                background-color: #110c0a;
+                z-index: 2;
+                bottom: 12px;
+                left: -12px;
+
+                @include rwd(1921) {
+                  width: 18px;
+                  height: 14px;
+                  bottom: 10px;
+                  left: -10px;
+                }
+              }
+              .square-block3__first {
+                width: 68px;
+                height: 52px;
+                background-color: #110c0a;
+                bottom: -3px;
+                left: 0;
+
+                @include rwd(1921) {
+                  width: 51px;
+                  height: 39px;
+                }
+              }
+              .square-block3__second {
+                width: 21px;
+                height: 17px;
+                background-color: rgba(126, 130, 0, .8);
+                z-index: 2;
+                bottom: 10px;
+                left: -6px;
+
+                @include rwd(1921) {
+                  width: 16px;
+                  height: 13px;
+                  left: -1px;
+                }
+              }
+
+              span {
+                display: block;
+                font-size: 42px;
+                line-height: 73px;
+                color: #110c0a;
+                font-weight: bold;
+                -moz-transform: skew(15deg); /* Для Firefox */
+                -ms-transform: skew(15deg); /* Для IE */
+                -webkit-transform: skew(15deg); /* Для Safari, Chrome, iOS */
+                -o-transform: skew(15deg); /* Для Opera */
+                transform: skew(15deg);
+
+                @include rwd(1921) {
+                  width: 70px;
+                  height: 55px;
+                  font-size: 32px;
+                  line-height: 55px;
+                }
+              }
+            }
+            .block2 {
+              .plus {
+                position: absolute;
+                width: 19px;
+                height: 19px;
+                bottom: 0;
+                right: 0;
+                -moz-transform: skew(15deg); /* Для Firefox */
+                -ms-transform: skew(15deg); /* Для IE */
+                -webkit-transform: skew(15deg); /* Для Safari, Chrome, iOS */
+                -o-transform: skew(15deg); /* Для Opera */
+                transform: skew(15deg);
+                z-index: 1;
+
+                .vertical {
+                  width: 2px;
+                  height: 19px;
+                  background: #000;
+                  margin-left: 8.5px;
+                }
+                .horizontal {
+                  width: 19px;
+                  height: 2px;
+                  background: #000;
+                  margin-top: -9.5px;
+                }
+              }
+            }
+          }
+
+          p {
+            margin: 0;
+            font-size: 38px;
+            letter-spacing: 0;
+            color: #110c0a;
+            font-weight: 500;
+
+            @include rwd(1921) {
+              font-size: 29px;
+              line-height: 55px;
+            }
+          }
+        }
+      }
+    }
+    .attention {
+      position: absolute;
+      bottom: 0;
+      right: 155px;
+      @include rwd(1921) {
+        right: 65px;
+      }
+
+      p {
+        font-size: 18px;
+        letter-spacing: 0;
+        color: rgba(127, 131, 0, .7);
+        font-weight: 300;
+        text-align: right;
+        text-transform: uppercase;
       }
     }
   }
 
-  &-header {
+  .footer {
     width: 100%;
-    max-width: 2235px;
-    margin: 20px auto 0 auto;
-    position: relative;
+    background: #000;
     display: flex;
     justify-content: space-between;
-    align-items: flex-end;
+    align-items: center;
+    padding: 21px 90px;
 
-    .logo {
-      overflow: hidden;
-      img {
-        width: 100%;
-      }
+    @include rwd(1921) {
+      padding: 21px 65px;
     }
 
-    .trophey-wrapper {
+    &-pay {
       display: flex;
+      justify-content: space-between;
       align-items: center;
-
-      .trophey-left__title {
-        width: 185px;
-        text-align: right;
-        text-transform: uppercase;
-
-        h1 {
-          font-size: 27px;
-          letter-spacing: 1px;
-          color: #110c0a;
-          font-weight: bold;
-          margin: 0;
-        }
-        p {
-          font-size: 23px;
-          letter-spacing: 1px;
-          color: #110c0a;
-          font-weight: bold;
-          margin: 0;
-        }
+      box-sizing: border-box;
+      padding: 0;
+      @include rwd(1921) {
+        //margin-right: 16%;
       }
 
-      .trophey-img {
-        margin: 0 20px;
-        overflow: hidden;
+      &__visa {
+        min-width: 46px;
+      }
+
+      &__mastercard {
+        min-width: 40px;
+      }
+
+      &__qiwi {
+        min-width: 66px;
+      }
+
+      &__ymoney {
+        min-width: 95px;
+      }
+
+      & > div {
+        margin-right: 40px;
+        @include rwd(1921) {
+          margin-right: 30px;
+        }
 
         img {
           width: 100%;
-          max-width: 100%;
-          height: 110px;
-        }
-      }
-
-      .trophey-right__title {
-        width: 95px;
-        text-align: left;
-        text-transform: uppercase;
-
-        h1 {
-          font-size: 27px;
-          letter-spacing: 1px;
-          color: #110c0a;
-          font-weight: bold;
-          margin: 0;
-        }
-        p {
-          font-size: 23px;
-          letter-spacing: 1px;
-          color: #110c0a;
-          font-weight: bold;
-          margin: 0;
-        }
-      }
-    }
-  }
-
-  &-main {
-    width: 100%;
-    max-width: 1440px;
-    margin: 70px auto 0 auto;
-    padding-left: 6%;
-    //overflow: hidden;
-
-    .main-title {
-      width: 100%;
-      max-width: 353px;
-      height: 48px;
-      position: relative;
-      margin-left: 6.8%;
-      text-align: center;
-      &::before {
-        content: '';
-        top: 0;
-        right: 0;
-        bottom: 0;
-        left: 0;
-        position: absolute;
-        z-index: -1;
-        background: #7f8300;
-        -moz-transform: skew(-15deg); /* Для Firefox */
-        -ms-transform: skew(-15deg); /* Для IE */
-        -webkit-transform: skew(-15deg); /* Для Safari, Chrome, iOS */
-        -o-transform: skew(-15deg); /* Для Opera */
-        transform: skew(-15deg);
-      }
-      .strip {
-        position: absolute;
-        width: 80px;
-        height: 1px;
-        top: 85%;
-        left: -9%;
-        background: #ffffff;
-      }
-      .square {
-        position: absolute;
-        width: 17px;
-        height: 17px;
-        background: rgba(17, 12, 10, .8);;
-        top: -15%;
-        right: 5%;
-        -moz-transform: skew(-15deg); /* Для Firefox */
-        -ms-transform: skew(-15deg); /* Для IE */
-        -webkit-transform: skew(-15deg); /* Для Safari, Chrome, iOS */
-        -o-transform: skew(-15deg); /* Для Opera */
-        transform: skew(-15deg);
-      }
-      p {
-        margin: 0;
-        font-size: 32px;
-        line-height: 42px;
-        letter-spacing: 1px;
-        color: #ffffff;
-        font-weight: bold;
-        text-align: center;
-      }
-    }
-
-    .main-bonus {
-      //padding-left: 6%;
-      width: 100%;
-
-      &__effects.bonus{
-        width: 100%;
-        position: relative;
-
-        .strip {
-          position: absolute;
-
-          &__first {
-            width: 267px;
-            height: 1px;
-            background-color: #d8de12;
-            top: 20%;
-            left: 1.5%;
-          }
-          &__second {
-            width: 106px;
-            height: 1px;
-            background-color: #d5db14;
-            bottom: 32%;
-            left: 30.5%;
-          }
-        }
-
-        .square {
-          position: absolute;
-          background: rgba(17, 12, 10, .8);;
-          -moz-transform: skew(-15deg); /* Для Firefox */
-          -ms-transform: skew(-15deg); /* Для IE */
-          -webkit-transform: skew(-15deg); /* Для Safari, Chrome, iOS */
-          -o-transform: skew(-15deg); /* Для Opera */
-          transform: skew(-15deg);
-
-          &__first {
-            width: 110px;
-            height: 17px;
-            background: rgba(220, 226, 20, 1);
-            bottom: 11.5%;
-            left: -6%;
-          }
-          &__second2 {
-            width: 44px;
-            height: 7px;
-            background: #ffffff;
-            bottom: 32%;
-            left: 17%;
-          }
-          &__third {
-            width: 17px;
-            height: 13px;
-            background: rgba(126, 130, 0, .8);
-            top: 30%;
-            left: 23.8%;
-          }
-        }
-
-        .plus {
-          position: absolute;
-          width: 19px;
-          height: 19px;
-          top: 55%;
-          left: 8.5%;
-
-          .vertical {
-            width: 2px;
-            height: 19px;
-            background: #fff;
-            //position: absolute;
-            margin-left: 8.5px;
-          }
-          .horizontal {
-            width: 19px;
-            height: 2px;
-            background: #fff;
-            //position: absolute;
-            margin-top: -9.5px;
-          }
-        }
-        p {
-          position: relative;
-          font-size: 211px;
-          color: #110c0a;
-          font-weight: bold;
-          margin: 0;
-          text-transform: uppercase;
-          line-height: 211px;
-          animation: glitch-skew 1s infinite linear alternate-reverse;
-          z-index: -5;
-          &::before{
-            @include glitchCopy;
-            left: 2px;
-            text-shadow: -1px 0 red;
-            clip: rect(0, 555px, 56px, 0);
-            animation: glitch-anim 2s infinite linear alternate-reverse;
-          }
-          &::after {
-            @include glitchCopy;
-            left: -2px;
-            text-shadow: -2px 0 #00fff9, 2px 2px #ff00c1;
-            clip: rect(0, 555px, 56px, 0);
-
-            animation: glitch-anim2 5s infinite linear alternate-reverse;
-          }
-        }
-      }
-
-      &__effects.gift{
-        width: 100%;
-        position: relative;
-        padding-left: 15%;
-
-        .strip {
-          position: absolute;
-
-          &__first {
-            width: 198px;
-            height: 1px;
-            background: #d7dd17;
-            bottom: 0;
-            left: 13.5%;
-          }
-          &__second {
-            width: 44px;
-            height: 1px;
-            background: #ffffff;
-            bottom: 43%;
-            left: 44.5%;
-          }
-        }
-
-        .square {
-          position: absolute;
-          background: rgba(17, 12, 10, .8);;
-          -moz-transform: skew(-15deg); /* Для Firefox */
-          -ms-transform: skew(-15deg); /* Для IE */
-          -webkit-transform: skew(-15deg); /* Для Safari, Chrome, iOS */
-          -o-transform: skew(-15deg); /* Для Opera */
-          transform: skew(-15deg);
-
-          &__first {
-            width: 44px;
-            height: 19px;
-            background: #ffffff;
-            top: -8.5%;
-            left: 31.5%;
-          }
-          &__second3 {
-            width: 35px;
-            height: 28px;
-            background: rgba(126, 130, 0, .8);
-            bottom: 32%;
-            left: 37.5%;
-          }
-          &__third {
-            width: 110px;
-            height: 17px;
-            background: #eff52f;
-            top: -10%;
-            left: 50.8%;
-            z-index: 1;
-          }
-          &__fourth {
-            width: 11px;
-            height: 8px;
-            background: rgba(126, 130, 0, .8);
-            top: 1%;
-            left: 52%;
-            z-index: 2;
-          }
-        }
-
-        .plus {
-          position: absolute;
-          width: 19px;
-          height: 19px;
-          bottom: -2.5%;
-          left: 41.3%;
-
-          .vertical {
-            width: 2px;
-            height: 19px;
-            background: #fff;
-            margin-left: 8.5px;
-          }
-          .horizontal {
-            width: 19px;
-            height: 2px;
-            background: #fff;
-            margin-top: -9.5px;
-          }
-        }
-
-        p {
-          position: relative;
-          font-size: 211px;
-          color: #110c0a;
-          font-weight: bold;
-          letter-spacing: 4px;
-          margin: 0;
-          line-height: 130px;
-          animation: glitch-skew 1s infinite linear alternate-reverse;
-          z-index: -5;
-          &::before{
-            @include glitchCopy;
-            left: 2px;
-            text-shadow: -1px 0 red;
-            clip: rect(0, 555px, 56px, 0);
-            animation: glitch-anim 2s infinite linear alternate-reverse;
-          }
-          &::after {
-            @include glitchCopy;
-            left: -2px;
-            text-shadow: -2px 0 #00fff9, 2px 2px #ff00c1;
-            clip: rect(0, 555px, 56px, 0);
-            animation: glitch-anim2 5s infinite linear alternate-reverse;
-          }
-        }
-      }
-
-      &__effects.registr {
-        width: 100%;
-        position: relative;
-
-        p {
-          position: relative;
-          font-size: 102px;
-          color: #7f8300;
-          font-weight: 500;
-          margin: 0;
-          line-height: 180px;
-          text-transform: uppercase;
-          animation: glitch-skew 1s infinite linear alternate-reverse;
-          z-index: -5;
-          &::before{
-            @include glitchCopy;
-            left: 2px;
-            text-shadow: -1px 0 red;
-            clip: rect(0, 555px, 56px, 0);
-            animation: glitch-anim 2s infinite linear alternate-reverse;
-          }
-          &::after {
-            @include glitchCopy;
-            left: -2px;
-            text-shadow: -2px 0 #00fff9, 2px 2px #ff00c1;
-            clip: rect(0, 555px, 56px, 0);
-            animation: glitch-anim2 5s infinite linear alternate-reverse;
-          }
         }
       }
     }
 
-    .wrap {
-      -moz-transform: skew(-15deg); /* Для Firefox */
-      -ms-transform: skew(-15deg); /* Для IE */
-      -webkit-transform: skew(-15deg); /* Для Safari, Chrome, iOS */
-      -o-transform: skew(-15deg); /* Для Opera */
-      transform: skew(-15deg);
-      z-index: 5;
+    &-install {
+      display: flex;
+      align-items: center;
+      box-sizing: border-box;
+      @include rwd(1921) {
+        //margin-right: 465px;
+      }
 
-      .main-btn__registration {
-        width: 649px;
-        height: 142px;
-        background: #110c0a;
-        text-align: center;
-        z-index: 1;
-
-        .invisible {
-          position: absolute;
-          width: 670px;
-          height: 163px;
-          bottom: -10px;
-          left: -10px;
-          background: rgba(255, 255, 255, 0);
-          z-index: -1;
+      & > div {
+        margin-right: 20px;
+        min-width: 179px;
+        @include rwd(1921) {
+          margin-right: 12px;
         }
 
-        .yellow {
-          position: absolute;
-          width: 649px;
-          height: 142px;
-          top: -10px;
-          left: -10px;
-          background-color: #7f8300;
-          z-index: -3;
-          transition: .5s
+        img {
+          width: 100%;
         }
+      }
+    }
 
-        .white {
-          position: absolute;
-          width: 649px;
-          height: 142px;
-          top: 10px;
-          left: 10px;
-          background-color: #fff;
-          z-index: -5;
-          transition: all.5s
-        }
-        .plus {
-          position: absolute;
-          width: 19px;
-          height: 19px;
-          top: 20px;
-          left: 600px;
-          -moz-transform: skew(15deg); /* Для Firefox */
-          -ms-transform: skew(15deg); /* Для IE */
-          -webkit-transform: skew(15deg); /* Для Safari, Chrome, iOS */
-          -o-transform: skew(15deg); /* Для Opera */
-          transform: skew(15deg);
+    &-warning {
+      margin-right: -20%;
+      box-sizing: border-box;
+      @include rwd(1921) {
+        margin-right: -15%;
+      }
 
-          .vertical {
-            width: 2px;
-            height: 19px;
-            background: #fff;
-            margin-left: 8.5px;
-          }
-          .horizontal {
-            width: 19px;
-            height: 2px;
-            background: #fff;
-            margin-top: -9.5px;
-          }
-        }
+      img {
+        width: 100%;
+        min-width: 41px;
+      }
+    }
+    &-social {
+      display: flex;
+      align-items: center;
+      box-sizing: border-box;
+      //width: 6%;
+
+      & > div {
+        min-width: 39px;
 
         a {
           display: block;
           width: 100%;
           height: 100%;
-          font-size: 48px;
-          letter-spacing: 1px;
-          line-height: 142px;
-          color: #f8ff13;
-          font-weight: bold;
-          text-decoration: none;
-          text-transform: uppercase;
-          transition: all.5s;
-          -moz-transform: skew(15deg); /* Для Firefox */
-          -ms-transform: skew(15deg); /* Для IE */
-          -webkit-transform: skew(15deg); /* Для Safari, Chrome, iOS */
-          -o-transform: skew(15deg); /* Для Opera */
-          transform: skew(15deg);
-        }
-        a:hover {
-          font-size: 50px;
-        }
-      }
 
-      .main-btn__registration:hover {
-        background: #141414;
-      }
-
-      .main-btn__registration:hover .yellow,
-      .main-btn__registration:hover .white {
-        top: 0;
-        left: 0;
-      }
-    }
-    .main-steps {
-      width: 100%;
-      margin-top: 210px;
-      margin-bottom: 95px;
-      padding-right: 77px;
-      display: flex;
-      justify-content: space-between;
-      flex-wrap: wrap;
-      align-items: center;
-
-      .step {
-        width: 30%;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        text-transform: uppercase;
-
-        .block-wrap{
-          -moz-transform: skew(-15deg); /* Для Firefox */
-          -ms-transform: skew(-15deg); /* Для IE */
-          -webkit-transform: skew(-15deg); /* Для Safari, Chrome, iOS */
-          -o-transform: skew(-15deg); /* Для Opera */
-          transform: skew(-15deg);
-
-          .block {
-            width: 93px;
-            height: 73px;
-            margin-right: 15px;
-            background: #ffffff;
-            text-align: center;
-            font-size: 42px;
-            letter-spacing: 1px;
-            line-height: 73px;
-            color: #110c0a;
-            font-weight: bold;
-
-            &-square {
-              position: absolute;
-              z-index: -1;
-            }
-            .square-block1__first {
-              width: 69px;
-              height: 55px;
-              background-color: #110c0a;
-              top: -5px;
-              left: -1px;
-            }
-            .square-block1__second{
-              width: 21px;
-              height: 17px;
-              background-color: rgba(126, 130, 0, .8);
-              bottom: -10px;
-              left: 50px;
-              z-index: 2;
-            }
-            .square-block2__first {
-              width: 37px;
-              height: 31px;
-              background-color: #7e8200;
-              top: -2px;
-              right: 14px;
-            }
-            .square-block2__second {
-              width: 24px;
-              height: 19px;
-              background-color: #110c0a;
-              z-index: 2;
-              bottom: 12px;
-              left: -12px;
-            }
-            .square-block3__first {
-              width: 68px;
-              height: 52px;
-              background-color: #110c0a;
-              bottom: -3px;
-              left: 0;
-            }
-            .square-block3__second {
-              width: 21px;
-              height: 17px;
-              background-color: rgba(126, 130, 0, .8);
-              z-index: 2;
-              bottom: 10px;
-              left: -6px;
-            }
-
-            span {
-              display: block;
-              font-size: 42px;
-              //letter-spacing: 1px;
-              line-height: 73px;
-              color: #110c0a;
-              font-weight: bold;
-              -moz-transform: skew(15deg); /* Для Firefox */
-              -ms-transform: skew(15deg); /* Для IE */
-              -webkit-transform: skew(15deg); /* Для Safari, Chrome, iOS */
-              -o-transform: skew(15deg); /* Для Opera */
-              transform: skew(15deg);
-            }
-          }
-          .block2 {
-            .plus {
-              position: absolute;
-              width: 19px;
-              height: 19px;
-              bottom: 0;
-              right: 0;
-              -moz-transform: skew(15deg); /* Для Firefox */
-              -ms-transform: skew(15deg); /* Для IE */
-              -webkit-transform: skew(15deg); /* Для Safari, Chrome, iOS */
-              -o-transform: skew(15deg); /* Для Opera */
-              transform: skew(15deg);
-              z-index: 1;
-
-              .vertical {
-                width: 2px;
-                height: 19px;
-                background: #000;
-                margin-left: 8.5px;
-              }
-              .horizontal {
-                width: 19px;
-                height: 2px;
-                background: #000;
-                margin-top: -9.5px;
-              }
-            }
+          img {
+            width: 100%;
           }
         }
-
-        p {
-          margin: 0;
-          font-size: 38px;
-          letter-spacing: 0;
-          color: #110c0a;
-          font-weight: 500;
-        }
-      }
-    }
-  }
-  .attention {
-    position: absolute;
-    bottom: 0;
-    right: 155px;
-
-    p {
-      font-size: 18px;
-      letter-spacing: 0;
-      color: rgba(127, 131, 0, .7);
-      font-weight: 300;
-      text-align: right;
-      text-transform: uppercase;
-    }
-  }
-}
-
-.footer {
-  width: 100%;
-  background: #000;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 21px 90px;
-  @include rwd(1921) {
-    padding: 21px 65px;
-  }
-
-  &-pay {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    box-sizing: border-box;
-    padding: 0;
-    @include rwd(1921) {
-      //margin-right: 16%;
-    }
-
-    &__visa {
-      min-width: 46px;
-    }
-
-    &__mastercard {
-      min-width: 40px;
-    }
-
-    &__qiwi {
-      min-width: 66px;
-    }
-
-    &__ymoney {
-      min-width: 95px;
-    }
-
-    & > div {
-      margin-right: 40px;
-      @include rwd(1921) {
-        margin-right: 30px;
       }
 
-      img {
-        width: 100%;
+      &__vk {
+        margin-right: 25px;
+      }
+      &__twitter {
+        margin-right: 25px;
       }
     }
   }
 
-  &-install {
-    display: flex;
-    align-items: center;
-    box-sizing: border-box;
-    @include rwd(1921) {
-      //margin-right: 19%;
-    }
-
-    & > div {
-      margin-right: 20px;
-      min-width: 179px;
-      @include rwd(1921) {
-        margin-right: 12px;
-      }
-
-      img {
-        width: 100%;
-      }
-    }
-  }
-
-  &-warning {
-    margin-right: -20%;
-    box-sizing: border-box;
-    width: 2%;
-
-    img {
-      width: 100%;
-      min-width: 41px;
-    }
-  }
-  &-social {
-    display: flex;
-    align-items: center;
-    box-sizing: border-box;
-    //width: 6%;
-
-    & > div {
-      min-width: 39px;
-
-      a {
-        display: block;
-        width: 100%;
-        height: 100%;
-
-        img {
-          width: 100%;
-        }
-      }
-    }
-
-    &__vk {
-      margin-right: 25px;
-    }
-    &__twitter {
-      margin-right: 25px;
-    }
-  }
-}
