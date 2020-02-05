@@ -103,6 +103,12 @@
   }
 }
 
+@mixin rwd2($screen) {
+  @media (min-width: $screen+'px') {
+    @content;
+  }
+}
+
 
 //@include rwd(1400) {
 //  max-width: 900px;
@@ -290,6 +296,10 @@ div {
         width: 113%;
       }
 
+      @include rwd(1100) {
+        display: none;
+      }
+
       img {
         width: 100%;
       }
@@ -403,6 +413,10 @@ div {
       justify-content: center;
       align-items: center;
 
+      @include rwd(1100) {
+        display: none;
+      }
+
       .plus {
         position: relative;
         width: 22px;
@@ -452,6 +466,10 @@ div {
       top: 0;
       right: 0;
       z-index: -15;
+
+      @include rwd(1100) {
+        display: none;
+      }
 
       .plus-rotate {
         width: 100%;
@@ -580,6 +598,9 @@ div {
         left: -115px;
         bottom: 130px;
       }
+      @include rwd(1100) {
+        display: none;
+      }
 
       .plus-wrap {
         display: flex;
@@ -667,6 +688,10 @@ div {
         padding: 0 65px;
       }
 
+      @include rwd(1100) {
+        justify-content: center;
+      }
+
       .logo {
         overflow: hidden;
         img {
@@ -677,6 +702,10 @@ div {
       .trophey-wrapper {
         display: flex;
         align-items: center;
+
+        @include rwd(1100) {
+          display: none;
+        }
 
         .trophey-left__title {
           width: 185px;
@@ -759,7 +788,15 @@ div {
       @include rwd(1921) {
         margin: 20px 460px 0 460px;
         padding-left: 35px;
-        //padding-right: 330px;
+      }
+      @include rwd(1440) {
+        padding-left: 200px;
+        padding-right: 200px;
+        margin: 30px auto;
+      }
+
+      @include rwd(1100) {
+        padding-right: 200px;
       }
 
       .main-title {
@@ -769,6 +806,12 @@ div {
         position: relative;
         margin-left: 6.8%;
         text-align: center;
+
+        @include rwd(1100) {
+          margin: 0 auto;
+          max-width: 282px;
+          height: 38px;
+        }
         &::before {
           content: '';
           top: 0;
@@ -813,13 +856,27 @@ div {
           color: #ffffff;
           font-weight: bold;
           text-align: center;
+
+          @include rwd(1100) {
+            font-size: 25px;
+            line-height: 38px;
+          }
         }
       }
 
       .main-bonus {
-        //padding-left: 6%;
         width: 100%;
         margin-bottom: -10px;
+
+        @include rwd(1440) {
+          padding: 0 165px;
+          //margin-bottom: 355px;
+        }
+
+        @include rwd(1100) {
+          padding: 0 135px;
+          margin-bottom: 355px;
+        }
 
         &__effects.bonus {
           width: 100%;
@@ -945,6 +1002,11 @@ div {
               line-height: 158px;
             }
 
+            @include rwd(1100) {
+              font-size: 126px;
+              line-height: 126px;
+            }
+
             &::before {
               @include glitchCopy;
               left: 2px;
@@ -970,6 +1032,10 @@ div {
 
           @include rwd(1921) {
             padding-left: 11%;
+          }
+
+          @include rwd(1100) {
+            padding-left: 28%;
           }
 
           .strip {
@@ -1128,6 +1194,11 @@ div {
               margin-top: -15px;
             }
 
+            @include rwd(1100) {
+              font-size: 126px;
+              line-height: 126px;
+            }
+
             &::before {
               @include glitchCopy;
               left: 2px;
@@ -1166,6 +1237,11 @@ div {
               //margin-bottom: -20px;
             }
 
+            @include rwd(1100) {
+              font-size: 61px;
+              line-height: 70px;
+            }
+
             &::before {
               @include glitchCopy;
               left: 2px;
@@ -1185,75 +1261,41 @@ div {
       }
 
       .wrap {
-        -moz-transform: skew(-15deg); /* Для Firefox */
-        -ms-transform: skew(-15deg); /* Для IE */
-        -webkit-transform: skew(-15deg); /* Для Safari, Chrome, iOS */
-        -o-transform: skew(-15deg); /* Для Opera */
+        width: 650px;
+        height: 142px;
+        -webkit-transform: skew(-15deg);
         transform: skew(-15deg);
         z-index: 5;
+        position: relative;
 
         @include rwd(1921) {
+          width: 486px;
+          height: 106px;
           margin-left: 20px;
         }
 
+        @include rwd(1100) {
+          width: 407px;
+          height: 89px;
+          margin: 0 auto;
+        }
+
+
         .main-btn__registration {
-          width: 649px;
-          height: 142px;
           background: #110c0a;
           text-align: center;
-          z-index: 1;
 
           @include rwd(1921) {
             width: 486px;
             height: 106px;
           }
 
-          .invisible {
-            position: absolute;
-            width: 670px;
-            height: 163px;
-            bottom: -10px;
-            left: -10px;
-            background: rgba(255, 255, 255, 0);
-            z-index: -1;
-
-            @include rwd(1921) {
-              width: 506px;
-              height: 126px;
-            }
+          @include rwd(1100) {
+            width: 407px;
+            height: 89px;
+            margin: 0 auto;
           }
 
-          .yellow {
-            position: absolute;
-            width: 649px;
-            height: 142px;
-            top: -10px;
-            left: -10px;
-            background-color: #7f8300;
-            z-index: -3;
-            transition: .5s;
-
-            @include rwd(1921) {
-              width: 486px;
-              height: 106px;
-            }
-          }
-
-          .white {
-            position: absolute;
-            width: 649px;
-            height: 142px;
-            top: 10px;
-            left: 10px;
-            background-color: #fff;
-            z-index: -5;
-            transition: all .5s;
-
-            @include rwd(1921) {
-              width: 486px;
-              height: 106px;
-            }
-          }
           .plus {
             position: absolute;
             width: 19px;
@@ -1271,6 +1313,10 @@ div {
               height: 14px;
               top: 15px;
               left: 460px;
+            }
+
+            @include rwd(1100) {
+              left: 380px;
             }
 
             .vertical {
@@ -1319,6 +1365,11 @@ div {
               font-size: 36px;
               line-height: 102px;
             }
+
+            @include rwd(1100) {
+              font-size: 30px;
+              line-height: 89px;
+            }
           }
           a:hover {
             font-size: 50px;
@@ -1326,18 +1377,84 @@ div {
             @include rwd(1921) {
               font-size: 38px;
             }
+
+            @include rwd(1100) {
+              font-size: 32px;
+              line-height: 89px;
+            }
+          }
+        }
+
+        .yellow {
+          position: absolute;
+          width: 100%;
+          height: 100%;
+          top: -10px;
+          left: -10px;
+          background-color: #7f8300;
+          z-index: -3;
+          -webkit-transition: .5s;
+          transition: .5s;
+
+          //@include rwd(1921) {
+          //  width: 486px;
+          //  height: 106px;
+          //}
+
+          @include rwd(1100) {
+            width: 407px;
+            height: 89px;
+            left: 50%;
+            margin-left: -212.5px;
+          }
+        }
+
+        .white {
+          position: absolute;
+          width: 100%;
+          height: 100%;
+          bottom: -10px;
+          right: -10px;
+          background-color: #fff;
+          z-index: -5;
+          -webkit-transition: all .5s;
+          transition: all .5s;
+
+          @include rwd(1921) {
+            width: 486px;
+            height: 106px;
+          }
+
+          @include rwd(1100) {
+            width: 407px;
+            height: 89px;
+            left: 50%;
+            margin-left: -194.5px;
           }
         }
 
         .main-btn__registration:hover {
           background: #141414;
         }
+      &:hover .yellow{
+        top: 0;
+        left: 0;
 
-        .main-btn__registration:hover .yellow,
-        .main-btn__registration:hover .white {
+        @include rwd(1100) {
+          margin-left: -202.5px;
           top: 0;
-          left: 0;
         }
+      }
+
+      &:hover .white{
+        bottom: 0;
+        right: 0;
+
+        @include rwd(1100) {
+          margin-left: -202.5px;
+          top: 0;
+        }
+      }
       }
       .main-steps {
         width: 100%;
@@ -1353,6 +1470,16 @@ div {
           padding-right: 430px;
           margin-top: 130px;
           margin-bottom: 85px;
+        }
+
+        @include rwd(1440) {
+          padding-right: 0  ;
+        }
+
+        @include rwd(1100) {
+          justify-content: space-between;
+          padding-right: 0;
+          margin-bottom: 45px;
         }
 
         .step {
@@ -1381,6 +1508,12 @@ div {
                 height: 55px;
               }
 
+              @include rwd(1100) {
+                width: 59px;
+                height: 47px;
+                margin-right: 10px;
+              }
+
               &-square {
                 position: absolute;
                 z-index: -1;
@@ -1395,6 +1528,11 @@ div {
                 @include rwd(1921) {
                   width: 52px;
                   height: 41px;
+                }
+
+                @include rwd(1100) {
+                  width: 44px;
+                  height: 35px;
                 }
               }
               .square-block1__second {
@@ -1411,6 +1549,13 @@ div {
                   bottom: -5px;
                   left: 40px;
                 }
+
+                @include rwd(1100) {
+                  width: 14px;
+                  height: 11px;
+                  bottom: -5px;
+                  left: 40px;
+                }
               }
               .square-block2__first {
                 width: 37px;
@@ -1422,6 +1567,11 @@ div {
                 @include rwd(1921) {
                   width: 28px;
                   height: 23px;
+                }
+
+                @include rwd(1100) {
+                  width: 24px;
+                  height: 19px;
                 }
               }
               .square-block2__second {
@@ -1438,6 +1588,13 @@ div {
                   bottom: 10px;
                   left: -10px;
                 }
+
+                @include rwd(1100) {
+                  width: 15px;
+                  height: 12px;
+                  bottom: 10px;
+                  left: -10px;
+                }
               }
               .square-block3__first {
                 width: 68px;
@@ -1449,6 +1606,11 @@ div {
                 @include rwd(1921) {
                   width: 51px;
                   height: 39px;
+                }
+
+                @include rwd(1100) {
+                  width: 43px;
+                  height: 33px;
                 }
               }
               .square-block3__second {
@@ -1462,6 +1624,12 @@ div {
                 @include rwd(1921) {
                   width: 16px;
                   height: 13px;
+                  left: -1px;
+                }
+
+                @include rwd(1100) {
+                  width: 14px;
+                  height: 11px;
                   left: -1px;
                 }
               }
@@ -1479,10 +1647,13 @@ div {
                 transform: skew(15deg);
 
                 @include rwd(1921) {
-                  width: 70px;
-                  height: 55px;
                   font-size: 32px;
                   line-height: 55px;
+                }
+
+                @include rwd(1100) {
+                  font-size: 27px;
+                  line-height: 47px;
                 }
               }
             }
@@ -1527,16 +1698,139 @@ div {
               font-size: 29px;
               line-height: 55px;
             }
+
+            @include rwd(1100) {
+              font-size: 24px;
+              line-height: 55px;
+            }
+          }
+        }
+      }
+      .trophey-wrapper {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        box-sizing: border-box;
+
+        @include rwd2(1100) {
+          display: none;
+        }
+
+        @include rwd(1100) {
+          justify-content: center;
+          padding-right: 100px;
+        }
+
+        .trophey-left__title {
+          width: 185px;
+          text-align: right;
+          text-transform: uppercase;
+
+          @include rwd(1100) {
+            font-size: 170px;
+          }
+
+          h1 {
+            font-size: 27px;
+            letter-spacing: 1px;
+            color: #110c0a;
+            font-weight: bold;
+            margin: 0;
+
+            @include rwd(1921) {
+              font-size: 23px;
+            }
+
+            @include rwd(1100) {
+              font-size: 21px;
+            }
+          }
+          p {
+            font-size: 23px;
+            letter-spacing: 1px;
+            color: #110c0a;
+            font-weight: bold;
+            margin: 0;
+
+            @include rwd(1921) {
+              font-size: 19px;
+            }
+
+            @include rwd(1100) {
+              font-size: 17px;
+            }
+          }
+        }
+
+        .trophey-img {
+          margin: 0 20px;
+          overflow: hidden;
+
+          img {
+            width: 100%;
+            max-width: 100%;
+            height: 110px;
+
+            @include rwd(1100) {
+              height: 85px;
+            }
+          }
+        }
+
+        .trophey-right__title {
+          width: 95px;
+          text-align: left;
+          text-transform: uppercase;
+
+          @include rwd(1100) {
+            width: 90px;
+          }
+
+          h1 {
+            font-size: 27px;
+            letter-spacing: 1px;
+            color: #110c0a;
+            font-weight: bold;
+            margin: 0;
+
+            @include rwd(1921) {
+              font-size: 23px;
+            }
+
+            @include rwd(1100) {
+              font-size: 21px;
+            }
+          }
+          p {
+            font-size: 23px;
+            letter-spacing: 1px;
+            color: #110c0a;
+            font-weight: bold;
+            margin: 0;
+
+            @include rwd(1921) {
+              font-size: 19px;
+            }
+
+            @include rwd(1100) {
+              font-size: 17px;
+            }
           }
         }
       }
     }
     .attention {
+      width: 100%;
       position: absolute;
       bottom: 0;
       right: 155px;
       @include rwd(1921) {
         right: 65px;
+      }
+
+      @include rwd(1100) {
+        right: 0;
+        bottom: -10px;
       }
 
       p {
@@ -1546,6 +1840,10 @@ div {
         font-weight: 300;
         text-align: right;
         text-transform: uppercase;
+
+        @include rwd(1100) {
+          text-align: center;
+        }
       }
     }
   }
@@ -1626,6 +1924,9 @@ div {
       box-sizing: border-box;
       @include rwd(1921) {
         margin-right: -15%;
+      }
+      @include rwd(1440) {
+        margin-right: 0;
       }
 
       img {
