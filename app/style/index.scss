@@ -142,73 +142,6 @@ div {
   box-sizing: border-box;
   z-index: 0;
 
-  .square {
-    position: absolute;
-    //background: rgba(17, 12, 10, .8);
-    -moz-transform: skew(-15deg); /* Для Firefox */
-    -ms-transform: skew(-15deg); /* Для IE */
-    -webkit-transform: skew(-15deg); /* Для Safari, Chrome, iOS */
-    -o-transform: skew(-15deg); /* Для Opera */
-    transform: skew(-15deg);
-
-    &__first {
-      width: 44px;
-      height: 19px;
-      background: #ffffff;
-      bottom: 666px;
-      left: 95px;
-
-      @include rwd(1921) {
-        width: 33px;
-        height: 14px;
-        bottom: 540px;
-        left: 60px;
-      }
-    }
-    &__second {
-      width: 64px;
-      height: 52px;
-      background: rgba(126, 130, 0, .8);
-      top: 110px;
-      right: 930px;
-
-      @include rwd(1921) {
-        width: 48px;
-        height: 39px;
-        top: 80px;
-        right: 725px;
-      }
-    }
-    &__third {
-      width: 44px;
-      height: 7px;
-      background: #ffffff;
-      bottom: 585px;
-      right: 500px;
-
-      @include rwd(1921) {
-        width: 33px;
-        height: 5px;
-        bottom: 545px;
-        right: 425px;
-      }
-    }
-    &__fourth {
-      width: 100px;
-      height: 1px;
-      background: #ffffff;
-      bottom: 400px;
-      right: 980px;
-
-      @include rwd(1921) {
-        width: 75px;
-        height: 1px;
-        bottom: 325px;
-        right: 800px;
-      }
-    }
-  }
-
     .bullet-bg_1 {
       position: absolute;
       width: 4%;
@@ -319,6 +252,13 @@ div {
         bottom: -25px;
       }
 
+      @include rwd(1100) {
+        min-width: 520px;
+        bottom: 289px;
+        left: 53%;
+        z-index: -15;
+      }
+
       .plus {
         position: absolute;
         width: 19px;
@@ -331,6 +271,10 @@ div {
           height: 14px;
           bottom: 375px;
           left: 20.5%;
+        }
+
+        @include rwd(1100) {
+          bottom: 230px;
         }
 
         .vertical {
@@ -359,6 +303,35 @@ div {
         }
       }
 
+      .square__first {
+        width: 44px;
+        height: 19px;
+        background: #ffffff;
+        bottom: 666px;
+        left: 95px;
+        position: absolute;
+        //background: rgba(17, 12, 10, .8);
+        -moz-transform: skew(-15deg); /* Для Firefox */
+        -ms-transform: skew(-15deg); /* Для IE */
+        -webkit-transform: skew(-15deg); /* Для Safari, Chrome, iOS */
+        -o-transform: skew(-15deg); /* Для Opera */
+        transform: skew(-15deg);
+
+        @include rwd(1921) {
+          width: 33px;
+          height: 14px;
+          bottom: 540px;
+          left: 60px;
+        }
+
+        @include rwd(1100) {
+          width: 19px;
+          height: 8px;
+          bottom: 340px;
+          left: 70px;
+        }
+      }
+
       img {
         width: 100%;
       }
@@ -378,15 +351,75 @@ div {
         bottom: 100px;
       }
 
+      @include rwd(1100) {
+        min-width: 365px;
+        right: 38%;
+        bottom: 138px;
+      }
+
       img {
         width: 100%;
+      }
+
+      .square__second {
+        width: 64px;
+        height: 52px;
+        background: rgba(126, 130, 0, .8);
+        top: 110px;
+        right: 930px;
+        position: absolute;
+        //background: rgba(17, 12, 10, .8);
+        -moz-transform: skew(-15deg); /* Для Firefox */
+        -ms-transform: skew(-15deg); /* Для IE */
+        -webkit-transform: skew(-15deg); /* Для Safari, Chrome, iOS */
+        -o-transform: skew(-15deg); /* Для Opera */
+        transform: skew(-15deg);
+
+        @include rwd(1921) {
+          width: 48px;
+          height: 39px;
+          top: 80px;
+          right: 725px;
+        }
+        @include rwd(1100) {
+          width: 30px;
+          height: 24px;
+          top: 40px;
+          right: 43%;
+        }
+      }
+
+      .square__fourth {
+        width: 100px;
+        height: 1px;
+        background: #ffffff;
+        bottom: 400px;
+        right: 980px;
+        position: absolute;
+        //background: rgba(17, 12, 10, .8);
+        -moz-transform: skew(-15deg); /* Для Firefox */
+        -ms-transform: skew(-15deg); /* Для IE */
+        -webkit-transform: skew(-15deg); /* Для Safari, Chrome, iOS */
+        -o-transform: skew(-15deg); /* Для Opera */
+        transform: skew(-15deg);
+
+        @include rwd(1921) {
+          width: 75px;
+          height: 1px;
+          bottom: 325px;
+          right: 800px;
+        }
+
+        @include rwd(1100) {
+          display: none;
+        }
       }
     }
     .tracer-bg {
       position: absolute;
       width: 32%;
       min-width: 630px;
-      z-index: -10;
+      z-index: -15;
       bottom: 140px;
       right: -185px;
       overflow: hidden;
@@ -397,8 +430,42 @@ div {
         right: -175px;
       }
 
+      @include rwd(1100) {
+        min-width: 420px;
+        bottom: 260px;
+        right: 46%;
+      }
+
       img {
         width: 100%;
+      }
+
+      .square__third {
+        width: 44px;
+        height: 7px;
+        background: #ffffff;
+        bottom: 585px;
+        right: 500px;
+        position: absolute;
+        //background: rgba(17, 12, 10, .8);
+        -moz-transform: skew(-15deg); /* Для Firefox */
+        -ms-transform: skew(-15deg); /* Для IE */
+        -webkit-transform: skew(-15deg); /* Для Safari, Chrome, iOS */
+        -o-transform: skew(-15deg); /* Для Opera */
+        transform: skew(-15deg);
+
+        @include rwd(1921) {
+          width: 33px;
+          height: 5px;
+          bottom: 545px;
+          right: 425px;
+        }
+        @include rwd(1100) {
+          width: 23px;
+          height: 3px;
+          bottom: 300px;
+          right: 93%;
+        }
       }
     }
 
@@ -465,7 +532,7 @@ div {
       height: 50%;
       top: 0;
       right: 0;
-      z-index: -15;
+      z-index: -20;
 
       @include rwd(1100) {
         display: none;
@@ -834,6 +901,11 @@ div {
           top: 85%;
           left: -9%;
           background: #ffffff;
+
+          @include rwd(1100) {
+            width: 48px;
+            left: -6%;
+          }
         }
         .square {
           position: absolute;
@@ -847,6 +919,13 @@ div {
           -webkit-transform: skew(-15deg); /* Для Safari, Chrome, iOS */
           -o-transform: skew(-15deg); /* Для Opera */
           transform: skew(-15deg);
+
+          @include rwd(1100) {
+            width: 10px;
+            height: 8px;
+            top: -10%;
+            right: 2%;
+          }
         }
         p {
           margin: 0;
@@ -896,6 +975,11 @@ div {
                 width: 200px;
                 left: 0.5%;
               }
+
+              @include rwd(1100) {
+                width: 160px;
+                left: 2.5%;
+              }
             }
             &__second {
               width: 106px;
@@ -907,6 +991,11 @@ div {
               @include rwd(1921) {
                 width: 80px;
                 left: 21.5%;
+              }
+
+              @include rwd(1100) {
+                width: 63px;
+                left: 55.5%;
               }
             }
           }
@@ -932,6 +1021,12 @@ div {
                 height: 13px;
                 left: -4.5%;
               }
+
+              @include rwd(1100) {
+                width: 66px;
+                height: 10px;
+                left: -11.5%;
+              }
             }
             &__second2 {
               width: 44px;
@@ -945,6 +1040,12 @@ div {
                 height: 5px;
                 left: 11.5%;
               }
+
+              @include rwd(1100) {
+                width: 26px;
+                height: 4px;
+                left: 30.5%;
+              }
             }
             &__third {
               width: 17px;
@@ -957,6 +1058,12 @@ div {
                 width: 13px;
                 height: 10px;
                 left: 16.2%;
+              }
+
+              @include rwd(1100) {
+                width: 10px;
+                height: 8px;
+                left: 44.2%;
               }
             }
           }
@@ -973,17 +1080,33 @@ div {
               left: 5.5%;
             }
 
+            @include rwd(1100) {
+              width: 11px;
+              height: 11px;
+              left: 16.5%;
+            }
+
             .vertical {
               width: 2px;
               height: 19px;
               background: #fff;
               margin-left: 8.5px;
+
+              @include rwd(1100) {
+                height: 11px;
+                margin-left: 5.5px;
+              }
             }
             .horizontal {
               width: 19px;
               height: 2px;
               background: #fff;
               margin-top: -9.5px;
+
+              @include rwd(1100) {
+                width: 11px;
+                margin-top: -7.5px;
+              }
             }
           }
           p {
@@ -1053,6 +1176,12 @@ div {
                 bottom: 10px;
                 left: 10.5%;
               }
+
+              @include rwd(1100) {
+                width: 125px;
+                bottom: 22px;
+                left: 25.5%;
+              }
             }
             &__second {
               width: 44px;
@@ -1064,6 +1193,12 @@ div {
               @include rwd(1921) {
                 width: 33px;
                 left: 31.5%;
+              }
+
+              @include rwd(1100) {
+                width: 25px;
+                left: 84.5%;
+                bottom: 47%;
               }
             }
           }
@@ -1090,6 +1225,13 @@ div {
                 top: 10px;
                 left: 22%;
               }
+
+              @include rwd(1100) {
+                width: 26px;
+                height: 11px;
+                top: 15px;
+                left: 60%;
+              }
             }
             &__second3 {
               width: 35px;
@@ -1103,6 +1245,13 @@ div {
                 height: 21px;
                 bottom: 32%;
                 left: 26.5%;
+              }
+
+              @include rwd(1100) {
+                width: 21px;
+                height: 17px;
+                bottom: 32%;
+                left: 56.5%;
               }
             }
             &__third {
@@ -1119,6 +1268,13 @@ div {
                 top: 7px;
                 left: 35.8%;
               }
+
+              @include rwd(1100) {
+                width: 66px;
+                height: 10px;
+                top: 15px;
+                left: 94.8%;
+              }
             }
             &__fourth {
               width: 11px;
@@ -1133,6 +1289,13 @@ div {
                 height: 6px;
                 top: 17px;
                 left: 37%;
+              }
+
+              @include rwd(1100) {
+                width: 6px;
+                height: 5px;
+                top: 22px;
+                left: 97%;
               }
             }
           }
@@ -1151,6 +1314,13 @@ div {
               left: 28.5%;
             }
 
+            @include rwd(1100) {
+              width: 11px;
+              height: 11px;
+              left: 61.5%;
+              bottom: 23px;
+            }
+
             .vertical {
               width: 2px;
               height: 19px;
@@ -1160,7 +1330,12 @@ div {
               @include rwd(1921) {
                 width: 2px;
                 height: 14px;
-                margin-left: 6px;
+                margin-left: 7px;
+              }
+
+              @include rwd(1100) {
+                height: 11px;
+                margin-left: 5.5px;
               }
             }
             .horizontal {
@@ -1173,6 +1348,11 @@ div {
                 width: 14px;
                 height: 2px;
                 margin-top: -8px;
+              }
+
+              @include rwd(1100) {
+                width: 11px;
+                margin-top: -7.5px;
               }
             }
           }
@@ -1473,13 +1653,14 @@ div {
         }
 
         @include rwd(1440) {
-          padding-right: 0  ;
+          padding-right: 0 ;
         }
 
         @include rwd(1100) {
           justify-content: space-between;
           padding-right: 0;
           margin-bottom: 45px;
+          margin-top: 60px;
         }
 
         .step {
@@ -1852,6 +2033,7 @@ div {
     width: 100%;
     background: #000;
     display: flex;
+    flex-flow: wrap;
     justify-content: space-between;
     align-items: center;
     padding: 21px 90px;
@@ -1860,14 +2042,22 @@ div {
       padding: 21px 65px;
     }
 
+    @include rwd(1100) {
+      padding: 21px 200px;
+    }
+
     &-pay {
       display: flex;
       justify-content: space-between;
       align-items: center;
       box-sizing: border-box;
       padding: 0;
-      @include rwd(1921) {
-        //margin-right: 16%;
+
+      @include rwd(1100) {
+        order: 3;
+        width: 100%;
+        justify-content: center;
+        margin-top: 25px;
       }
 
       &__visa {
@@ -1902,19 +2092,30 @@ div {
       display: flex;
       align-items: center;
       box-sizing: border-box;
-      @include rwd(1921) {
-        //margin-right: 465px;
+
+      @include rwd(1100) {
+        order: 1;
+        //justify-content: space-between;
       }
 
       & > div {
         margin-right: 20px;
         min-width: 179px;
+
         @include rwd(1921) {
           margin-right: 12px;
+          min-width: 110px;
+        }
+        @include rwd(1100) {
+          min-width: 110px;
         }
 
         img {
           width: 100%;
+
+          @include rwd(1100) {
+            width: 62%;
+          }
         }
       }
     }
@@ -1929,9 +2130,18 @@ div {
         margin-right: 0;
       }
 
+      @include rwd(1100) {
+        order: 0;
+      }
+
       img {
         width: 100%;
         min-width: 41px;
+
+        @include rwd(1100) {
+          width: 80%;
+          min-width: 31px;
+        }
       }
     }
     &-social {
@@ -1939,6 +2149,10 @@ div {
       align-items: center;
       box-sizing: border-box;
       //width: 6%;
+
+      @include rwd(1100) {
+        order: 2;
+      }
 
       & > div {
         min-width: 39px;
@@ -1950,6 +2164,10 @@ div {
 
           img {
             width: 100%;
+
+            @include rwd(1100) {
+              width: 82%;
+            }
           }
         }
       }
