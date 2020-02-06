@@ -884,6 +884,11 @@ div {
         padding-right: 200px;
       }
 
+      @include rwd(768) {
+        padding-right: 145px;
+        padding-left: 145px;
+      }
+
       .main-title {
         width: 100%;
         max-width: 353px;
@@ -896,6 +901,11 @@ div {
           margin: 0 auto;
           max-width: 282px;
           height: 38px;
+        }
+
+        @include rwd(768) {
+          max-width: 244px;
+          height: 33px;
         }
         &::before {
           content: '';
@@ -924,6 +934,11 @@ div {
             width: 48px;
             left: -6%;
           }
+
+          @include rwd(768) {
+            width: 40px;
+            left: -6%;
+          }
         }
         .square {
           position: absolute;
@@ -944,6 +959,11 @@ div {
             top: -10%;
             right: 2%;
           }
+
+          @include rwd(768) {
+            width: 9px;
+            height: 7px;
+          }
         }
         p {
           margin: 0;
@@ -957,6 +977,11 @@ div {
           @include rwd(1100) {
             font-size: 25px;
             line-height: 38px;
+          }
+
+          @include rwd(768) {
+            font-size: 22px;
+            line-height: 33px;
           }
         }
       }
@@ -975,9 +1000,19 @@ div {
           margin-bottom: 355px;
         }
 
+        @include rwd(768) {
+          //padding: 0 60px;
+          padding: 0 12.6%;
+          margin-bottom: 315px;
+        }
+
         &__effects.bonus {
           width: 100%;
           position: relative;
+
+          @include rwd(768) {
+            text-align: left;
+          }
 
           .strip {
             position: absolute;
@@ -998,6 +1033,12 @@ div {
                 width: 160px;
                 left: 2.5%;
               }
+
+              @include rwd(768) {
+                width: 138px;
+                left: 1.5%;
+              }
+
             }
             &__second {
               width: 106px;
@@ -1045,6 +1086,11 @@ div {
                 height: 10px;
                 left: -11.5%;
               }
+
+              @include rwd(768) {
+                width: 57px;
+                height: 9px;
+              }
             }
             &__second2 {
               width: 44px;
@@ -1063,6 +1109,11 @@ div {
                 width: 26px;
                 height: 4px;
                 left: 30.5%;
+              }
+
+              @include rwd(768) {
+                width: 23px;
+                height: 3px;
               }
             }
             &__third {
@@ -1083,6 +1134,12 @@ div {
                 height: 8px;
                 left: 44.2%;
               }
+
+              @include rwd(768) {
+                width: 9px;
+                height: 7px;
+                left: 43.2%;
+              }
             }
           }
 
@@ -1102,6 +1159,10 @@ div {
               width: 11px;
               height: 11px;
               left: 16.5%;
+            }
+
+            @include rwd(768) {
+              left: 13.5%;
             }
 
             .vertical {
@@ -1148,6 +1209,11 @@ div {
               line-height: 126px;
             }
 
+            @include rwd(768) {
+              font-size: 106px;
+              line-height: 106px;
+            }
+
             &::before {
               @include glitchCopy;
               left: 2px;
@@ -1179,6 +1245,11 @@ div {
             padding-left: 28%;
           }
 
+          @include rwd(768) {
+            padding-left: 0;
+            text-align: right;
+          }
+
           .strip {
             position: absolute;
 
@@ -1200,6 +1271,11 @@ div {
                 bottom: 22px;
                 left: 25.5%;
               }
+
+              @include rwd(768) {
+                width: 100px;
+                bottom: 10px;
+              }
             }
             &__second {
               width: 44px;
@@ -1217,6 +1293,11 @@ div {
                 width: 25px;
                 left: 84.5%;
                 bottom: 47%;
+              }
+
+              @include rwd(768) {
+                left: 83.5%;
+                bottom: 44%;
               }
             }
           }
@@ -1250,6 +1331,13 @@ div {
                 top: 15px;
                 left: 60%;
               }
+
+              @include rwd(768) {
+                width: 23px;
+                height: 10px;
+                top: 5px;
+                left: 58%;
+              }
             }
             &__second3 {
               width: 35px;
@@ -1271,6 +1359,11 @@ div {
                 bottom: 32%;
                 left: 56.5%;
               }
+
+              @include rwd(768) {
+                width: 18px;
+                height: 14px;
+              }
             }
             &__third {
               width: 110px;
@@ -1291,6 +1384,13 @@ div {
                 width: 66px;
                 height: 10px;
                 top: 15px;
+                left: 94.8%;
+              }
+
+              @include rwd(768) {
+                width: 57px;
+                height: 9px;
+                top: 7px;
                 left: 94.8%;
               }
             }
@@ -1315,6 +1415,11 @@ div {
                 top: 22px;
                 left: 97%;
               }
+
+              @include rwd(768) {
+                height: 4px;
+                top: 14px;
+              }
             }
           }
 
@@ -1337,6 +1442,10 @@ div {
               height: 11px;
               left: 61.5%;
               bottom: 23px;
+            }
+
+            @include rwd(768) {
+              bottom: 12px;
             }
 
             .vertical {
@@ -1397,6 +1506,11 @@ div {
               line-height: 126px;
             }
 
+            @include rwd(768) {
+              font-size: 106px;
+              line-height: 91px;
+            }
+
             &::before {
               @include glitchCopy;
               left: 2px;
@@ -1440,6 +1554,12 @@ div {
               line-height: 70px;
             }
 
+            @include rwd(768) {
+              font-size: 48px;
+              line-height: 54px;
+              margin-top: 0;
+            }
+
             &::before {
               @include glitchCopy;
               left: 2px;
@@ -1478,6 +1598,11 @@ div {
           margin: 0 auto;
         }
 
+        @include rwd(768) {
+          width: 336px;
+          height: 73px;
+        }
+
 
         .main-btn__registration {
           background: #110c0a;
@@ -1492,6 +1617,11 @@ div {
             width: 407px;
             height: 89px;
             margin: 0 auto;
+          }
+
+          @include rwd(768) {
+            width: 336px;
+            height: 73px;
           }
 
           .plus {
@@ -1515,6 +1645,10 @@ div {
 
             @include rwd(1100) {
               left: 380px;
+            }
+
+            @include rwd(768) {
+              left: 310px;
             }
 
             .vertical {
@@ -1568,6 +1702,11 @@ div {
               font-size: 30px;
               line-height: 89px;
             }
+
+            @include rwd(768) {
+              font-size: 25px;
+              line-height: 73px;
+            }
           }
           a:hover {
             font-size: 50px;
@@ -1578,6 +1717,11 @@ div {
 
             @include rwd(1100) {
               font-size: 32px;
+              line-height: 89px;
+            }
+
+            @include rwd(768) {
+              font-size: 27px;
               line-height: 89px;
             }
           }
@@ -1605,6 +1749,12 @@ div {
             left: 50%;
             margin-left: -212.5px;
           }
+
+          @include rwd(768) {
+            width: 336px;
+            height: 73px;
+            margin-left: -180px;
+          }
         }
 
         .white {
@@ -1629,30 +1779,50 @@ div {
             left: 50%;
             margin-left: -194.5px;
           }
+
+          @include rwd(768) {
+            width: 336px;
+            height: 73px;
+            margin-left: -156px;
+          }
         }
 
         .main-btn__registration:hover {
           background: #141414;
         }
-      &:hover .yellow{
-        top: 0;
-        left: 0;
-
-        @include rwd(1100) {
-          margin-left: -202.5px;
+        &:hover .yellow{
           top: 0;
-        }
-      }
+          left: 0;
 
-      &:hover .white{
-        bottom: 0;
-        right: 0;
+          @include rwd(1100) {
+            left: 50%;
+            margin-left: -202.5px;
+            top: 0;
+          }
 
-        @include rwd(1100) {
-          margin-left: -202.5px;
-          top: 0;
+          @include rwd(768) {
+            left: 50%;
+            margin-left: -168px;
+            top: 0;
+          }
         }
-      }
+
+        &:hover .white{
+          bottom: 0;
+          right: 0;
+
+          @include rwd(1100) {
+            left: 50%;
+            margin-left: -202.5px;
+            top: 0;
+          }
+
+          @include rwd(768) {
+            left: 50%;
+            margin-left: -168px;
+            top: 0;
+          }
+        }
       }
       .main-steps {
         width: 100%;
@@ -1681,12 +1851,30 @@ div {
           margin-top: 60px;
         }
 
+        @include rwd(768) {
+          flex-direction: column;
+          align-items: flex-start;
+          margin-bottom: 40px;
+          margin-top: 50px;
+        }
+
         .step {
           width: 30%;
           display: flex;
           justify-content: center;
           align-items: center;
           text-transform: uppercase;
+
+          @include rwd(768) {
+            width: 100%;
+            justify-content: start;
+            //padding: 0 105px;
+            padding-top: 0;
+            padding-bottom: 0;
+            //padding-left: 105px;
+            padding-left: 22%;
+            margin-bottom: 30px;
+          }
 
           .block-wrap {
             -moz-transform: skew(-15deg); /* Для Firefox */
@@ -1708,9 +1896,14 @@ div {
               }
 
               @include rwd(1100) {
-                width: 59px;
-                height: 47px;
-                margin-right: 10px;
+                 width: 59px;
+                 height: 47px;
+                 margin-right: 10px;
+               }
+
+              @include rwd(768) {
+                width: 70px;
+                height: 55px;
               }
 
               &-square {
@@ -1733,6 +1926,11 @@ div {
                   width: 44px;
                   height: 35px;
                 }
+
+                @include rwd(768) {
+                  width: 52px;
+                  height: 41px;
+                }
               }
               .square-block1__second {
                 width: 21px;
@@ -1752,8 +1950,12 @@ div {
                 @include rwd(1100) {
                   width: 14px;
                   height: 11px;
-                  bottom: -5px;
-                  left: 40px;
+                }
+
+                @include rwd(768) {
+                  width: 16px;
+                  height: 13px;
+
                 }
               }
               .square-block2__first {
@@ -1771,6 +1973,11 @@ div {
                 @include rwd(1100) {
                   width: 24px;
                   height: 19px;
+                }
+
+                @include rwd(768) {
+                  width: 28px;
+                  height: 23px;
                 }
               }
               .square-block2__second {
@@ -1791,8 +1998,11 @@ div {
                 @include rwd(1100) {
                   width: 15px;
                   height: 12px;
-                  bottom: 10px;
-                  left: -10px;
+                }
+
+                @include rwd(768) {
+                  width: 18px;
+                  height: 14px;
                 }
               }
               .square-block3__first {
@@ -1810,6 +2020,11 @@ div {
                 @include rwd(1100) {
                   width: 43px;
                   height: 33px;
+                }
+
+                @include rwd(768) {
+                  width: 51px;
+                  height: 39px;
                 }
               }
               .square-block3__second {
@@ -1829,7 +2044,11 @@ div {
                 @include rwd(1100) {
                   width: 14px;
                   height: 11px;
-                  left: -1px;
+                }
+
+                @include rwd(768) {
+                  width: 16px;
+                  height: 13px;
                 }
               }
 
@@ -1854,6 +2073,11 @@ div {
                   font-size: 27px;
                   line-height: 47px;
                 }
+
+                @include rwd(768) {
+                  font-size: 32px;
+                  line-height: 55px;
+                }
               }
             }
             .block2 {
@@ -1870,17 +2094,34 @@ div {
                 transform: skew(15deg);
                 z-index: 1;
 
+                @include rwd(768) {
+                  width: 14px;
+                  height: 14px;
+                }
+
                 .vertical {
                   width: 2px;
                   height: 19px;
                   background: #000;
                   margin-left: 8.5px;
+
+                  @include rwd(768) {
+                    width: 1px;
+                    height: 14px;
+                    margin-left: 6.5px;
+                  }
                 }
                 .horizontal {
                   width: 19px;
                   height: 2px;
                   background: #000;
                   margin-top: -9.5px;
+
+                  @include rwd(768) {
+                    width: 14px;
+                    height: 1px;
+                    margin-top: -7.5px;
+                  }
                 }
               }
             }
@@ -1902,6 +2143,12 @@ div {
               font-size: 24px;
               line-height: 55px;
             }
+
+            @include rwd(768) {
+              font-size: 29px;
+              line-height: 55px;
+              font-weight: 300;
+            }
           }
         }
       }
@@ -1918,6 +2165,10 @@ div {
         @include rwd(1100) {
           justify-content: center;
           padding-right: 100px;
+        }
+
+        @include rwd(768) {
+          margin-bottom: 10px;
         }
 
         .trophey-left__title {
@@ -1943,6 +2194,10 @@ div {
             @include rwd(1100) {
               font-size: 21px;
             }
+
+            @include rwd(768) {
+              font-size: 2.3vw;
+            }
           }
           p {
             font-size: 23px;
@@ -1958,12 +2213,22 @@ div {
             @include rwd(1100) {
               font-size: 17px;
             }
+
+            @include rwd(768) {
+              font-size: 2vw;
+            }
           }
         }
 
         .trophey-img {
           margin: 0 20px;
           overflow: hidden;
+
+          @include rwd(768) {
+            min-width: 60px;
+            //width: 16vw;
+            margin: 0 10px;
+          }
 
           img {
             width: 100%;
@@ -1972,6 +2237,10 @@ div {
 
             @include rwd(1100) {
               height: 85px;
+            }
+
+            @include rwd(768) {
+              height: 100%;
             }
           }
         }
@@ -1999,6 +2268,10 @@ div {
             @include rwd(1100) {
               font-size: 21px;
             }
+
+            @include rwd(768) {
+              font-size: 2.3vw;
+            }
           }
           p {
             font-size: 23px;
@@ -2013,6 +2286,10 @@ div {
 
             @include rwd(1100) {
               font-size: 17px;
+            }
+
+            @include rwd(768) {
+              font-size: 2vw;
             }
           }
         }
@@ -2032,6 +2309,11 @@ div {
         bottom: -10px;
       }
 
+      @include rwd(768) {
+        right: 0;
+        bottom: 0;
+      }
+
       p {
         font-size: 18px;
         letter-spacing: 0;
@@ -2042,6 +2324,10 @@ div {
 
         @include rwd(1100) {
           text-align: center;
+        }
+
+        @include rwd(768) {
+          font-size: 1.6vw;
         }
       }
     }
@@ -2078,25 +2364,48 @@ div {
         margin-top: 25px;
       }
 
+      @include rwd(768) {
+        width: 57%;
+        justify-content: center;
+        margin-top: 30px;
+      }
+
       &__visa {
         min-width: 46px;
       }
 
       &__mastercard {
         min-width: 40px;
+
+        @include rwd(768) {
+          min-width: 36px;
+        }
       }
 
       &__qiwi {
         min-width: 66px;
+
+        @include rwd(768) {
+          min-width: 60px;
+        }
       }
 
       &__ymoney {
         min-width: 95px;
+
+        @include rwd(768) {
+          min-width: 85px;
+        }
       }
 
       & > div {
         margin-right: 40px;
         @include rwd(1921) {
+          margin-right: 30px;
+        }
+
+        @include rwd(768) {
+          //min-width: 25%;
           margin-right: 30px;
         }
 
@@ -2115,6 +2424,11 @@ div {
         order: 1;
         justify-content: center;
         margin-right: -15%;
+      }
+
+      @include rwd(768) {
+        order: 0;
+        width: 100%;
       }
 
       &__app {
@@ -2167,6 +2481,13 @@ div {
         order: 0;
       }
 
+      @include rwd(768) {
+        order: 2;
+        width: 10%;
+        margin-top: 30px;
+        margin-right: 25px;
+      }
+
       img {
         width: 100%;
         min-width: 41px;
@@ -2184,6 +2505,13 @@ div {
 
       @include rwd(1100) {
         order: 2;
+      }
+
+      @include rwd(768) {
+        order: 1;
+        width: 100%;
+        justify-content: center;
+        margin-top: 30px;
       }
 
       & > div {
