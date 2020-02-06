@@ -157,6 +157,12 @@ div {
         left: 395px;
       }
 
+      @include rwd(1100) {
+        min-width: 70px;
+        top: 200px;
+        left: 70%;
+      }
+
       img {
         width: 100%;
       }
@@ -176,6 +182,13 @@ div {
         left: 440px;
       }
 
+      @include rwd(1100) {
+        min-width: 35px;
+        bottom: 20px;
+        left: 290px;
+        top: 15px;
+      }
+
       img {
         width: 100%;
       }
@@ -191,6 +204,11 @@ div {
 
       @include rwd(1921) {
         top: 300px;
+      }
+
+      @include rwd(1100) {
+        top: 78%;
+        left: 70%;
       }
 
       img {
@@ -2095,16 +2113,17 @@ div {
 
       @include rwd(1100) {
         order: 1;
-        //justify-content: space-between;
+        justify-content: center;
+        margin-right: -15%;
       }
 
-      & > div {
+      &__app {
         margin-right: 20px;
         min-width: 179px;
 
         @include rwd(1921) {
           margin-right: 12px;
-          min-width: 110px;
+          max-width: 110px;
         }
         @include rwd(1100) {
           min-width: 110px;
@@ -2112,10 +2131,24 @@ div {
 
         img {
           width: 100%;
+        }
+      }
 
-          @include rwd(1100) {
-            width: 62%;
-          }
+      &__googlep {
+        margin-right: 20px;
+        min-width: 179px;
+
+        @include rwd(1921) {
+          margin-right: 12px;
+          max-width: 110px;
+        }
+        @include rwd(1100) {
+          margin-right: 0;
+          min-width: 110px;
+        }
+
+        img {
+          width: 100%;
         }
       }
     }
@@ -2148,14 +2181,17 @@ div {
       display: flex;
       align-items: center;
       box-sizing: border-box;
-      //width: 6%;
 
       @include rwd(1100) {
         order: 2;
       }
 
       & > div {
-        min-width: 39px;
+        max-width: 39px;
+
+        @include rwd(1100) {
+          min-width: 32px;
+        }
 
         a {
           display: block;
@@ -2174,9 +2210,17 @@ div {
 
       &__vk {
         margin-right: 25px;
+
+        @include rwd(1100) {
+          margin-right: 20px;
+        }
       }
       &__twitter {
         margin-right: 25px;
+
+        @include rwd(1100) {
+          margin-right: 20px;
+        }
       }
     }
   }
