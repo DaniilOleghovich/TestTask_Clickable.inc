@@ -860,6 +860,14 @@ div {
 
       .logo {
         overflow: hidden;
+
+        @include rwd(768) {
+          max-width: 200px;
+        }
+
+        @include rwd(500) {
+          max-width: 105px;
+        }
         img {
           width: 100%;
         }
@@ -971,6 +979,11 @@ div {
         margin: 35px auto;
       }
 
+      @include rwd(500) {
+        padding-right: 18%;
+        padding-left: 18%;
+      }
+
       .main-title {
         width: 100%;
         max-width: 353px;
@@ -989,6 +1002,12 @@ div {
           max-width: 244px;
           height: 33px;
         }
+
+        @include rwd(500) {
+          width: 147px;
+          height: 20px;
+        }
+
         &::before {
           content: '';
           top: 0;
@@ -1021,6 +1040,11 @@ div {
             width: 40px;
             left: -6%;
           }
+
+          @include rwd(500) {
+            width: 20px;
+            left: -6%;
+          }
         }
         .square {
           position: absolute;
@@ -1046,6 +1070,11 @@ div {
             width: 9px;
             height: 7px;
           }
+
+          @include rwd(768) {
+            width: 5px;
+            height: 4px;
+          }
         }
         p {
           margin: 0;
@@ -1062,8 +1091,13 @@ div {
           }
 
           @include rwd(768) {
-            font-size: 22px;
+            font-size: 2.8vw;
             line-height: 33px;
+          }
+
+          @include rwd(500) {
+            font-size: 2.8vw;
+            line-height: 20px;
           }
         }
       }
@@ -1074,7 +1108,6 @@ div {
 
         @include rwd(1440) {
           padding: 0 165px;
-          //margin-bottom: 355px;
         }
 
         @include rwd(1100) {
@@ -1083,9 +1116,13 @@ div {
         }
 
         @include rwd(768) {
-          //padding: 0 60px;
           padding: 0 12.6%;
           margin-bottom: 315px;
+        }
+
+        @include rwd(500) {
+          padding: 0 15.7%;
+          margin-bottom: 195px;
         }
 
         &__effects.bonus {
@@ -1121,6 +1158,11 @@ div {
                 left: 1.5%;
               }
 
+              @include rwd(500) {
+                width: 80px;
+                top: 17%;
+              }
+
             }
             &__second {
               width: 106px;
@@ -1136,6 +1178,11 @@ div {
 
               @include rwd(1100) {
                 width: 63px;
+                left: 55.5%;
+              }
+
+              @include rwd(500) {
+                width: 35px;
                 left: 55.5%;
               }
             }
@@ -1173,6 +1220,11 @@ div {
                 width: 57px;
                 height: 9px;
               }
+
+              @include rwd(500) {
+                width: 34px;
+                height: 5px;
+              }
             }
             &__second2 {
               width: 44px;
@@ -1196,6 +1248,11 @@ div {
               @include rwd(768) {
                 width: 23px;
                 height: 3px;
+              }
+
+              @include rwd(500) {
+                width: 14px;
+                height: 2px;
               }
             }
             &__third {
@@ -1222,6 +1279,12 @@ div {
                 height: 7px;
                 left: 43.2%;
               }
+
+              @include rwd(500) {
+                width: 5px;
+                height: 4px;
+                top: 26%;
+              }
             }
           }
 
@@ -1247,6 +1310,12 @@ div {
               left: 13.5%;
             }
 
+            @include rwd(500) {
+              width: 6px;
+              height: 6px;
+              left: 14.5%;
+            }
+
             .vertical {
               width: 2px;
               height: 19px;
@@ -1256,6 +1325,12 @@ div {
               @include rwd(1100) {
                 height: 11px;
                 margin-left: 5.5px;
+              }
+
+              @include rwd(500) {
+                height: 6px;
+                width: 1px;
+                margin-left: 3.5px;
               }
             }
             .horizontal {
@@ -1267,6 +1342,12 @@ div {
               @include rwd(1100) {
                 width: 11px;
                 margin-top: -7.5px;
+              }
+
+              @include rwd(500) {
+                width: 6px;
+                height: 1px;
+                margin-top: -3.5px;
               }
             }
           }
@@ -1294,6 +1375,11 @@ div {
             @include rwd(768) {
               font-size: 106px;
               line-height: 106px;
+            }
+
+            @include rwd(500) {
+              font-size: 64px;
+              line-height: 64px;
             }
 
             &::before {
@@ -1358,6 +1444,12 @@ div {
                 width: 100px;
                 bottom: 10px;
               }
+
+              @include rwd(500) {
+                width: 55px;
+                left: 23.5%;
+                bottom: 15px;
+              }
             }
             &__second {
               width: 44px;
@@ -1380,6 +1472,12 @@ div {
               @include rwd(768) {
                 left: 83.5%;
                 bottom: 44%;
+              }
+
+              @include rwd(500) {
+                width: 15px;
+                left: 81.5%;
+                bottom: 45%;
               }
             }
           }
@@ -1420,6 +1518,12 @@ div {
                 top: 5px;
                 left: 58%;
               }
+
+              @include rwd(500) {
+                width: 14px;
+                height: 6px;
+                top: 10px;
+              }
             }
             &__second3 {
               width: 35px;
@@ -1446,7 +1550,32 @@ div {
                 width: 18px;
                 height: 14px;
               }
+
+              @include rwd(500) {
+                width: 11px;
+                height: 9px;
+                bottom: 40%;
+                left: 55.5%;
+              }
             }
+
+            &__second3-2 {
+              width: 35px;
+              height: 28px;
+              background: rgba(126, 130, 0, .8);
+              bottom: 32%;
+              left: 37.5%;
+              display: none;
+
+              @include rwd(500) {
+                display: block;
+                width: 11px;
+                height: 9px;
+                bottom: 22%;
+                left: 51.5%;
+              }
+            }
+
             &__third {
               width: 110px;
               height: 17px;
@@ -1475,6 +1604,12 @@ div {
                 top: 7px;
                 left: 94.8%;
               }
+
+              @include rwd(500) {
+                width: 34px;
+                height: 5px;
+                top: 12px;
+              }
             }
             &__fourth {
               width: 11px;
@@ -1501,6 +1636,12 @@ div {
               @include rwd(768) {
                 height: 4px;
                 top: 14px;
+              }
+
+              @include rwd(500) {
+                width: 2px;
+                height: 3px;
+                top: 35px;
               }
             }
           }
@@ -1530,6 +1671,12 @@ div {
               bottom: 12px;
             }
 
+            @include rwd(500) {
+              width: 6px;
+              height: 6px;
+              bottom: 17px;
+            }
+
             .vertical {
               width: 2px;
               height: 19px;
@@ -1545,6 +1692,12 @@ div {
               @include rwd(1100) {
                 height: 11px;
                 margin-left: 5.5px;
+              }
+
+              @include rwd(500) {
+                width: 1px;
+                height: 6px;
+                margin-left: 3.5px;
               }
             }
             .horizontal {
@@ -1562,6 +1715,12 @@ div {
               @include rwd(1100) {
                 width: 11px;
                 margin-top: -7.5px;
+              }
+
+              @include rwd(500) {
+                width: 6px;
+                height: 1px;
+                margin-top: -4.5px;
               }
             }
           }
@@ -1593,6 +1752,11 @@ div {
               line-height: 91px;
             }
 
+            @include rwd(500) {
+              font-size: 64px;
+              line-height: 72px;
+            }
+
             &::before {
               @include glitchCopy;
               left: 2px;
@@ -1613,6 +1777,10 @@ div {
         &__effects.registr {
           width: 100%;
           position: relative;
+
+          @include rwd(500) {
+            margin-top: -10px;
+          }
 
           p {
             position: relative;
@@ -1640,6 +1808,11 @@ div {
               font-size: 48px;
               line-height: 54px;
               margin-top: 0;
+            }
+
+            @include rwd(500) {
+              font-size: 32px;
+              line-height: 38px;
             }
 
             &::before {
@@ -1685,6 +1858,11 @@ div {
           height: 73px;
         }
 
+        @include rwd(500) {
+          width: 230px;
+          height: 50px;
+        }
+
 
         .main-btn__registration {
           background: #110c0a;
@@ -1704,6 +1882,11 @@ div {
           @include rwd(768) {
             width: 336px;
             height: 73px;
+          }
+
+          @include rwd(500) {
+            width: 230px;
+            height: 50px;
           }
 
           .plus {
@@ -1733,6 +1916,13 @@ div {
               left: 310px;
             }
 
+            @include rwd(500) {
+              width: 7px;
+              height: 7px;
+              left: 220px;
+              top: 3px;
+            }
+
             .vertical {
               width: 2px;
               height: 19px;
@@ -1742,6 +1932,12 @@ div {
               @include rwd(1921) {
                 height: 14px;
                 margin-left: 5.5px;
+              }
+
+              @include rwd(500) {
+                width: 1px;
+                height: 7px;
+                margin-left: 3px;
               }
             }
             .horizontal {
@@ -1753,6 +1949,12 @@ div {
               @include rwd(1921) {
                 width: 14px;
                 margin-top: -8.5px;
+              }
+
+              @include rwd(500) {
+                width: 7px;
+                height: 1px;
+                margin-top: -4.5px;
               }
             }
           }
@@ -1789,6 +1991,11 @@ div {
               font-size: 25px;
               line-height: 73px;
             }
+
+            @include rwd(500) {
+              font-size: 17px;
+              line-height: 50px;
+            }
           }
           a:hover {
             font-size: 50px;
@@ -1806,6 +2013,11 @@ div {
               font-size: 27px;
               line-height: 89px;
             }
+
+            @include rwd(768) {
+              font-size: 19px;
+              line-height: 51px;
+            }
           }
         }
 
@@ -1820,11 +2032,6 @@ div {
           -webkit-transition: .5s;
           transition: .5s;
 
-          //@include rwd(1921) {
-          //  width: 486px;
-          //  height: 106px;
-          //}
-
           @include rwd(1100) {
             width: 407px;
             height: 89px;
@@ -1836,6 +2043,12 @@ div {
             width: 336px;
             height: 73px;
             margin-left: -180px;
+          }
+
+          @include rwd(500) {
+            width: 230px;
+            height: 50px;
+            margin-left: -125px;
           }
         }
 
@@ -1867,6 +2080,12 @@ div {
             height: 73px;
             margin-left: -156px;
           }
+
+          @include rwd(500) {
+            width: 230px;
+            height: 50px;
+            margin-left: -105px;
+          }
         }
 
         .main-btn__registration:hover {
@@ -1887,6 +2106,12 @@ div {
             margin-left: -168px;
             top: 0;
           }
+
+          @include rwd(500) {
+            left: 50%;
+            margin-left: -115px;
+            top: 0;
+          }
         }
 
         &:hover .white{
@@ -1902,6 +2127,12 @@ div {
           @include rwd(768) {
             left: 50%;
             margin-left: -168px;
+            top: 0;
+          }
+
+          @include rwd(500) {
+            left: 50%;
+            margin-left: -115px;
             top: 0;
           }
         }
@@ -1938,6 +2169,7 @@ div {
           align-items: flex-start;
           margin-bottom: 40px;
           margin-top: 50px;
+          padding-left: 22%;
         }
 
         .step {
@@ -1950,11 +2182,8 @@ div {
           @include rwd(768) {
             width: 100%;
             justify-content: start;
-            //padding: 0 105px;
             padding-top: 0;
             padding-bottom: 0;
-            //padding-left: 105px;
-            padding-left: 22%;
             margin-bottom: 30px;
           }
 
@@ -1988,6 +2217,11 @@ div {
                 height: 55px;
               }
 
+              @include rwd(500) {
+                width: 48px;
+                height: 38px;
+              }
+
               &-square {
                 position: absolute;
                 z-index: -1;
@@ -2013,6 +2247,11 @@ div {
                   width: 52px;
                   height: 41px;
                 }
+
+                @include rwd(500) {
+                  width: 36px;
+                  height: 28px;
+                }
               }
               .square-block1__second {
                 width: 21px;
@@ -2037,6 +2276,11 @@ div {
                 @include rwd(768) {
                   width: 16px;
                   height: 13px;
+                }
+
+                @include rwd(500) {
+                  width: 11px;
+                  height: 9px;
 
                 }
               }
@@ -2060,6 +2304,11 @@ div {
                 @include rwd(768) {
                   width: 28px;
                   height: 23px;
+                }
+
+                @include rwd(500) {
+                  width: 19px;
+                  height: 16px;
                 }
               }
               .square-block2__second {
@@ -2086,6 +2335,11 @@ div {
                   width: 18px;
                   height: 14px;
                 }
+
+                @include rwd(500) {
+                  width: 12px;
+                  height: 10px;
+                }
               }
               .square-block3__first {
                 width: 68px;
@@ -2107,6 +2361,11 @@ div {
                 @include rwd(768) {
                   width: 51px;
                   height: 39px;
+                }
+
+                @include rwd(500) {
+                  width: 35px;
+                  height: 27px;
                 }
               }
               .square-block3__second {
@@ -2131,6 +2390,11 @@ div {
                 @include rwd(768) {
                   width: 16px;
                   height: 13px;
+                }
+
+                @include rwd(500) {
+                  width: 11px;
+                  height: 9px;
                 }
               }
 
@@ -2159,6 +2423,11 @@ div {
                 @include rwd(768) {
                   font-size: 32px;
                   line-height: 55px;
+                }
+
+                @include rwd(500) {
+                  font-size: 22px;
+                  line-height: 38px;
                 }
               }
             }
@@ -2231,6 +2500,10 @@ div {
               line-height: 55px;
               font-weight: 300;
             }
+
+            @include rwd(500) {
+              font-size: 20px;
+            }
           }
         }
       }
@@ -2253,13 +2526,21 @@ div {
           margin-bottom: 10px;
         }
 
+        @include rwd(500) {
+          padding-right: 10%;
+        }
+
         .trophey-left__title {
           width: 185px;
           text-align: right;
           text-transform: uppercase;
 
           @include rwd(1100) {
-            font-size: 170px;
+            width: 170px;
+          }
+
+          @include rwd(550) {
+            width: 82px;
           }
 
           h1 {
@@ -2299,6 +2580,10 @@ div {
             @include rwd(768) {
               font-size: 2vw;
             }
+
+            @include rwd(500) {
+              font-size: 1.8vw;
+            }
           }
         }
 
@@ -2308,8 +2593,13 @@ div {
 
           @include rwd(768) {
             min-width: 60px;
-            //width: 16vw;
             margin: 0 10px;
+          }
+
+          @include rwd(500) {
+            max-width: 35px;
+            min-width: 35px;
+            margin: 0 5px;
           }
 
           img {
@@ -2322,6 +2612,7 @@ div {
             }
 
             @include rwd(768) {
+              width: 80%;
               height: 100%;
             }
           }
@@ -2336,6 +2627,10 @@ div {
             width: 90px;
           }
 
+          @include rwd(500) {
+            width: 45px;
+          }
+
           h1 {
             font-size: 27px;
             letter-spacing: 1px;
@@ -2372,6 +2667,10 @@ div {
 
             @include rwd(768) {
               font-size: 2vw;
+            }
+
+            @include rwd(500) {
+              font-size: 1.8vw;
             }
           }
         }
@@ -2411,6 +2710,10 @@ div {
         @include rwd(768) {
           font-size: 1.6vw;
         }
+
+        @include rwd(500) {
+          font-size: 2vw;
+        }
       }
     }
   }
@@ -2430,6 +2733,10 @@ div {
 
     @include rwd(1100) {
       padding: 21px 200px;
+    }
+
+    @include rwd(500) {
+      padding: 21px 100px;
     }
 
     &-pay {
@@ -2452,8 +2759,21 @@ div {
         margin-top: 30px;
       }
 
+      @include rwd(400) {
+        order: 2;
+        width: 100%;
+      }
+
       &__visa {
         min-width: 46px;
+
+        @include rwd(768) {
+          min-width: 36px;
+        }
+
+        @include rwd(500) {
+          margin-right: 20px;
+        }
       }
 
       &__mastercard {
@@ -2461,6 +2781,10 @@ div {
 
         @include rwd(768) {
           min-width: 36px;
+        }
+
+        @include rwd(500) {
+          margin-right: 20px;
         }
       }
 
@@ -2470,6 +2794,11 @@ div {
         @include rwd(768) {
           min-width: 60px;
         }
+
+        @include rwd(500) {
+          min-width: 40px;
+          margin-right: 20px;
+        }
       }
 
       &__ymoney {
@@ -2477,6 +2806,14 @@ div {
 
         @include rwd(768) {
           min-width: 85px;
+        }
+
+        @include rwd(500) {
+          min-width: 50px;
+        }
+
+        @include rwd(400) {
+          margin-right: 0;
         }
       }
 
@@ -2487,7 +2824,6 @@ div {
         }
 
         @include rwd(768) {
-          //min-width: 25%;
           margin-right: 30px;
         }
 
@@ -2570,6 +2906,17 @@ div {
         margin-right: 25px;
       }
 
+      @include rwd(500) {
+        margin-right: 20px;
+        max-width: 25px;
+      }
+
+      @include rwd(400) {
+        width: 13%;
+        margin: 10px auto;
+        order: 3;
+      }
+
       img {
         width: 100%;
         min-width: 41px;
@@ -2577,6 +2924,11 @@ div {
         @include rwd(1100) {
           width: 80%;
           min-width: 31px;
+        }
+
+        @include rwd(1100) {
+          //width: 80%;
+          min-width: 25px;
         }
       }
     }
