@@ -199,6 +199,12 @@ div {
         top: 310px;
       }
 
+      @include rwd(500) {
+        left: 20%;
+        top: 195px;
+        min-width: 25px;
+      }
+
       img {
         width: 100%;
       }
@@ -225,6 +231,11 @@ div {
         min-width: 25px;
         top: 75%;
         left: 22%;
+      }
+
+      @include rwd(500) {
+        top: 81%;
+        left: 68%;
       }
 
       img {
@@ -299,6 +310,17 @@ div {
         left: 53%;
       }
 
+      @include rwd(570) {
+        min-width: 410px;
+        bottom: 450px;
+      }
+
+      @include rwd(500) {
+        min-width: 260px;
+        bottom: 425px;
+        left: 53%;
+      }
+
       .plus {
         position: absolute;
         width: 19px;
@@ -366,7 +388,7 @@ div {
         height: 19px;
         background: #ffffff;
         bottom: 666px;
-        left: 95px;
+        left: 110px;
         position: absolute;
         //background: rgba(17, 12, 10, .8);
         -moz-transform: skew(-15deg); /* Для Firefox */
@@ -379,7 +401,7 @@ div {
           width: 33px;
           height: 14px;
           bottom: 540px;
-          left: 60px;
+          left: 100px;
         }
 
         @include rwd(1100) {
@@ -428,6 +450,24 @@ div {
         bottom: 400px;
       }
 
+      @include rwd(570) {
+        min-width: 295px;
+        right: 32%;
+        bottom: 355px;
+      }
+
+      @include rwd(500) {
+        min-width: 190px;
+        right: 38%;
+        bottom: 355px;
+      }
+
+      @include rwd(320) {
+        min-width: 190px;
+        right: 30%;
+        bottom: 355px;
+      }
+
       img {
         width: 100%;
       }
@@ -436,8 +476,8 @@ div {
         width: 64px;
         height: 52px;
         background: rgba(126, 130, 0, .8);
-        top: 110px;
-        right: 930px;
+        top: 80px;
+        right: 310px;
         position: absolute;
         //background: rgba(17, 12, 10, .8);
         -moz-transform: skew(-15deg); /* Для Firefox */
@@ -450,7 +490,7 @@ div {
           width: 48px;
           height: 39px;
           top: 80px;
-          right: 725px;
+          right: 235px;
         }
         @include rwd(1100) {
           width: 30px;
@@ -463,6 +503,10 @@ div {
           width: 24px;
           height: 19px;
           top: 30px;
+        }
+
+        @include rwd(500) {
+          display: none;
         }
       }
 
@@ -499,6 +543,10 @@ div {
           top: 90px;
           right: 73%;
         }
+
+        @include rwd(500) {
+          display: none;
+        }
       }
     }
     .tracer-bg {
@@ -528,6 +576,19 @@ div {
         right: 47%;
       }
 
+      @include rwd(570) {
+        bottom: 465px;
+      }
+
+      @include rwd(500) {
+        min-width: 225px;
+        bottom: 420px;
+      }
+
+      @include rwd(320) {
+        right: 45%;
+      }
+
       img {
         width: 100%;
       }
@@ -537,7 +598,7 @@ div {
         height: 7px;
         background: #ffffff;
         bottom: 585px;
-        right: 500px;
+        right: 770px;
         position: absolute;
         //background: rgba(17, 12, 10, .8);
         -moz-transform: skew(-15deg); /* Для Firefox */
@@ -549,8 +610,8 @@ div {
         @include rwd(1921) {
           width: 33px;
           height: 5px;
-          bottom: 545px;
-          right: 425px;
+          bottom: 460px;
+          right: 610px;
         }
         @include rwd(1100) {
           width: 23px;
@@ -563,7 +624,10 @@ div {
           width: 18px;
           height: 3px;
           bottom: 225px;
-          right: 93%;
+        }
+
+        @include rwd(500) {
+          bottom: 160px;
         }
       }
     }
@@ -979,9 +1043,19 @@ div {
         margin: 35px auto;
       }
 
+      @include rwd(570) {
+        padding-right: 18%;
+        padding-left: 18%;
+      }
+
       @include rwd(500) {
         padding-right: 18%;
         padding-left: 18%;
+      }
+
+      @include rwd(320) {
+        padding-right: 3%;
+        padding-left: 3%;
       }
 
       .main-title {
@@ -1120,8 +1194,18 @@ div {
           margin-bottom: 315px;
         }
 
+        @include rwd(570) {
+          padding: 0 5.6%;
+          margin-bottom: 315px;
+        }
+
         @include rwd(500) {
           padding: 0 15.7%;
+          margin-bottom: 195px;
+        }
+
+        @include rwd(320) {
+          padding: 0 12.7%;
           margin-bottom: 195px;
         }
 
@@ -1810,6 +1894,10 @@ div {
               margin-top: 0;
             }
 
+            @include rwd(570) {
+              font-size: 40px;
+            }
+
             @include rwd(500) {
               font-size: 32px;
               line-height: 38px;
@@ -2014,9 +2102,9 @@ div {
               line-height: 89px;
             }
 
-            @include rwd(768) {
+            @include rwd(500) {
               font-size: 19px;
-              line-height: 51px;
+              line-height: 50px;
             }
           }
         }
@@ -2526,8 +2614,16 @@ div {
           margin-bottom: 10px;
         }
 
+        @include rwd(570) {
+          padding-right: 60px;
+        }
+
         @include rwd(500) {
           padding-right: 10%;
+        }
+
+        @include rwd(320) {
+          margin-bottom: -20px;
         }
 
         .trophey-left__title {
@@ -2561,6 +2657,10 @@ div {
             @include rwd(768) {
               font-size: 2.3vw;
             }
+
+            @include rwd(320) {
+              font-size: 2.8vw;
+            }
           }
           p {
             font-size: 23px;
@@ -2584,6 +2684,10 @@ div {
             @include rwd(500) {
               font-size: 1.8vw;
             }
+
+            @include rwd(320) {
+              font-size: 2.2vw;
+            }
           }
         }
 
@@ -2600,6 +2704,10 @@ div {
             max-width: 35px;
             min-width: 35px;
             margin: 0 5px;
+          }
+
+          @include rwd(320) {
+            max-width: 50px;
           }
 
           img {
@@ -2649,6 +2757,10 @@ div {
             @include rwd(768) {
               font-size: 2.3vw;
             }
+
+            @include rwd(320) {
+              font-size: 2.8vw;
+            }
           }
           p {
             font-size: 23px;
@@ -2671,6 +2783,10 @@ div {
 
             @include rwd(500) {
               font-size: 1.8vw;
+            }
+
+            @include rwd(320) {
+              font-size: 2.2vw;
             }
           }
         }
@@ -2735,8 +2851,16 @@ div {
       padding: 21px 200px;
     }
 
+    @include rwd(571) {
+      padding: 21px 120px;
+    }
+
     @include rwd(500) {
       padding: 21px 100px;
+    }
+
+    @include rwd(320) {
+      padding: 21px 10px;
     }
 
     &-pay {
@@ -2760,8 +2884,13 @@ div {
       }
 
       @include rwd(400) {
-        order: 2;
+        order: 3;
         width: 100%;
+      }
+
+      @include rwd(320) {
+        justify-content: space-between;
+        width: 85%;
       }
 
       &__visa {
@@ -2773,6 +2902,11 @@ div {
 
         @include rwd(500) {
           margin-right: 20px;
+        }
+
+        @include rwd(320) {
+          max-width: 36px;
+          min-width: 30px;
         }
       }
 
@@ -2825,6 +2959,10 @@ div {
 
         @include rwd(768) {
           margin-right: 30px;
+        }
+
+        @include rwd(320) {
+          margin-right: 0;
         }
 
         img {
@@ -2914,7 +3052,11 @@ div {
       @include rwd(400) {
         width: 13%;
         margin: 10px auto;
-        order: 3;
+        order: 2;
+      }
+
+      @include rwd(400) {
+        margin-top: 30px;
       }
 
       img {
