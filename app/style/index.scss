@@ -1,3137 +1,3 @@
-//
-//@font-face{
-//  font-family: "Parimatch";
-//  src: local("Parimatch"), url("../fonts/Parimatch-Bold.woff") format("woff");
-//  font-weight: bold;
-//}
-//@font-face{
-//  font-family: "Parimatch";
-//  src: local("Parimatch"), url("../fonts/Parimatch-Light.woff") format("woff");
-//  font-weight: normal;
-//}
-//@font-face{
-//  font-family: "Parimatch";
-//  src: local("Parimatch"), url("../fonts/ParimatchMedium.woff") format("woff");
-//  font-weight: 500;
-//}
-//
-//@mixin glitchCopy {
-//  content: attr(data-text);
-//  position: absolute;
-//  top: 0;
-//  left: 0;
-//  width: 100%;
-//  height: 100%;
-//}
-//
-//
-//@keyframes glitch-anim {
-//  $steps: 20;
-//  @for $i from 0 through $steps {
-//    #{percentage($i*(1/$steps))} {
-//      clip: rect(random(200)+px, 9999px, random(200)+px, 0);
-//      transform: skew((random(100) / 10) + deg);
-//    }
-//  }
-//}
-////
-////// Same deal, just duplicated for ultra randomness.
-//@keyframes glitch-anim2 {
-//  $steps: 20;
-//  @for $i from 0 through $steps {
-//    #{percentage($i*(1/$steps))} {
-//      clip: rect(random(200)+px, 9999px, random(200)+px, 0);
-//      transform: skew((random(100) / 100) + deg);
-//    }
-//  }
-//}
-////
-////// Does the same deal as before, but now only skews. Used for main text.
-//@keyframes glitch-skew {
-//  $steps: 10;
-//  @for $i from 0 through $steps {
-//    #{percentage($i*(1/$steps))} {
-//      transform: skew((random(10) - 5) + deg);
-//    }
-//  }
-//}
-//
-////// Small tablets and large smartphones (landscape view)
-////$screen-sm-min: 576px;
-////
-////// Small tablets (portrait view)
-////$screen-md-min: 768px;
-////
-////// Tablets and small desktops
-////$screen-lg-min: 992px;
-////
-////// Large tablets and desktops
-////$screen-xl-min: 1200px;
-////
-////// Small devices
-////@mixin sm {
-////  @media (min-width: #{$screen-sm-min}) {
-////    @content;
-////  }
-////}
-////
-////// Medium devices
-////@mixin md {
-////  @media (min-width: #{$screen-md-min}) {
-////    @content;
-////  }
-////}
-////
-////// Large devices
-////@mixin lg {
-////  @media (min-width: #{$screen-lg-min}) {
-////    @content;
-////  }
-////}
-////
-////// Extra large devices
-////@mixin xl {
-////  @media (min-width: #{$screen-xl-min}) {
-////    @content;
-////  }
-////}
-//
-//
-//@mixin rwd($screen) {
-//  @media (max-width: $screen+'px') {
-//    @content;
-//  }
-//}
-//
-//@mixin rwd2($screen) {
-//  @media (min-width: $screen+'px') {
-//    @content;
-//  }
-//}
-//
-//
-////@include rwd(1400) {
-////  max-width: 900px;
-////}
-//
-//html {
-//  width: 100%;
-//}
-//body {
-//  width: 100%;
-//  margin: 0 auto;
-//  font-family: "Parimatch", serif
-//}
-//
-//div {
-//  -webkit-box-sizing: border-box;
-//  -moz-box-sizing: border-box;
-//  box-sizing: border-box;
-//}
-//
-//.content {
-//  width: 100%;
-//  //height: 100vh;
-//  position: relative;
-//  overflow: hidden;
-//  background: #f8ff13 url("../img/bg1.png") no-repeat center center fixed;
-//  -webkit-background-size: cover;
-//  -moz-background-size: cover;
-//  -o-background-size: cover;
-//  background-size: cover;
-//  box-sizing: border-box;
-//  z-index: 0;
-//
-//    .bullet-bg_1 {
-//      position: absolute;
-//      width: 4%;
-//      min-width: 117px;
-//      z-index: -1;
-//      top: 220px;
-//      left: 375px;
-//      overflow: hidden;
-//
-//      @include rwd(1921) {
-//        min-width: 70px;
-//        top: 200px;
-//        left: 395px;
-//      }
-//
-//      @include rwd(1100) {
-//        min-width: 70px;
-//        top: 200px;
-//        left: 70%;
-//      }
-//
-//      @include rwd(768) {
-//        top: 130px;
-//        left: 75%;
-//      }
-//
-//      img {
-//        width: 100%;
-//      }
-//    }
-//    .bullet-bg_2 {
-//      position: absolute;
-//      width: 3%;
-//      min-width: 91px;
-//      z-index: -1;
-//      bottom: 90px;
-//      left: 565px;
-//      overflow: hidden;
-//
-//      @include rwd(1921) {
-//        min-width: 70px;
-//        bottom: 20px;
-//        left: 440px;
-//      }
-//
-//      @include rwd(1100) {
-//        min-width: 35px;
-//        bottom: 20px;
-//        left: 290px;
-//        top: 15px;
-//      }
-//
-//      @include rwd(768) {
-//        left: 25%;
-//        top: 310px;
-//      }
-//
-//      @include rwd(500) {
-//        left: 20%;
-//        top: 195px;
-//        min-width: 25px;
-//      }
-//
-//      img {
-//        width: 100%;
-//      }
-//    }
-//    .bullet-bg_3 {
-//      position: absolute;
-//      width: 1%;
-//      min-width: 38px;
-//      z-index: -1;
-//      top: 350px;
-//      left: 170px;
-//      overflow: hidden;
-//
-//      @include rwd(1921) {
-//        top: 300px;
-//      }
-//
-//      @include rwd(1100) {
-//        top: 78%;
-//        left: 70%;
-//      }
-//
-//      @include rwd(768) {
-//        min-width: 25px;
-//        top: 75%;
-//        left: 22%;
-//      }
-//
-//      @include rwd(500) {
-//        top: 81%;
-//        left: 68%;
-//      }
-//
-//      img {
-//        width: 100%;
-//      }
-//    }
-//    .bullet-bg_4 {
-//      position: absolute;
-//      width: 22px;
-//      min-width: 22px;
-//      z-index: -1;
-//      bottom: 480px;
-//      left: 630px;
-//      overflow: hidden;
-//
-//      @include rwd(1921) {
-//        bottom: 295px;
-//        left: 455px;
-//      }
-//
-//      img {
-//        width: 100%;
-//      }
-//    }
-//
-//    .dirt-bg {
-//      position: absolute;
-//      width: 103%;
-//      //min-width: 900px;
-//      z-index: -1;
-//      bottom: 0;
-//      left: -20px;
-//      overflow: hidden;
-//
-//      @include rwd(1921) {
-//        width: 113%;
-//      }
-//
-//      @include rwd(1100) {
-//        display: none;
-//      }
-//
-//      img {
-//        width: 100%;
-//      }
-//    }
-//
-//    .pubg-bg {
-//      position: absolute;
-//      width: 40%;
-//      min-width: 900px;
-//      z-index: -1;
-//      bottom: 0;
-//      left: -30px;
-//      overflow: hidden;
-//
-//      @include rwd(1921) {
-//        min-width: 825px;
-//        bottom: -25px;
-//      }
-//
-//      @include rwd(1100) {
-//        min-width: 520px;
-//        bottom: 289px;
-//        left: 53%;
-//        z-index: -15;
-//      }
-//
-//      @include rwd(768) {
-//        min-width: 420px;
-//        bottom: 490px;
-//        left: 53%;
-//      }
-//
-//      @include rwd(570) {
-//        min-width: 410px;
-//        bottom: 450px;
-//      }
-//
-//      @include rwd(500) {
-//        min-width: 260px;
-//        bottom: 425px;
-//        left: 53%;
-//      }
-//
-//      .plus {
-//        position: absolute;
-//        width: 19px;
-//        height: 19px;
-//        bottom: -2.5%;
-//        left: 41.3%;
-//
-//        @include rwd(1921) {
-//          width: 14px;
-//          height: 14px;
-//          bottom: 375px;
-//          left: 20.5%;
-//        }
-//
-//        @include rwd(1100) {
-//          bottom: 230px;
-//        }
-//
-//        @include rwd(768) {
-//          width: 10px;
-//          height: 10px;
-//          bottom: 190px;
-//        }
-//
-//        .vertical {
-//          width: 2px;
-//          height: 19px;
-//          background: #fff;
-//          margin-left: 8.5px;
-//
-//          @include rwd(1921) {
-//            width: 2px;
-//            height: 14px;
-//            margin-left: 6px;
-//          }
-//
-//          @include rwd(768) {
-//            width: 1px;
-//            height: 10px;
-//            margin-left: 5px;
-//          }
-//        }
-//        .horizontal {
-//          width: 19px;
-//          height: 2px;
-//          background: #fff;
-//          margin-top: -9.5px;
-//
-//          @include rwd(1921) {
-//            width: 14px;
-//            height: 2px;
-//            margin-top: -8px;
-//          }
-//
-//          @include rwd(768) {
-//            width: 10px;
-//            height: 1px;
-//            margin-top: -6px;
-//          }
-//        }
-//      }
-//
-//      .square__first {
-//        width: 44px;
-//        height: 19px;
-//        background: #ffffff;
-//        bottom: 666px;
-//        left: 110px;
-//        position: absolute;
-//        //background: rgba(17, 12, 10, .8);
-//        -moz-transform: skew(-15deg); /* Для Firefox */
-//        -ms-transform: skew(-15deg); /* Для IE */
-//        -webkit-transform: skew(-15deg); /* Для Safari, Chrome, iOS */
-//        -o-transform: skew(-15deg); /* Для Opera */
-//        transform: skew(-15deg);
-//
-//        @include rwd(1921) {
-//          width: 33px;
-//          height: 14px;
-//          bottom: 540px;
-//          left: 100px;
-//        }
-//
-//        @include rwd(1100) {
-//          width: 19px;
-//          height: 8px;
-//          bottom: 340px;
-//          left: 70px;
-//        }
-//
-//        @include rwd(768) {
-//          width: 16px;
-//          height: 7px;
-//          bottom: 280px;
-//          left: 50px;
-//        }
-//      }
-//
-//      img {
-//        width: 100%;
-//      }
-//    }
-//    .jugg-bg {
-//      position: absolute;
-//      width: 28%;
-//      min-width: 690px;
-//      z-index: -10;
-//      bottom: 80px;
-//      right: 625px;
-//      overflow: hidden;
-//
-//      @include rwd(1921) {
-//        min-width: 540px;
-//        right: 495px;
-//        bottom: 100px;
-//      }
-//
-//      @include rwd(1100) {
-//        min-width: 365px;
-//        right: 38%;
-//        bottom: 138px;
-//      }
-//
-//      @include rwd(768) {
-//        min-width: 285px;
-//        right: 35%;
-//        bottom: 400px;
-//      }
-//
-//      @include rwd(570) {
-//        min-width: 295px;
-//        right: 32%;
-//        bottom: 355px;
-//      }
-//
-//      @include rwd(500) {
-//        min-width: 190px;
-//        right: 38%;
-//        bottom: 355px;
-//      }
-//
-//      @include rwd(320) {
-//        min-width: 190px;
-//        right: 30%;
-//        bottom: 355px;
-//      }
-//
-//      img {
-//        width: 100%;
-//      }
-//
-//      .square__second {
-//        width: 64px;
-//        height: 52px;
-//        background: rgba(126, 130, 0, .8);
-//        top: 80px;
-//        right: 310px;
-//        position: absolute;
-//        //background: rgba(17, 12, 10, .8);
-//        -moz-transform: skew(-15deg); /* Для Firefox */
-//        -ms-transform: skew(-15deg); /* Для IE */
-//        -webkit-transform: skew(-15deg); /* Для Safari, Chrome, iOS */
-//        -o-transform: skew(-15deg); /* Для Opera */
-//        transform: skew(-15deg);
-//
-//        @include rwd(1921) {
-//          width: 48px;
-//          height: 39px;
-//          top: 80px;
-//          right: 235px;
-//        }
-//        @include rwd(1100) {
-//          width: 30px;
-//          height: 24px;
-//          top: 40px;
-//          right: 43%;
-//        }
-//
-//        @include rwd(768) {
-//          width: 24px;
-//          height: 19px;
-//          top: 30px;
-//        }
-//
-//        @include rwd(500) {
-//          display: none;
-//        }
-//      }
-//
-//      .square__fourth {
-//        width: 100px;
-//        height: 1px;
-//        background: #ffffff;
-//        bottom: 400px;
-//        right: 980px;
-//        position: absolute;
-//        //background: rgba(17, 12, 10, .8);
-//        -moz-transform: skew(-15deg); /* Для Firefox */
-//        -ms-transform: skew(-15deg); /* Для IE */
-//        -webkit-transform: skew(-15deg); /* Для Safari, Chrome, iOS */
-//        -o-transform: skew(-15deg); /* Для Opera */
-//        transform: skew(-15deg);
-//
-//        @include rwd(1921) {
-//          width: 75px;
-//          height: 1px;
-//          bottom: 325px;
-//          right: 800px;
-//        }
-//
-//        @include rwd(1100) {
-//          display: none;
-//        }
-//
-//        @include rwd(768) {
-//          display: block;
-//          width: 14px;
-//          height: 11px;
-//          background: rgba(126, 130, 0, .8);
-//          top: 90px;
-//          right: 73%;
-//        }
-//
-//        @include rwd(500) {
-//          display: none;
-//        }
-//      }
-//    }
-//    .tracer-bg {
-//      position: absolute;
-//      width: 32%;
-//      min-width: 630px;
-//      z-index: -15;
-//      bottom: 140px;
-//      right: -185px;
-//      overflow: hidden;
-//
-//      @include rwd(1921) {
-//        min-width: 655px;
-//        bottom: 80px;
-//        right: -175px;
-//      }
-//
-//      @include rwd(1100) {
-//        min-width: 420px;
-//        bottom: 260px;
-//        right: 46%;
-//      }
-//
-//      @include rwd(768) {
-//        min-width: 320px;
-//        bottom: 520px;
-//        right: 47%;
-//      }
-//
-//      @include rwd(570) {
-//        bottom: 465px;
-//      }
-//
-//      @include rwd(500) {
-//        min-width: 225px;
-//        bottom: 420px;
-//      }
-//
-//      @include rwd(320) {
-//        right: 45%;
-//      }
-//
-//      img {
-//        width: 100%;
-//      }
-//
-//      .square__third {
-//        width: 44px;
-//        height: 7px;
-//        background: #ffffff;
-//        bottom: 585px;
-//        right: 770px;
-//        position: absolute;
-//        //background: rgba(17, 12, 10, .8);
-//        -moz-transform: skew(-15deg); /* Для Firefox */
-//        -ms-transform: skew(-15deg); /* Для IE */
-//        -webkit-transform: skew(-15deg); /* Для Safari, Chrome, iOS */
-//        -o-transform: skew(-15deg); /* Для Opera */
-//        transform: skew(-15deg);
-//
-//        @include rwd(1921) {
-//          width: 33px;
-//          height: 5px;
-//          bottom: 460px;
-//          right: 610px;
-//        }
-//        @include rwd(1100) {
-//          width: 23px;
-//          height: 3px;
-//          bottom: 300px;
-//          right: 93%;
-//        }
-//
-//        @include rwd(768) {
-//          width: 18px;
-//          height: 3px;
-//          bottom: 225px;
-//        }
-//
-//        @include rwd(500) {
-//          bottom: 160px;
-//        }
-//      }
-//    }
-//
-//    .plus-wrap {
-//      width: 100%;
-//      height: auto;
-//      position: absolute;
-//      overflow: hidden;
-//      margin: 0 auto;
-//      padding-top: 5px;
-//      display: flex;
-//      justify-content: center;
-//      align-items: center;
-//
-//      @include rwd(1100) {
-//        display: none;
-//      }
-//
-//      .plus {
-//        position: relative;
-//        width: 22px;
-//        height: 22px;
-//        margin-left: 25px;
-//
-//        @include rwd(1921) {
-//          width: 14px;
-//          height: 14px;
-//          margin-left: 15px;
-//        }
-//
-//        .vertical {
-//          width: 2px;
-//          height: 22px;
-//          background: #000;
-//          position: absolute;
-//          left: 10px;
-//
-//          @include rwd(1921) {
-//            width: 2px;
-//            height: 14px;
-//            left: 6px;
-//          }
-//        }
-//        .horizontal {
-//          width: 22px;
-//          height: 2px;
-//          background: #000;
-//          position: absolute;
-//          top: 10px;
-//
-//          @include rwd(1921) {
-//            width: 14px;
-//            height: 2px;
-//            top: 6px;
-//          }
-//        }
-//      }
-//    }
-//
-//    .plus-wrap__right {
-//      position: absolute;
-//      width: 100%;
-//      max-width: 600px;
-//      height: 50%;
-//      top: 0;
-//      right: 0;
-//      z-index: -20;
-//
-//      @include rwd(1100) {
-//        display: none;
-//      }
-//
-//      .plus-rotate {
-//        width: 100%;
-//        height: auto;
-//        position: absolute;
-//        overflow: hidden;
-//        top: 37.8%;
-//        left: -20.5%;
-//        padding-top: 20px;
-//        display: flex;
-//        justify-content: center;
-//        align-items: center;
-//        -moz-transform: rotate(-77deg); /* Для Firefox */
-//        -ms-transform: rotate(-77deg); /* Для IE */
-//        -webkit-transform: rotate(-77deg); /* Для Safari, Chrome, iOS */
-//        -o-transform: rotate(-77deg); /* Для Opera */
-//        transform: rotate(-77deg);
-//
-//        @include rwd(1921) {
-//          top: 28.5%;
-//          left: -18.5%;
-//        }
-//
-//        .plus {
-//          margin-left: 25px;
-//          width: 22px;
-//          height: 22px;
-//          -moz-transform: rotate(-15deg); /* Для Firefox */
-//          -ms-transform: rotate(-15deg); /* Для IE */
-//          -webkit-transform: rotate(-15deg); /* Для Safari, Chrome, iOS */
-//          -o-transform: rotate(-15deg); /* Для Opera */
-//          transform: rotate(-15deg);
-//
-//          @include rwd(1921) {
-//            width: 14px;
-//            height: 14px;
-//            margin-left: 15px;
-//          }
-//
-//          .vertical {
-//            width: 2px;
-//            height: 22px;
-//            background: #000;
-//            position: absolute;
-//            left: 10px;
-//
-//            @include rwd(1921) {
-//              height: 14px;
-//              left: 6px;
-//            }
-//          }
-//          .horizontal {
-//            width: 22px;
-//            height: 2px;
-//            background: #000;
-//            position: absolute;
-//            top: 10px;
-//
-//            @include rwd(1921) {
-//              width: 14px;
-//              top: 6px;
-//            }
-//          }
-//        }
-//      }
-//      .plus-wrap {
-//        display: flex;
-//        height: auto;
-//        bottom: 40px;
-//        left: 85px;
-//
-//        @include rwd(1921) {
-//          bottom: 40px;
-//          left: 85px;
-//        }
-//
-//        .plus {
-//          position: relative;
-//          width: 22px;
-//          height: 22px;
-//          margin-left: 25px;
-//
-//          @include rwd(1921) {
-//            width: 14px;
-//            height: 14px;
-//            margin-left: 15px;
-//          }
-//
-//          .vertical {
-//            width: 2px;
-//            height: 22px;
-//            background: #000;
-//            position: absolute;
-//            left: 10px;
-//
-//            @include rwd(1921) {
-//              height: 14px;
-//              left: 6px;
-//            }
-//          }
-//          .horizontal {
-//            width: 22px;
-//            height: 2px;
-//            background: #000;
-//            position: absolute;
-//            top: 10px;
-//
-//            @include rwd(1921) {
-//              width: 14px;
-//              top: 6px;
-//            }
-//          }
-//        }
-//      }
-//    }
-//
-//    .plus-wrap__left {
-//      position: absolute;
-//      width: 100%;
-//      max-width: 600px;
-//      height: 50%;
-//      bottom: 70px;
-//      z-index: -5;
-//
-//      @include rwd(1921) {
-//        left: -115px;
-//        bottom: 130px;
-//      }
-//      @include rwd(1100) {
-//        display: none;
-//      }
-//
-//      .plus-wrap {
-//        display: flex;
-//        height: auto;
-//
-//        .plus {
-//          position: relative;
-//          width: 22px;
-//          height: 22px;
-//          margin-left: 25px;
-//
-//          @include rwd(1921) {
-//            width: 14px;
-//            height: 14px;
-//            margin-left: 15px;
-//          }
-//
-//          .vertical {
-//            width: 2px;
-//            height: 22px;
-//            background: #000;
-//            position: absolute;
-//            left: 10px;
-//
-//            @include rwd(1921) {
-//              height: 14px;
-//              left: 6px;
-//            }
-//          }
-//          .horizontal {
-//            width: 22px;
-//            height: 2px;
-//            background: #000;
-//            position: absolute;
-//            top: 10px;
-//
-//            @include rwd(1921) {
-//              width: 14px;
-//              top: 6px;
-//            }
-//          }
-//        }
-//      }
-//      .plus-rotate {
-//        width: 100%;
-//        height: auto;
-//        position: absolute;
-//        overflow: hidden;
-//        top: 325px;
-//        left: 210px;
-//        display: flex;
-//        justify-content: center;
-//        align-items: center;
-//        -moz-transform: rotate(-77deg); /* Для Firefox */
-//        -ms-transform: rotate(-77deg); /* Для IE */
-//        -webkit-transform: rotate(-77deg); /* Для Safari, Chrome, iOS */
-//        -o-transform: rotate(-77deg); /* Для Opera */
-//        transform: rotate(-77deg);
-//
-//        @include rwd(1921) {
-//          top: 225px;
-//          left: 135px;
-//        }
-//
-//        .plus {
-//          -moz-transform: rotate(-15deg); /* Для Firefox */
-//          -ms-transform: rotate(-15deg); /* Для IE */
-//          -webkit-transform: rotate(-15deg); /* Для Safari, Chrome, iOS */
-//          -o-transform: rotate(-15deg); /* Для Opera */
-//          transform: rotate(-15deg);
-//        }
-//      }
-//    }
-//
-//    &-header {
-//      width: 100%;
-//      max-width: 2235px;
-//      margin: 20px auto 0 auto;
-//      position: relative;
-//      display: flex;
-//      justify-content: space-between;
-//      align-items: flex-end;
-//
-//      @include rwd(1921) {
-//        padding: 0 65px;
-//      }
-//
-//      @include rwd(1100) {
-//        justify-content: center;
-//      }
-//
-//      .logo {
-//        overflow: hidden;
-//
-//        @include rwd(768) {
-//          max-width: 200px;
-//        }
-//
-//        @include rwd(500) {
-//          max-width: 105px;
-//        }
-//        img {
-//          width: 100%;
-//        }
-//      }
-//
-//      .trophey-wrapper {
-//        display: flex;
-//        align-items: center;
-//
-//        @include rwd(1100) {
-//          display: none;
-//        }
-//
-//        .trophey-left__title {
-//          width: 185px;
-//          text-align: right;
-//          text-transform: uppercase;
-//
-//          h1 {
-//            font-size: 27px;
-//            letter-spacing: 1px;
-//            color: #110c0a;
-//            font-weight: bold;
-//            margin: 0;
-//
-//            @include rwd(1921) {
-//              font-size: 23px;
-//            }
-//          }
-//          p {
-//            font-size: 23px;
-//            letter-spacing: 1px;
-//            color: #110c0a;
-//            font-weight: bold;
-//            margin: 0;
-//
-//            @include rwd(1921) {
-//              font-size: 19px;
-//            }
-//          }
-//        }
-//
-//        .trophey-img {
-//          margin: 0 20px;
-//          overflow: hidden;
-//
-//          img {
-//            width: 100%;
-//            max-width: 100%;
-//            height: 110px;
-//          }
-//        }
-//
-//        .trophey-right__title {
-//          width: 95px;
-//          text-align: left;
-//          text-transform: uppercase;
-//
-//          h1 {
-//            font-size: 27px;
-//            letter-spacing: 1px;
-//            color: #110c0a;
-//            font-weight: bold;
-//            margin: 0;
-//
-//            @include rwd(1921) {
-//              font-size: 23px;
-//            }
-//          }
-//          p {
-//            font-size: 23px;
-//            letter-spacing: 1px;
-//            color: #110c0a;
-//            font-weight: bold;
-//            margin: 0;
-//
-//            @include rwd(1921) {
-//              font-size: 19px;
-//            }
-//          }
-//        }
-//      }
-//    }
-//
-//    &-main {
-//      width: 100%;
-//      max-width: 1440px;
-//      margin: 70px auto 0 auto;
-//      padding-left: 6%;
-//      //overflow: hidden;
-//
-//      @include rwd(1921) {
-//        margin: 20px 460px 0 460px;
-//        padding-left: 35px;
-//      }
-//      @include rwd(1440) {
-//        padding-left: 200px;
-//        padding-right: 200px;
-//        margin: 30px auto;
-//      }
-//
-//      @include rwd(1100) {
-//        padding-right: 200px;
-//      }
-//
-//      @include rwd(768) {
-//        padding-right: 145px;
-//        padding-left: 145px;
-//        margin: 35px auto;
-//      }
-//
-//      @include rwd(570) {
-//        padding-right: 18%;
-//        padding-left: 18%;
-//      }
-//
-//      @include rwd(500) {
-//        padding-right: 18%;
-//        padding-left: 18%;
-//      }
-//
-//      @include rwd(320) {
-//        padding-right: 3%;
-//        padding-left: 3%;
-//      }
-//
-//      .main-title {
-//        width: 100%;
-//        max-width: 353px;
-//        height: 48px;
-//        position: relative;
-//        margin-left: 6.8%;
-//        text-align: center;
-//
-//        @include rwd(1100) {
-//          margin: 0 auto;
-//          max-width: 282px;
-//          height: 38px;
-//        }
-//
-//        @include rwd(768) {
-//          max-width: 244px;
-//          height: 33px;
-//        }
-//
-//        @include rwd(500) {
-//          width: 147px;
-//          height: 20px;
-//        }
-//
-//        &::before {
-//          content: '';
-//          top: 0;
-//          right: 0;
-//          bottom: 0;
-//          left: 0;
-//          position: absolute;
-//          z-index: -1;
-//          background: #7f8300;
-//          -moz-transform: skew(-15deg); /* Для Firefox */
-//          -ms-transform: skew(-15deg); /* Для IE */
-//          -webkit-transform: skew(-15deg); /* Для Safari, Chrome, iOS */
-//          -o-transform: skew(-15deg); /* Для Opera */
-//          transform: skew(-15deg);
-//        }
-//        .strip {
-//          position: absolute;
-//          width: 80px;
-//          height: 1px;
-//          top: 85%;
-//          left: -9%;
-//          background: #ffffff;
-//
-//          @include rwd(1100) {
-//            width: 48px;
-//            left: -6%;
-//          }
-//
-//          @include rwd(768) {
-//            width: 40px;
-//            left: -6%;
-//          }
-//
-//          @include rwd(500) {
-//            width: 20px;
-//            left: -6%;
-//          }
-//        }
-//        .square {
-//          position: absolute;
-//          width: 17px;
-//          height: 17px;
-//          background: rgba(17, 12, 10, .8);;
-//          top: -15%;
-//          right: 5%;
-//          -moz-transform: skew(-15deg); /* Для Firefox */
-//          -ms-transform: skew(-15deg); /* Для IE */
-//          -webkit-transform: skew(-15deg); /* Для Safari, Chrome, iOS */
-//          -o-transform: skew(-15deg); /* Для Opera */
-//          transform: skew(-15deg);
-//
-//          @include rwd(1100) {
-//            width: 10px;
-//            height: 8px;
-//            top: -10%;
-//            right: 2%;
-//          }
-//
-//          @include rwd(768) {
-//            width: 9px;
-//            height: 7px;
-//          }
-//
-//          @include rwd(768) {
-//            width: 5px;
-//            height: 4px;
-//          }
-//        }
-//        p {
-//          margin: 0;
-//          font-size: 32px;
-//          line-height: 42px;
-//          letter-spacing: 1px;
-//          color: #ffffff;
-//          font-weight: bold;
-//          text-align: center;
-//
-//          @include rwd(1100) {
-//            font-size: 25px;
-//            line-height: 38px;
-//          }
-//
-//          @include rwd(768) {
-//            font-size: 2.8vw;
-//            line-height: 33px;
-//          }
-//
-//          @include rwd(500) {
-//            font-size: 2.8vw;
-//            line-height: 20px;
-//          }
-//        }
-//      }
-//
-//      .main-bonus {
-//        width: 100%;
-//        margin-bottom: -10px;
-//
-//        @include rwd(1440) {
-//          padding: 0 165px;
-//        }
-//
-//        @include rwd(1100) {
-//          padding: 0 135px;
-//          margin-bottom: 355px;
-//        }
-//
-//        @include rwd(768) {
-//          padding: 0 12.6%;
-//          margin-bottom: 315px;
-//        }
-//
-//        @include rwd(570) {
-//          padding: 0 5.6%;
-//          margin-bottom: 315px;
-//        }
-//
-//        @include rwd(500) {
-//          padding: 0 15.7%;
-//          margin-bottom: 195px;
-//        }
-//
-//        @include rwd(320) {
-//          padding: 0 12.7%;
-//          margin-bottom: 195px;
-//        }
-//
-//        &__effects.bonus {
-//          width: 100%;
-//          position: relative;
-//
-//          @include rwd(768) {
-//            text-align: left;
-//          }
-//
-//          .strip {
-//            position: absolute;
-//
-//            &__first {
-//              width: 267px;
-//              height: 1px;
-//              background-color: #d8de12;
-//              top: 20%;
-//              left: 1.5%;
-//
-//              @include rwd(1921) {
-//                width: 200px;
-//                left: 0.5%;
-//              }
-//
-//              @include rwd(1100) {
-//                width: 160px;
-//                left: 2.5%;
-//              }
-//
-//              @include rwd(768) {
-//                width: 138px;
-//                left: 1.5%;
-//              }
-//
-//              @include rwd(500) {
-//                width: 80px;
-//                top: 17%;
-//              }
-//
-//            }
-//            &__second {
-//              width: 106px;
-//              height: 1px;
-//              background-color: #d5db14;
-//              bottom: 32%;
-//              left: 30.5%;
-//
-//              @include rwd(1921) {
-//                width: 80px;
-//                left: 21.5%;
-//              }
-//
-//              @include rwd(1100) {
-//                width: 63px;
-//                left: 55.5%;
-//              }
-//
-//              @include rwd(500) {
-//                width: 35px;
-//                left: 55.5%;
-//              }
-//            }
-//          }
-//
-//          .square {
-//            position: absolute;
-//            background: rgba(17, 12, 10, .8);;
-//            -moz-transform: skew(-15deg); /* Для Firefox */
-//            -ms-transform: skew(-15deg); /* Для IE */
-//            -webkit-transform: skew(-15deg); /* Для Safari, Chrome, iOS */
-//            -o-transform: skew(-15deg); /* Для Opera */
-//            transform: skew(-15deg);
-//
-//            &__first {
-//              width: 110px;
-//              height: 17px;
-//              background: rgba(220, 226, 20, 1);
-//              bottom: 11.5%;
-//              left: -6%;
-//
-//              @include rwd(1921) {
-//                width: 82px;
-//                height: 13px;
-//                left: -4.5%;
-//              }
-//
-//              @include rwd(1100) {
-//                width: 66px;
-//                height: 10px;
-//                left: -11.5%;
-//              }
-//
-//              @include rwd(768) {
-//                width: 57px;
-//                height: 9px;
-//              }
-//
-//              @include rwd(500) {
-//                width: 34px;
-//                height: 5px;
-//              }
-//            }
-//            &__second2 {
-//              width: 44px;
-//              height: 7px;
-//              background: #ffffff;
-//              bottom: 32%;
-//              left: 17%;
-//
-//              @include rwd(1921) {
-//                width: 33px;
-//                height: 5px;
-//                left: 11.5%;
-//              }
-//
-//              @include rwd(1100) {
-//                width: 26px;
-//                height: 4px;
-//                left: 30.5%;
-//              }
-//
-//              @include rwd(768) {
-//                width: 23px;
-//                height: 3px;
-//              }
-//
-//              @include rwd(500) {
-//                width: 14px;
-//                height: 2px;
-//              }
-//            }
-//            &__third {
-//              width: 17px;
-//              height: 13px;
-//              background: rgba(126, 130, 0, .8);
-//              top: 30%;
-//              left: 23.8%;
-//
-//              @include rwd(1921) {
-//                width: 13px;
-//                height: 10px;
-//                left: 16.2%;
-//              }
-//
-//              @include rwd(1100) {
-//                width: 10px;
-//                height: 8px;
-//                left: 44.2%;
-//              }
-//
-//              @include rwd(768) {
-//                width: 9px;
-//                height: 7px;
-//                left: 43.2%;
-//              }
-//
-//              @include rwd(500) {
-//                width: 5px;
-//                height: 4px;
-//                top: 26%;
-//              }
-//            }
-//          }
-//
-//          .plus {
-//            position: absolute;
-//            width: 19px;
-//            height: 19px;
-//            top: 55%;
-//            left: 8.5%;
-//
-//            @include rwd(1921) {
-//              top: 55%;
-//              left: 5.5%;
-//            }
-//
-//            @include rwd(1100) {
-//              width: 11px;
-//              height: 11px;
-//              left: 16.5%;
-//            }
-//
-//            @include rwd(768) {
-//              left: 13.5%;
-//            }
-//
-//            @include rwd(500) {
-//              width: 6px;
-//              height: 6px;
-//              left: 14.5%;
-//            }
-//
-//            .vertical {
-//              width: 2px;
-//              height: 19px;
-//              background: #fff;
-//              margin-left: 8.5px;
-//
-//              @include rwd(1100) {
-//                height: 11px;
-//                margin-left: 5.5px;
-//              }
-//
-//              @include rwd(500) {
-//                height: 6px;
-//                width: 1px;
-//                margin-left: 3.5px;
-//              }
-//            }
-//            .horizontal {
-//              width: 19px;
-//              height: 2px;
-//              background: #fff;
-//              margin-top: -9.5px;
-//
-//              @include rwd(1100) {
-//                width: 11px;
-//                margin-top: -7.5px;
-//              }
-//
-//              @include rwd(500) {
-//                width: 6px;
-//                height: 1px;
-//                margin-top: -3.5px;
-//              }
-//            }
-//          }
-//          p {
-//            position: relative;
-//            font-size: 211px;
-//            color: #110c0a;
-//            font-weight: bold;
-//            margin: 0;
-//            text-transform: uppercase;
-//            line-height: 211px;
-//            animation: glitch-skew 1s infinite linear alternate-reverse;
-//            z-index: -5;
-//
-//            @include rwd(1921) {
-//              font-size: 158px;
-//              line-height: 158px;
-//            }
-//
-//            @include rwd(1100) {
-//              font-size: 126px;
-//              line-height: 126px;
-//            }
-//
-//            @include rwd(768) {
-//              font-size: 106px;
-//              line-height: 106px;
-//            }
-//
-//            @include rwd(500) {
-//              font-size: 64px;
-//              line-height: 64px;
-//            }
-//
-//            &::before {
-//              @include glitchCopy;
-//              left: 2px;
-//              text-shadow: -1px 0 red;
-//              clip: rect(0, 555px, 56px, 0);
-//              animation: glitch-anim 2s infinite linear alternate-reverse;
-//            }
-//            &::after {
-//              @include glitchCopy;
-//              left: -2px;
-//              text-shadow: -2px 0 #00fff9, 2px 2px #ff00c1;
-//              clip: rect(0, 555px, 56px, 0);
-//
-//              animation: glitch-anim2 5s infinite linear alternate-reverse;
-//            }
-//          }
-//        }
-//
-//        &__effects.gift {
-//          width: 100%;
-//          position: relative;
-//          padding-left: 15%;
-//
-//          @include rwd(1921) {
-//            padding-left: 11%;
-//          }
-//
-//          @include rwd(1100) {
-//            padding-left: 28%;
-//          }
-//
-//          @include rwd(768) {
-//            padding-left: 0;
-//            text-align: right;
-//          }
-//
-//          .strip {
-//            position: absolute;
-//
-//            &__first {
-//              width: 198px;
-//              height: 1px;
-//              background: #d7dd17;
-//              bottom: 0;
-//              left: 13.5%;
-//
-//              @include rwd(1921) {
-//                width: 148px;
-//                bottom: 10px;
-//                left: 10.5%;
-//              }
-//
-//              @include rwd(1100) {
-//                width: 125px;
-//                bottom: 22px;
-//                left: 25.5%;
-//              }
-//
-//              @include rwd(768) {
-//                width: 100px;
-//                bottom: 10px;
-//              }
-//
-//              @include rwd(500) {
-//                width: 55px;
-//                left: 23.5%;
-//                bottom: 15px;
-//              }
-//            }
-//            &__second {
-//              width: 44px;
-//              height: 1px;
-//              background: #ffffff;
-//              bottom: 43%;
-//              left: 44.5%;
-//
-//              @include rwd(1921) {
-//                width: 33px;
-//                left: 31.5%;
-//              }
-//
-//              @include rwd(1100) {
-//                width: 25px;
-//                left: 84.5%;
-//                bottom: 47%;
-//              }
-//
-//              @include rwd(768) {
-//                left: 83.5%;
-//                bottom: 44%;
-//              }
-//
-//              @include rwd(500) {
-//                width: 15px;
-//                left: 81.5%;
-//                bottom: 45%;
-//              }
-//            }
-//          }
-//
-//          .square {
-//            position: absolute;
-//            background: rgba(17, 12, 10, .8);;
-//            -moz-transform: skew(-15deg); /* Для Firefox */
-//            -ms-transform: skew(-15deg); /* Для IE */
-//            -webkit-transform: skew(-15deg); /* Для Safari, Chrome, iOS */
-//            -o-transform: skew(-15deg); /* Для Opera */
-//            transform: skew(-15deg);
-//
-//            &__first {
-//              width: 44px;
-//              height: 19px;
-//              background: #ffffff;
-//              top: -8.5%;
-//              left: 31.5%;
-//
-//              @include rwd(1921) {
-//                width: 33px;
-//                height: 14px;
-//                top: 10px;
-//                left: 22%;
-//              }
-//
-//              @include rwd(1100) {
-//                width: 26px;
-//                height: 11px;
-//                top: 15px;
-//                left: 60%;
-//              }
-//
-//              @include rwd(768) {
-//                width: 23px;
-//                height: 10px;
-//                top: 5px;
-//                left: 58%;
-//              }
-//
-//              @include rwd(500) {
-//                width: 14px;
-//                height: 6px;
-//                top: 10px;
-//              }
-//            }
-//            &__second3 {
-//              width: 35px;
-//              height: 28px;
-//              background: rgba(126, 130, 0, .8);
-//              bottom: 32%;
-//              left: 37.5%;
-//
-//              @include rwd(1921) {
-//                width: 26px;
-//                height: 21px;
-//                bottom: 32%;
-//                left: 26.5%;
-//              }
-//
-//              @include rwd(1100) {
-//                width: 21px;
-//                height: 17px;
-//                bottom: 32%;
-//                left: 56.5%;
-//              }
-//
-//              @include rwd(768) {
-//                width: 18px;
-//                height: 14px;
-//              }
-//
-//              @include rwd(500) {
-//                width: 11px;
-//                height: 9px;
-//                bottom: 40%;
-//                left: 55.5%;
-//              }
-//            }
-//
-//            &__second3-2 {
-//              width: 35px;
-//              height: 28px;
-//              background: rgba(126, 130, 0, .8);
-//              bottom: 32%;
-//              left: 37.5%;
-//              display: none;
-//
-//              @include rwd(500) {
-//                display: block;
-//                width: 11px;
-//                height: 9px;
-//                bottom: 22%;
-//                left: 51.5%;
-//              }
-//            }
-//
-//            &__third {
-//              width: 110px;
-//              height: 17px;
-//              background: #eff52f;
-//              top: -10%;
-//              left: 50.8%;
-//              z-index: 1;
-//
-//              @include rwd(1921) {
-//                width: 82px;
-//                height: 13px;
-//                top: 7px;
-//                left: 35.8%;
-//              }
-//
-//              @include rwd(1100) {
-//                width: 66px;
-//                height: 10px;
-//                top: 15px;
-//                left: 94.8%;
-//              }
-//
-//              @include rwd(768) {
-//                width: 57px;
-//                height: 9px;
-//                top: 7px;
-//                left: 94.8%;
-//              }
-//
-//              @include rwd(500) {
-//                width: 34px;
-//                height: 5px;
-//                top: 12px;
-//              }
-//            }
-//            &__fourth {
-//              width: 11px;
-//              height: 8px;
-//              background: rgba(126, 130, 0, .8);
-//              top: 1%;
-//              left: 52%;
-//              z-index: 2;
-//
-//              @include rwd(1921) {
-//                width: 8px;
-//                height: 6px;
-//                top: 17px;
-//                left: 37%;
-//              }
-//
-//              @include rwd(1100) {
-//                width: 6px;
-//                height: 5px;
-//                top: 22px;
-//                left: 97%;
-//              }
-//
-//              @include rwd(768) {
-//                height: 4px;
-//                top: 14px;
-//              }
-//
-//              @include rwd(500) {
-//                width: 2px;
-//                height: 3px;
-//                top: 35px;
-//              }
-//            }
-//          }
-//
-//          .plus {
-//            position: absolute;
-//            width: 19px;
-//            height: 19px;
-//            bottom: -2.5%;
-//            left: 41.3%;
-//
-//            @include rwd(1921) {
-//              width: 14px;
-//              height: 14px;
-//              bottom: 10px;
-//              left: 28.5%;
-//            }
-//
-//            @include rwd(1100) {
-//              width: 11px;
-//              height: 11px;
-//              left: 61.5%;
-//              bottom: 23px;
-//            }
-//
-//            @include rwd(768) {
-//              bottom: 12px;
-//            }
-//
-//            @include rwd(500) {
-//              width: 6px;
-//              height: 6px;
-//              bottom: 17px;
-//            }
-//
-//            .vertical {
-//              width: 2px;
-//              height: 19px;
-//              background: #fff;
-//              margin-left: 8.5px;
-//
-//              @include rwd(1921) {
-//                width: 2px;
-//                height: 14px;
-//                margin-left: 7px;
-//              }
-//
-//              @include rwd(1100) {
-//                height: 11px;
-//                margin-left: 5.5px;
-//              }
-//
-//              @include rwd(500) {
-//                width: 1px;
-//                height: 6px;
-//                margin-left: 3.5px;
-//              }
-//            }
-//            .horizontal {
-//              width: 19px;
-//              height: 2px;
-//              background: #fff;
-//              margin-top: -9.5px;
-//
-//              @include rwd(1921) {
-//                width: 14px;
-//                height: 2px;
-//                margin-top: -8px;
-//              }
-//
-//              @include rwd(1100) {
-//                width: 11px;
-//                margin-top: -7.5px;
-//              }
-//
-//              @include rwd(500) {
-//                width: 6px;
-//                height: 1px;
-//                margin-top: -4.5px;
-//              }
-//            }
-//          }
-//
-//          p {
-//            position: relative;
-//            font-size: 211px;
-//            color: #110c0a;
-//            font-weight: bold;
-//            letter-spacing: 4px;
-//            margin: 0;
-//            line-height: 130px;
-//            animation: glitch-skew 1s infinite linear alternate-reverse;
-//            z-index: -5;
-//
-//            @include rwd(1921) {
-//              font-size: 158px;
-//              line-height: 130px;
-//              margin-top: -15px;
-//            }
-//
-//            @include rwd(1100) {
-//              font-size: 126px;
-//              line-height: 126px;
-//            }
-//
-//            @include rwd(768) {
-//              font-size: 106px;
-//              line-height: 91px;
-//            }
-//
-//            @include rwd(500) {
-//              font-size: 64px;
-//              line-height: 72px;
-//            }
-//
-//            &::before {
-//              @include glitchCopy;
-//              left: 2px;
-//              text-shadow: -1px 0 red;
-//              clip: rect(0, 555px, 56px, 0);
-//              animation: glitch-anim 2s infinite linear alternate-reverse;
-//            }
-//            &::after {
-//              @include glitchCopy;
-//              left: -2px;
-//              text-shadow: -2px 0 #00fff9, 2px 2px #ff00c1;
-//              clip: rect(0, 555px, 56px, 0);
-//              animation: glitch-anim2 5s infinite linear alternate-reverse;
-//            }
-//          }
-//        }
-//
-//        &__effects.registr {
-//          width: 100%;
-//          position: relative;
-//
-//          @include rwd(500) {
-//            margin-top: -10px;
-//          }
-//
-//          p {
-//            position: relative;
-//            font-size: 102px;
-//            color: #7f8300;
-//            font-weight: 500;
-//            margin: 0;
-//            line-height: 180px;
-//            text-transform: uppercase;
-//            animation: glitch-skew 1s infinite linear alternate-reverse;
-//            z-index: -5;
-//
-//            @include rwd(1921) {
-//              font-size: 77px;
-//              margin-top: -15px;
-//              //margin-bottom: -20px;
-//            }
-//
-//            @include rwd(1100) {
-//              font-size: 61px;
-//              line-height: 70px;
-//            }
-//
-//            @include rwd(768) {
-//              font-size: 48px;
-//              line-height: 54px;
-//              margin-top: 0;
-//            }
-//
-//            @include rwd(570) {
-//              font-size: 40px;
-//            }
-//
-//            @include rwd(500) {
-//              font-size: 32px;
-//              line-height: 38px;
-//            }
-//
-//            &::before {
-//              @include glitchCopy;
-//              left: 2px;
-//              text-shadow: -1px 0 red;
-//              clip: rect(0, 555px, 56px, 0);
-//              animation: glitch-anim 2s infinite linear alternate-reverse;
-//            }
-//            &::after {
-//              @include glitchCopy;
-//              left: -2px;
-//              text-shadow: -2px 0 #00fff9, 2px 2px #ff00c1;
-//              clip: rect(0, 555px, 56px, 0);
-//              animation: glitch-anim2 5s infinite linear alternate-reverse;
-//            }
-//          }
-//        }
-//      }
-//
-//      .wrap {
-//        width: 650px;
-//        height: 142px;
-//        -webkit-transform: skew(-15deg);
-//        transform: skew(-15deg);
-//        z-index: 5;
-//        position: relative;
-//
-//        @include rwd(1921) {
-//          width: 486px;
-//          height: 106px;
-//          margin-left: 20px;
-//        }
-//
-//        @include rwd(1100) {
-//          width: 407px;
-//          height: 89px;
-//          margin: 0 auto;
-//        }
-//
-//        @include rwd(768) {
-//          width: 336px;
-//          height: 73px;
-//        }
-//
-//        @include rwd(500) {
-//          width: 230px;
-//          height: 50px;
-//        }
-//
-//
-//        .main-btn__registration {
-//          background: #110c0a;
-//          text-align: center;
-//
-//          @include rwd(1921) {
-//            width: 486px;
-//            height: 106px;
-//          }
-//
-//          @include rwd(1100) {
-//            width: 407px;
-//            height: 89px;
-//            margin: 0 auto;
-//          }
-//
-//          @include rwd(768) {
-//            width: 336px;
-//            height: 73px;
-//          }
-//
-//          @include rwd(500) {
-//            width: 230px;
-//            height: 50px;
-//          }
-//
-//          .plus {
-//            position: absolute;
-//            width: 19px;
-//            height: 19px;
-//            top: 20px;
-//            left: 600px;
-//            -moz-transform: skew(15deg); /* Для Firefox */
-//            -ms-transform: skew(15deg); /* Для IE */
-//            -webkit-transform: skew(15deg); /* Для Safari, Chrome, iOS */
-//            -o-transform: skew(15deg); /* Для Opera */
-//            transform: skew(15deg);
-//
-//            @include rwd(1921) {
-//              width: 14px;
-//              height: 14px;
-//              top: 15px;
-//              left: 460px;
-//            }
-//
-//            @include rwd(1100) {
-//              left: 380px;
-//            }
-//
-//            @include rwd(768) {
-//              left: 310px;
-//            }
-//
-//            @include rwd(500) {
-//              width: 7px;
-//              height: 7px;
-//              left: 220px;
-//              top: 3px;
-//            }
-//
-//            .vertical {
-//              width: 2px;
-//              height: 19px;
-//              background: #fff;
-//              margin-left: 8.5px;
-//
-//              @include rwd(1921) {
-//                height: 14px;
-//                margin-left: 5.5px;
-//              }
-//
-//              @include rwd(500) {
-//                width: 1px;
-//                height: 7px;
-//                margin-left: 3px;
-//              }
-//            }
-//            .horizontal {
-//              width: 19px;
-//              height: 2px;
-//              background: #fff;
-//              margin-top: -9.5px;
-//
-//              @include rwd(1921) {
-//                width: 14px;
-//                margin-top: -8.5px;
-//              }
-//
-//              @include rwd(500) {
-//                width: 7px;
-//                height: 1px;
-//                margin-top: -4.5px;
-//              }
-//            }
-//          }
-//
-//          a {
-//            display: block;
-//            width: 100%;
-//            height: 100%;
-//            font-size: 48px;
-//            letter-spacing: 1px;
-//            line-height: 142px;
-//            color: #f8ff13;
-//            font-weight: bold;
-//            text-decoration: none;
-//            text-transform: uppercase;
-//            transition: all .5s;
-//            -moz-transform: skew(15deg); /* Для Firefox */
-//            -ms-transform: skew(15deg); /* Для IE */
-//            -webkit-transform: skew(15deg); /* Для Safari, Chrome, iOS */
-//            -o-transform: skew(15deg); /* Для Opera */
-//            transform: skew(15deg);
-//
-//            @include rwd(1921) {
-//              font-size: 36px;
-//              line-height: 102px;
-//            }
-//
-//            @include rwd(1100) {
-//              font-size: 30px;
-//              line-height: 89px;
-//            }
-//
-//            @include rwd(768) {
-//              font-size: 25px;
-//              line-height: 73px;
-//            }
-//
-//            @include rwd(500) {
-//              font-size: 17px;
-//              line-height: 50px;
-//            }
-//          }
-//          a:hover {
-//            font-size: 50px;
-//
-//            @include rwd(1921) {
-//              font-size: 38px;
-//            }
-//
-//            @include rwd(1100) {
-//              font-size: 32px;
-//              line-height: 89px;
-//            }
-//
-//            @include rwd(768) {
-//              font-size: 27px;
-//              line-height: 89px;
-//            }
-//
-//            @include rwd(500) {
-//              font-size: 19px;
-//              line-height: 50px;
-//            }
-//          }
-//        }
-//
-//        .yellow {
-//          position: absolute;
-//          width: 100%;
-//          height: 100%;
-//          top: -10px;
-//          left: -10px;
-//          background-color: #7f8300;
-//          z-index: -3;
-//          -webkit-transition: .5s;
-//          transition: .5s;
-//
-//          @include rwd(1100) {
-//            width: 407px;
-//            height: 89px;
-//            left: 50%;
-//            margin-left: -212.5px;
-//          }
-//
-//          @include rwd(768) {
-//            width: 336px;
-//            height: 73px;
-//            margin-left: -180px;
-//          }
-//
-//          @include rwd(500) {
-//            width: 230px;
-//            height: 50px;
-//            margin-left: -125px;
-//          }
-//        }
-//
-//        .white {
-//          position: absolute;
-//          width: 100%;
-//          height: 100%;
-//          bottom: -10px;
-//          right: -10px;
-//          background-color: #fff;
-//          z-index: -5;
-//          -webkit-transition: all .5s;
-//          transition: all .5s;
-//
-//          @include rwd(1921) {
-//            width: 486px;
-//            height: 106px;
-//          }
-//
-//          @include rwd(1100) {
-//            width: 407px;
-//            height: 89px;
-//            left: 50%;
-//            margin-left: -194.5px;
-//          }
-//
-//          @include rwd(768) {
-//            width: 336px;
-//            height: 73px;
-//            margin-left: -156px;
-//          }
-//
-//          @include rwd(500) {
-//            width: 230px;
-//            height: 50px;
-//            margin-left: -105px;
-//          }
-//        }
-//
-//        .main-btn__registration:hover {
-//          background: #141414;
-//        }
-//        &:hover .yellow{
-//          top: 0;
-//          left: 0;
-//
-//          @include rwd(1100) {
-//            left: 50%;
-//            margin-left: -202.5px;
-//            top: 0;
-//          }
-//
-//          @include rwd(768) {
-//            left: 50%;
-//            margin-left: -168px;
-//            top: 0;
-//          }
-//
-//          @include rwd(500) {
-//            left: 50%;
-//            margin-left: -115px;
-//            top: 0;
-//          }
-//        }
-//
-//        &:hover .white{
-//          bottom: 0;
-//          right: 0;
-//
-//          @include rwd(1100) {
-//            left: 50%;
-//            margin-left: -202.5px;
-//            top: 0;
-//          }
-//
-//          @include rwd(768) {
-//            left: 50%;
-//            margin-left: -168px;
-//            top: 0;
-//          }
-//
-//          @include rwd(500) {
-//            left: 50%;
-//            margin-left: -115px;
-//            top: 0;
-//          }
-//        }
-//      }
-//      .main-steps {
-//        width: 100%;
-//        margin-top: 210px;
-//        margin-bottom: 95px;
-//        padding-right: 77px;
-//        display: flex;
-//        justify-content: space-between;
-//        flex-wrap: wrap;
-//        align-items: center;
-//
-//        @include rwd(1921) {
-//          padding-right: 430px;
-//          margin-top: 130px;
-//          margin-bottom: 85px;
-//        }
-//
-//        @include rwd(1440) {
-//          padding-right: 0 ;
-//        }
-//
-//        @include rwd(1100) {
-//          justify-content: space-between;
-//          padding-right: 0;
-//          margin-bottom: 45px;
-//          margin-top: 60px;
-//        }
-//
-//        @include rwd(768) {
-//          flex-direction: column;
-//          align-items: flex-start;
-//          margin-bottom: 40px;
-//          margin-top: 50px;
-//          padding-left: 22%;
-//        }
-//
-//        .step {
-//          width: 30%;
-//          display: flex;
-//          justify-content: center;
-//          align-items: center;
-//          text-transform: uppercase;
-//
-//          @include rwd(768) {
-//            width: 100%;
-//            justify-content: start;
-//            padding-top: 0;
-//            padding-bottom: 0;
-//            margin-bottom: 30px;
-//          }
-//
-//          .block-wrap {
-//            -moz-transform: skew(-15deg); /* Для Firefox */
-//            -ms-transform: skew(-15deg); /* Для IE */
-//            -webkit-transform: skew(-15deg); /* Для Safari, Chrome, iOS */
-//            -o-transform: skew(-15deg); /* Для Opera */
-//            transform: skew(-15deg);
-//
-//            .block {
-//              width: 93px;
-//              height: 73px;
-//              margin-right: 15px;
-//              background: #ffffff;
-//              text-align: center;
-//
-//              @include rwd(1921) {
-//                width: 70px;
-//                height: 55px;
-//              }
-//
-//              @include rwd(1100) {
-//                 width: 59px;
-//                 height: 47px;
-//                 margin-right: 10px;
-//               }
-//
-//              @include rwd(768) {
-//                width: 70px;
-//                height: 55px;
-//              }
-//
-//              @include rwd(500) {
-//                width: 48px;
-//                height: 38px;
-//              }
-//
-//              &-square {
-//                position: absolute;
-//                z-index: -1;
-//              }
-//              .square-block1__first {
-//                width: 69px;
-//                height: 55px;
-//                background-color: #110c0a;
-//                top: -5px;
-//                left: -1px;
-//
-//                @include rwd(1921) {
-//                  width: 52px;
-//                  height: 41px;
-//                }
-//
-//                @include rwd(1100) {
-//                  width: 44px;
-//                  height: 35px;
-//                }
-//
-//                @include rwd(768) {
-//                  width: 52px;
-//                  height: 41px;
-//                }
-//
-//                @include rwd(500) {
-//                  width: 36px;
-//                  height: 28px;
-//                }
-//              }
-//              .square-block1__second {
-//                width: 21px;
-//                height: 17px;
-//                background-color: rgba(126, 130, 0, .8);
-//                bottom: -10px;
-//                left: 50px;
-//                z-index: 2;
-//
-//                @include rwd(1921) {
-//                  width: 16px;
-//                  height: 13px;
-//                  bottom: -5px;
-//                  left: 40px;
-//                }
-//
-//                @include rwd(1100) {
-//                  width: 14px;
-//                  height: 11px;
-//                }
-//
-//                @include rwd(768) {
-//                  width: 16px;
-//                  height: 13px;
-//                }
-//
-//                @include rwd(500) {
-//                  width: 11px;
-//                  height: 9px;
-//
-//                }
-//              }
-//              .square-block2__first {
-//                width: 37px;
-//                height: 31px;
-//                background-color: #7e8200;
-//                top: -2px;
-//                right: 14px;
-//
-//                @include rwd(1921) {
-//                  width: 28px;
-//                  height: 23px;
-//                }
-//
-//                @include rwd(1100) {
-//                  width: 24px;
-//                  height: 19px;
-//                }
-//
-//                @include rwd(768) {
-//                  width: 28px;
-//                  height: 23px;
-//                }
-//
-//                @include rwd(500) {
-//                  width: 19px;
-//                  height: 16px;
-//                }
-//              }
-//              .square-block2__second {
-//                width: 24px;
-//                height: 19px;
-//                background-color: #110c0a;
-//                z-index: 2;
-//                bottom: 12px;
-//                left: -12px;
-//
-//                @include rwd(1921) {
-//                  width: 18px;
-//                  height: 14px;
-//                  bottom: 10px;
-//                  left: -10px;
-//                }
-//
-//                @include rwd(1100) {
-//                  width: 15px;
-//                  height: 12px;
-//                }
-//
-//                @include rwd(768) {
-//                  width: 18px;
-//                  height: 14px;
-//                }
-//
-//                @include rwd(500) {
-//                  width: 12px;
-//                  height: 10px;
-//                }
-//              }
-//              .square-block3__first {
-//                width: 68px;
-//                height: 52px;
-//                background-color: #110c0a;
-//                bottom: -3px;
-//                left: 0;
-//
-//                @include rwd(1921) {
-//                  width: 51px;
-//                  height: 39px;
-//                }
-//
-//                @include rwd(1100) {
-//                  width: 43px;
-//                  height: 33px;
-//                }
-//
-//                @include rwd(768) {
-//                  width: 51px;
-//                  height: 39px;
-//                }
-//
-//                @include rwd(500) {
-//                  width: 35px;
-//                  height: 27px;
-//                }
-//              }
-//              .square-block3__second {
-//                width: 21px;
-//                height: 17px;
-//                background-color: rgba(126, 130, 0, .8);
-//                z-index: 2;
-//                bottom: 10px;
-//                left: -6px;
-//
-//                @include rwd(1921) {
-//                  width: 16px;
-//                  height: 13px;
-//                  left: -1px;
-//                }
-//
-//                @include rwd(1100) {
-//                  width: 14px;
-//                  height: 11px;
-//                }
-//
-//                @include rwd(768) {
-//                  width: 16px;
-//                  height: 13px;
-//                }
-//
-//                @include rwd(500) {
-//                  width: 11px;
-//                  height: 9px;
-//                }
-//              }
-//
-//              span {
-//                display: block;
-//                font-size: 42px;
-//                line-height: 73px;
-//                color: #110c0a;
-//                font-weight: bold;
-//                -moz-transform: skew(15deg); /* Для Firefox */
-//                -ms-transform: skew(15deg); /* Для IE */
-//                -webkit-transform: skew(15deg); /* Для Safari, Chrome, iOS */
-//                -o-transform: skew(15deg); /* Для Opera */
-//                transform: skew(15deg);
-//
-//                @include rwd(1921) {
-//                  font-size: 32px;
-//                  line-height: 55px;
-//                }
-//
-//                @include rwd(1100) {
-//                  font-size: 27px;
-//                  line-height: 47px;
-//                }
-//
-//                @include rwd(768) {
-//                  font-size: 32px;
-//                  line-height: 55px;
-//                }
-//
-//                @include rwd(500) {
-//                  font-size: 22px;
-//                  line-height: 38px;
-//                }
-//              }
-//            }
-//            .block2 {
-//              .plus {
-//                position: absolute;
-//                width: 19px;
-//                height: 19px;
-//                bottom: 0;
-//                right: 0;
-//                -moz-transform: skew(15deg); /* Для Firefox */
-//                -ms-transform: skew(15deg); /* Для IE */
-//                -webkit-transform: skew(15deg); /* Для Safari, Chrome, iOS */
-//                -o-transform: skew(15deg); /* Для Opera */
-//                transform: skew(15deg);
-//                z-index: 1;
-//
-//                @include rwd(768) {
-//                  width: 14px;
-//                  height: 14px;
-//                }
-//
-//                .vertical {
-//                  width: 2px;
-//                  height: 19px;
-//                  background: #000;
-//                  margin-left: 8.5px;
-//
-//                  @include rwd(768) {
-//                    width: 1px;
-//                    height: 14px;
-//                    margin-left: 6.5px;
-//                  }
-//                }
-//                .horizontal {
-//                  width: 19px;
-//                  height: 2px;
-//                  background: #000;
-//                  margin-top: -9.5px;
-//
-//                  @include rwd(768) {
-//                    width: 14px;
-//                    height: 1px;
-//                    margin-top: -7.5px;
-//                  }
-//                }
-//              }
-//            }
-//          }
-//
-//          p {
-//            margin: 0;
-//            font-size: 38px;
-//            letter-spacing: 0;
-//            color: #110c0a;
-//            font-weight: 500;
-//
-//            @include rwd(1921) {
-//              font-size: 29px;
-//              line-height: 55px;
-//            }
-//
-//            @include rwd(1100) {
-//              font-size: 24px;
-//              line-height: 55px;
-//            }
-//
-//            @include rwd(768) {
-//              font-size: 29px;
-//              line-height: 55px;
-//              font-weight: 300;
-//            }
-//
-//            @include rwd(500) {
-//              font-size: 20px;
-//            }
-//          }
-//        }
-//      }
-//      .trophey-wrapper {
-//        width: 100%;
-//        display: flex;
-//        align-items: center;
-//        box-sizing: border-box;
-//
-//        @include rwd2(1100) {
-//          display: none;
-//        }
-//
-//        @include rwd(1100) {
-//          justify-content: center;
-//          padding-right: 100px;
-//        }
-//
-//        @include rwd(768) {
-//          margin-bottom: 10px;
-//        }
-//
-//        @include rwd(570) {
-//          padding-right: 60px;
-//        }
-//
-//        @include rwd(500) {
-//          padding-right: 10%;
-//        }
-//
-//        @include rwd(320) {
-//          margin-bottom: -20px;
-//        }
-//
-//        .trophey-left__title {
-//          width: 185px;
-//          text-align: right;
-//          text-transform: uppercase;
-//
-//          @include rwd(1100) {
-//            width: 170px;
-//          }
-//
-//          @include rwd(550) {
-//            width: 82px;
-//          }
-//
-//          h1 {
-//            font-size: 27px;
-//            letter-spacing: 1px;
-//            color: #110c0a;
-//            font-weight: bold;
-//            margin: 0;
-//
-//            @include rwd(1921) {
-//              font-size: 23px;
-//            }
-//
-//            @include rwd(1100) {
-//              font-size: 21px;
-//            }
-//
-//            @include rwd(768) {
-//              font-size: 2.3vw;
-//            }
-//
-//            @include rwd(320) {
-//              font-size: 2.8vw;
-//            }
-//          }
-//          p {
-//            font-size: 23px;
-//            letter-spacing: 1px;
-//            color: #110c0a;
-//            font-weight: bold;
-//            margin: 0;
-//
-//            @include rwd(1921) {
-//              font-size: 19px;
-//            }
-//
-//            @include rwd(1100) {
-//              font-size: 17px;
-//            }
-//
-//            @include rwd(768) {
-//              font-size: 2vw;
-//            }
-//
-//            @include rwd(500) {
-//              font-size: 1.8vw;
-//            }
-//
-//            @include rwd(320) {
-//              font-size: 2.2vw;
-//            }
-//          }
-//        }
-//
-//        .trophey-img {
-//          margin: 0 20px;
-//          overflow: hidden;
-//
-//          @include rwd(768) {
-//            min-width: 60px;
-//            margin: 0 10px;
-//          }
-//
-//          @include rwd(500) {
-//            max-width: 35px;
-//            min-width: 35px;
-//            margin: 0 5px;
-//          }
-//
-//          @include rwd(320) {
-//            max-width: 50px;
-//          }
-//
-//          img {
-//            width: 100%;
-//            max-width: 100%;
-//            height: 110px;
-//
-//            @include rwd(1100) {
-//              height: 85px;
-//            }
-//
-//            @include rwd(768) {
-//              width: 80%;
-//              height: 100%;
-//            }
-//          }
-//        }
-//
-//        .trophey-right__title {
-//          width: 95px;
-//          text-align: left;
-//          text-transform: uppercase;
-//
-//          @include rwd(1100) {
-//            width: 90px;
-//          }
-//
-//          @include rwd(500) {
-//            width: 45px;
-//          }
-//
-//          h1 {
-//            font-size: 27px;
-//            letter-spacing: 1px;
-//            color: #110c0a;
-//            font-weight: bold;
-//            margin: 0;
-//
-//            @include rwd(1921) {
-//              font-size: 23px;
-//            }
-//
-//            @include rwd(1100) {
-//              font-size: 21px;
-//            }
-//
-//            @include rwd(768) {
-//              font-size: 2.3vw;
-//            }
-//
-//            @include rwd(320) {
-//              font-size: 2.8vw;
-//            }
-//          }
-//          p {
-//            font-size: 23px;
-//            letter-spacing: 1px;
-//            color: #110c0a;
-//            font-weight: bold;
-//            margin: 0;
-//
-//            @include rwd(1921) {
-//              font-size: 19px;
-//            }
-//
-//            @include rwd(1100) {
-//              font-size: 17px;
-//            }
-//
-//            @include rwd(768) {
-//              font-size: 2vw;
-//            }
-//
-//            @include rwd(500) {
-//              font-size: 1.8vw;
-//            }
-//
-//            @include rwd(320) {
-//              font-size: 2.2vw;
-//            }
-//          }
-//        }
-//      }
-//    }
-//    .attention {
-//      width: 100%;
-//      position: absolute;
-//      bottom: 0;
-//      right: 155px;
-//      @include rwd(1921) {
-//        right: 65px;
-//      }
-//
-//      @include rwd(1100) {
-//        right: 0;
-//        bottom: -10px;
-//      }
-//
-//      @include rwd(768) {
-//        right: 0;
-//        bottom: 0;
-//      }
-//
-//      p {
-//        font-size: 18px;
-//        letter-spacing: 0;
-//        color: rgba(127, 131, 0, .7);
-//        font-weight: 300;
-//        text-align: right;
-//        text-transform: uppercase;
-//
-//        @include rwd(1100) {
-//          text-align: center;
-//        }
-//
-//        @include rwd(768) {
-//          font-size: 1.6vw;
-//        }
-//
-//        @include rwd(500) {
-//          font-size: 2vw;
-//        }
-//      }
-//    }
-//  }
-//
-//  .footer {
-//    width: 100%;
-//    background: #000;
-//    display: flex;
-//    flex-flow: wrap;
-//    justify-content: space-between;
-//    align-items: center;
-//    padding: 21px 90px;
-//
-//    @include rwd(1921) {
-//      padding: 21px 65px;
-//    }
-//
-//    @include rwd(1100) {
-//      padding: 21px 200px;
-//    }
-//
-//    @include rwd(571) {
-//      padding: 21px 120px;
-//    }
-//
-//    @include rwd(500) {
-//      padding: 21px 100px;
-//    }
-//
-//    @include rwd(320) {
-//      padding: 21px 10px;
-//    }
-//
-//    &-pay {
-//      display: flex;
-//      justify-content: space-between;
-//      align-items: center;
-//      box-sizing: border-box;
-//      padding: 0;
-//
-//      @include rwd(1100) {
-//        order: 3;
-//        width: 100%;
-//        justify-content: center;
-//        margin-top: 25px;
-//      }
-//
-//      @include rwd(768) {
-//        width: 57%;
-//        justify-content: center;
-//        margin-top: 30px;
-//      }
-//
-//      @include rwd(400) {
-//        order: 3;
-//        width: 100%;
-//      }
-//
-//      @include rwd(320) {
-//        justify-content: space-between;
-//        width: 85%;
-//      }
-//
-//      &__visa {
-//        min-width: 46px;
-//
-//        @include rwd(768) {
-//          min-width: 36px;
-//        }
-//
-//        @include rwd(500) {
-//          margin-right: 20px;
-//        }
-//
-//        @include rwd(320) {
-//          max-width: 36px;
-//          min-width: 30px;
-//        }
-//      }
-//
-//      &__mastercard {
-//        min-width: 40px;
-//
-//        @include rwd(768) {
-//          min-width: 36px;
-//        }
-//
-//        @include rwd(500) {
-//          margin-right: 20px;
-//        }
-//      }
-//
-//      &__qiwi {
-//        min-width: 66px;
-//
-//        @include rwd(768) {
-//          min-width: 60px;
-//        }
-//
-//        @include rwd(500) {
-//          min-width: 40px;
-//          margin-right: 20px;
-//        }
-//      }
-//
-//      &__ymoney {
-//        min-width: 95px;
-//
-//        @include rwd(768) {
-//          min-width: 85px;
-//        }
-//
-//        @include rwd(500) {
-//          min-width: 50px;
-//        }
-//
-//        @include rwd(400) {
-//          margin-right: 0;
-//        }
-//      }
-//
-//      & > div {
-//        margin-right: 40px;
-//        @include rwd(1921) {
-//          margin-right: 30px;
-//        }
-//
-//        @include rwd(768) {
-//          margin-right: 30px;
-//        }
-//
-//        @include rwd(320) {
-//          margin-right: 0;
-//        }
-//
-//        img {
-//          width: 100%;
-//        }
-//      }
-//    }
-//
-//    &-install {
-//      display: flex;
-//      align-items: center;
-//      box-sizing: border-box;
-//
-//      @include rwd(1100) {
-//        order: 1;
-//        justify-content: center;
-//        margin-right: -15%;
-//      }
-//
-//      @include rwd(768) {
-//        order: 0;
-//        width: 100%;
-//      }
-//
-//      &__app {
-//        margin-right: 20px;
-//        min-width: 179px;
-//
-//        @include rwd(1921) {
-//          margin-right: 12px;
-//          max-width: 110px;
-//        }
-//        @include rwd(1100) {
-//          min-width: 110px;
-//        }
-//
-//        img {
-//          width: 100%;
-//        }
-//      }
-//
-//      &__googlep {
-//        margin-right: 20px;
-//        min-width: 179px;
-//
-//        @include rwd(1921) {
-//          margin-right: 12px;
-//          max-width: 110px;
-//        }
-//        @include rwd(1100) {
-//          margin-right: 0;
-//          min-width: 110px;
-//        }
-//
-//        img {
-//          width: 100%;
-//        }
-//      }
-//    }
-//
-//    &-warning {
-//      margin-right: -20%;
-//      box-sizing: border-box;
-//      @include rwd(1921) {
-//        margin-right: -15%;
-//      }
-//      @include rwd(1440) {
-//        margin-right: 0;
-//      }
-//
-//      @include rwd(1100) {
-//        order: 0;
-//      }
-//
-//      @include rwd(768) {
-//        order: 2;
-//        width: 10%;
-//        margin-top: 30px;
-//        margin-right: 25px;
-//      }
-//
-//      @include rwd(500) {
-//        margin-right: 20px;
-//        max-width: 25px;
-//      }
-//
-//      @include rwd(400) {
-//        width: 13%;
-//        margin: 10px auto;
-//        order: 2;
-//      }
-//
-//      @include rwd(400) {
-//        margin-top: 30px;
-//      }
-//
-//      img {
-//        width: 100%;
-//        min-width: 41px;
-//
-//        @include rwd(1100) {
-//          width: 80%;
-//          min-width: 31px;
-//        }
-//
-//        @include rwd(1100) {
-//          //width: 80%;
-//          min-width: 25px;
-//        }
-//      }
-//    }
-//    &-social {
-//      display: flex;
-//      align-items: center;
-//      box-sizing: border-box;
-//
-//      @include rwd(1100) {
-//        order: 2;
-//      }
-//
-//      @include rwd(768) {
-//        order: 1;
-//        width: 100%;
-//        justify-content: center;
-//        margin-top: 30px;
-//      }
-//
-//      & > div {
-//        max-width: 39px;
-//
-//        @include rwd(1100) {
-//          min-width: 32px;
-//        }
-//
-//        a {
-//          display: block;
-//          width: 100%;
-//          height: 100%;
-//
-//          img {
-//            width: 100%;
-//
-//            @include rwd(1100) {
-//              width: 82%;
-//            }
-//          }
-//        }
-//      }
-//
-//      &__vk {
-//        margin-right: 25px;
-//
-//        @include rwd(1100) {
-//          margin-right: 20px;
-//        }
-//      }
-//      &__twitter {
-//        margin-right: 25px;
-//
-//        @include rwd(1100) {
-//          margin-right: 20px;
-//        }
-//      }
-//    }
-//  }
-//
-
-
-
 
 
 @font-face{
@@ -3191,47 +57,6 @@
   }
 }
 
-//// Small tablets and large smartphones (landscape view)
-//$screen-sm-min: 576px;
-//
-//// Small tablets (portrait view)
-//$screen-md-min: 768px;
-//
-//// Tablets and small desktops
-//$screen-lg-min: 992px;
-//
-//// Large tablets and desktops
-//$screen-xl-min: 1200px;
-//
-//// Small devices
-//@mixin sm {
-//  @media (min-width: #{$screen-sm-min}) {
-//    @content;
-//  }
-//}
-//
-//// Medium devices
-//@mixin md {
-//  @media (min-width: #{$screen-md-min}) {
-//    @content;
-//  }
-//}
-//
-//// Large devices
-//@mixin lg {
-//  @media (min-width: #{$screen-lg-min}) {
-//    @content;
-//  }
-//}
-//
-//// Extra large devices
-//@mixin xl {
-//  @media (min-width: #{$screen-xl-min}) {
-//    @content;
-//  }
-//}
-
-
 @mixin rwd($screen) {
   @media (max-width: $screen+'px') {
     @content;
@@ -3243,11 +68,6 @@
     @content;
   }
 }
-
-
-//@include rwd(1400) {
-//  max-width: 900px;
-//}
 
 html {
   width: 100%;
@@ -3277,7 +97,7 @@ div {
   box-sizing: border-box;
   z-index: 0;
   @include rwd(720) {
-      max-width: 720px;
+    max-width: 720px;
   }
 
   .bullet-bg_1 {
@@ -3304,6 +124,11 @@ div {
     @include rwd(768) {
       top: 130px;
       left: 75%;
+    }
+
+    @include rwd(320) {
+      min-width: 45px;
+      top: 110px;
     }
 
     img {
@@ -3448,15 +273,14 @@ div {
       left: 53%;
     }
 
-    @include rwd(570) {
-      min-width: 410px;
-      bottom: 450px;
+    @include rwd(480) {
+      min-width: 260px;
+      bottom: 360px;
+      left: 56%;
     }
 
-    @include rwd(500) {
-      min-width: 260px;
-      bottom: 425px;
-      left: 53%;
+    @include rwd(320) {
+      bottom: 350px;
     }
 
     .plus {
@@ -3481,6 +305,10 @@ div {
         width: 10px;
         height: 10px;
         bottom: 190px;
+      }
+
+      @include rwd(480) {
+        display: none;
       }
 
       .vertical {
@@ -3570,9 +398,9 @@ div {
     right: 625px;
     overflow: hidden;
 
-    @include rwd(1921) {
+    @include rwd(1920) {
       min-width: 540px;
-      right: 495px;
+      right: 485px;
       bottom: 100px;
     }
 
@@ -3588,22 +416,15 @@ div {
       bottom: 400px;
     }
 
-    @include rwd(570) {
-      min-width: 295px;
-      right: 32%;
-      bottom: 355px;
-    }
-
-    @include rwd(500) {
+    @include rwd(480) {
       min-width: 190px;
-      right: 38%;
-      bottom: 355px;
+      right: 34%;
+      bottom: 290px;
     }
 
     @include rwd(320) {
-      min-width: 190px;
-      right: 30%;
-      bottom: 355px;
+      right: 28%;
+      bottom: 280px;
     }
 
     img {
@@ -3643,7 +464,7 @@ div {
         top: 30px;
       }
 
-      @include rwd(500) {
+      @include rwd(480) {
         display: none;
       }
     }
@@ -3682,7 +503,7 @@ div {
         right: 73%;
       }
 
-      @include rwd(500) {
+      @include rwd(480) {
         display: none;
       }
     }
@@ -3714,17 +535,15 @@ div {
       right: 47%;
     }
 
-    @include rwd(570) {
-      bottom: 465px;
-    }
-
-    @include rwd(500) {
+    @include rwd(480) {
       min-width: 225px;
-      bottom: 420px;
+      right: 44%;
+      bottom: 350px;
     }
 
     @include rwd(320) {
       right: 45%;
+      bottom: 340px;
     }
 
     img {
@@ -3764,7 +583,7 @@ div {
         bottom: 225px;
       }
 
-      @include rwd(500) {
+      @include rwd(480) {
         bottom: 160px;
       }
     }
@@ -4067,7 +886,7 @@ div {
         max-width: 200px;
       }
 
-      @include rwd(500) {
+      @include rwd(480) {
         max-width: 105px;
       }
       img {
@@ -4098,6 +917,10 @@ div {
           @include rwd(1921) {
             font-size: 23px;
           }
+
+          //@include rwd(768) {
+          //  font-size: 18px;
+          //}
         }
         p {
           font-size: 23px;
@@ -4109,6 +932,10 @@ div {
           @include rwd(1921) {
             font-size: 19px;
           }
+          //
+          //@include rwd(768) {
+          //  font-size: 15px;
+          //}
         }
       }
 
@@ -4158,42 +985,28 @@ div {
     width: 100%;
     max-width: 1440px;
     margin: 70px auto 0 auto;
-    padding-left: 6%;
-    //overflow: hidden;
 
-    @include rwd(1921) {
-      margin: 20px 460px 0 460px;
-      padding-left: 35px;
+    @include rwd(1920) {
+      max-width: 1000px;
+      margin: 20px auto;
     }
+
     @include rwd(1440) {
-      padding-left: 200px;
-      padding-right: 200px;
       margin: 30px auto;
     }
 
     @include rwd(1100) {
-      padding-right: 200px;
+      max-width: 720px;
     }
 
     @include rwd(768) {
-      padding-right: 145px;
-      padding-left: 145px;
+      max-width: 480px;
       margin: 35px auto;
     }
 
-    @include rwd(720) {
-      padding-right: 0;
-      padding-left: 0;
-    }
-
-    @include rwd(570) {
-      padding-right: 18%;
-      padding-left: 18%;
-    }
-
-    @include rwd(500) {
-      padding-right: 18%;
-      padding-left: 18%;
+    @include rwd(480) {
+      max-width: 320px;
+      margin: 15px auto;
     }
 
     @include rwd(320) {
@@ -4203,11 +1016,17 @@ div {
 
     .main-title {
       width: 100%;
-      max-width: 353px;
-      height: 48px;
+      max-width: 472px;
+      height: 64px;
       position: relative;
       margin-left: 6.8%;
       text-align: center;
+
+      @include rwd(1920) {
+        margin: 0 120px;
+        max-width: 353px;
+        height: 48px;
+      }
 
       @include rwd(1100) {
         margin: 0 auto;
@@ -4220,7 +1039,7 @@ div {
         height: 33px;
       }
 
-      @include rwd(500) {
+      @include rwd(480) {
         width: 147px;
         height: 20px;
       }
@@ -4258,7 +1077,7 @@ div {
           left: -6%;
         }
 
-        @include rwd(500) {
+        @include rwd(480) {
           width: 20px;
           left: -6%;
         }
@@ -4295,12 +1114,17 @@ div {
       }
       p {
         margin: 0;
-        font-size: 32px;
-        line-height: 42px;
+        font-size: 42px;
+        line-height: 64px;
         letter-spacing: 1px;
         color: #ffffff;
         font-weight: bold;
         text-align: center;
+
+        @include rwd(1920) {
+          font-size: 32px;
+          line-height: 48px;
+        }
 
         @include rwd(1100) {
           font-size: 25px;
@@ -4308,12 +1132,12 @@ div {
         }
 
         @include rwd(768) {
-          font-size: 2.8vw;
-          line-height: 33px;
+          font-size: 22px;
+          line-height: 32px;
         }
 
-        @include rwd(500) {
-          font-size: 2.8vw;
+        @include rwd(480) {
+          font-size: 13px;
           line-height: 20px;
         }
       }
@@ -4328,27 +1152,17 @@ div {
       }
 
       @include rwd(1100) {
-        padding: 0 135px;
+        padding: 0 145px;
         margin-bottom: 355px;
       }
 
       @include rwd(768) {
-        padding: 0 12.6%;
+        padding: 0 60px;
         margin-bottom: 315px;
       }
 
-      @include rwd(720) {
-        padding: 0 20.3%;
-        margin-bottom: 315px;
-      }
-
-      @include rwd(570) {
-        padding: 0 5.6%;
-        margin-bottom: 315px;
-      }
-
-      @include rwd(500) {
-        padding: 0 15.7%;
+      @include rwd(480) {
+        padding: 0 50px;
         margin-bottom: 195px;
       }
 
@@ -4360,6 +1174,14 @@ div {
       &__effects.bonus {
         width: 100%;
         position: relative;
+
+        @include rwd(1920) {
+          margin-left: 35px;
+        }
+
+        @include rwd(1100) {
+          margin-left: 0;
+        }
 
         @include rwd(768) {
           text-align: left;
@@ -4390,7 +1212,7 @@ div {
               left: 1.5%;
             }
 
-            @include rwd(500) {
+            @include rwd(480) {
               width: 80px;
               top: 17%;
             }
@@ -4401,11 +1223,11 @@ div {
             height: 1px;
             background-color: #d5db14;
             bottom: 32%;
-            left: 30.5%;
+            left: 26.5%;
 
-            @include rwd(1921) {
+            @include rwd(1920) {
               width: 80px;
-              left: 21.5%;
+              left: 28.5%;
             }
 
             @include rwd(1100) {
@@ -4413,7 +1235,7 @@ div {
               left: 55.5%;
             }
 
-            @include rwd(500) {
+            @include rwd(480) {
               width: 35px;
               left: 55.5%;
             }
@@ -4436,10 +1258,10 @@ div {
             bottom: 11.5%;
             left: -6%;
 
-            @include rwd(1921) {
+            @include rwd(1920) {
               width: 82px;
               height: 13px;
-              left: -4.5%;
+              left: -5.5%;
             }
 
             @include rwd(1100) {
@@ -4453,7 +1275,7 @@ div {
               height: 9px;
             }
 
-            @include rwd(500) {
+            @include rwd(480) {
               width: 34px;
               height: 5px;
             }
@@ -4463,12 +1285,12 @@ div {
             height: 7px;
             background: #ffffff;
             bottom: 32%;
-            left: 17%;
+            left: 14%;
 
-            @include rwd(1921) {
+            @include rwd(1920) {
               width: 33px;
               height: 5px;
-              left: 11.5%;
+              left: 16.5%;
             }
 
             @include rwd(1100) {
@@ -4482,7 +1304,7 @@ div {
               height: 3px;
             }
 
-            @include rwd(500) {
+            @include rwd(480) {
               width: 14px;
               height: 2px;
             }
@@ -4492,12 +1314,12 @@ div {
             height: 13px;
             background: rgba(126, 130, 0, .8);
             top: 30%;
-            left: 23.8%;
+            left: 21%;
 
-            @include rwd(1921) {
+            @include rwd(1920) {
               width: 13px;
               height: 10px;
-              left: 16.2%;
+              left: 23.2%;
             }
 
             @include rwd(1100) {
@@ -4512,7 +1334,7 @@ div {
               left: 43.2%;
             }
 
-            @include rwd(500) {
+            @include rwd(480) {
               width: 5px;
               height: 4px;
               top: 26%;
@@ -4525,11 +1347,11 @@ div {
           width: 19px;
           height: 19px;
           top: 55%;
-          left: 8.5%;
+          left: 7.5%;
 
-          @include rwd(1921) {
+          @include rwd(1920) {
             top: 55%;
-            left: 5.5%;
+            left: 7.5%;
           }
 
           @include rwd(1100) {
@@ -4542,7 +1364,7 @@ div {
             left: 13.5%;
           }
 
-          @include rwd(500) {
+          @include rwd(480) {
             width: 6px;
             height: 6px;
             left: 14.5%;
@@ -4559,7 +1381,7 @@ div {
               margin-left: 5.5px;
             }
 
-            @include rwd(500) {
+            @include rwd(480) {
               height: 6px;
               width: 1px;
               margin-left: 3.5px;
@@ -4576,7 +1398,7 @@ div {
               margin-top: -7.5px;
             }
 
-            @include rwd(500) {
+            @include rwd(480) {
               width: 6px;
               height: 1px;
               margin-top: -3.5px;
@@ -4609,7 +1431,7 @@ div {
             line-height: 106px;
           }
 
-          @include rwd(500) {
+          @include rwd(480) {
             font-size: 64px;
             line-height: 64px;
           }
@@ -4637,17 +1459,19 @@ div {
         position: relative;
         padding-left: 15%;
 
-        @include rwd(1921) {
-          padding-left: 11%;
+        @include rwd(1920) {
+          padding-left: 0;
+          margin-left: 195px;
         }
 
         @include rwd(1100) {
-          padding-left: 28%;
+          margin-left: 120px;
         }
 
         @include rwd(768) {
           padding-left: 0;
           text-align: right;
+          margin-left: 0;
         }
 
         .strip {
@@ -4660,24 +1484,25 @@ div {
             bottom: 0;
             left: 13.5%;
 
-            @include rwd(1921) {
+            @include rwd(1920) {
               width: 148px;
               bottom: 10px;
-              left: 10.5%;
+              left: 0.5%;
             }
 
             @include rwd(1100) {
               width: 125px;
               bottom: 22px;
-              left: 25.5%;
+              left: -0.5%;
             }
 
             @include rwd(768) {
               width: 100px;
               bottom: 10px;
+              left: 25.5%;
             }
 
-            @include rwd(500) {
+            @include rwd(480) {
               width: 55px;
               left: 23.5%;
               bottom: 15px;
@@ -4688,16 +1513,16 @@ div {
             height: 1px;
             background: #ffffff;
             bottom: 43%;
-            left: 44.5%;
+            left: 41.5%;
 
-            @include rwd(1921) {
+            @include rwd(1920) {
               width: 33px;
-              left: 31.5%;
+              left: 28.5%;
             }
 
             @include rwd(1100) {
               width: 25px;
-              left: 84.5%;
+              left: 55.5%;
               bottom: 47%;
             }
 
@@ -4706,7 +1531,7 @@ div {
               bottom: 44%;
             }
 
-            @include rwd(500) {
+            @include rwd(480) {
               width: 15px;
               left: 81.5%;
               bottom: 45%;
@@ -4728,20 +1553,20 @@ div {
             height: 19px;
             background: #ffffff;
             top: -8.5%;
-            left: 31.5%;
+            left: 29.5%;
 
-            @include rwd(1921) {
+            @include rwd(1920) {
               width: 33px;
               height: 14px;
               top: 10px;
-              left: 22%;
+              left: 16%;
             }
 
             @include rwd(1100) {
               width: 26px;
               height: 11px;
               top: 15px;
-              left: 60%;
+              left: 31%;
             }
 
             @include rwd(768) {
@@ -4751,7 +1576,7 @@ div {
               left: 58%;
             }
 
-            @include rwd(500) {
+            @include rwd(480) {
               width: 14px;
               height: 6px;
               top: 10px;
@@ -4762,28 +1587,29 @@ div {
             height: 28px;
             background: rgba(126, 130, 0, .8);
             bottom: 32%;
-            left: 37.5%;
+            left: 36.5%;
 
-            @include rwd(1921) {
+            @include rwd(1920) {
               width: 26px;
               height: 21px;
               bottom: 32%;
-              left: 26.5%;
+              left: 22%;
             }
 
             @include rwd(1100) {
               width: 21px;
               height: 17px;
               bottom: 32%;
-              left: 56.5%;
+              left: 43.5%;
             }
 
             @include rwd(768) {
               width: 18px;
               height: 14px;
+              left: 71.5%;
             }
 
-            @include rwd(500) {
+            @include rwd(480) {
               width: 11px;
               height: 9px;
               bottom: 40%;
@@ -4799,7 +1625,7 @@ div {
             left: 37.5%;
             display: none;
 
-            @include rwd(500) {
+            @include rwd(480) {
               display: block;
               width: 11px;
               height: 9px;
@@ -4813,21 +1639,21 @@ div {
             height: 17px;
             background: #eff52f;
             top: -10%;
-            left: 50.8%;
+            left: 46.8%;
             z-index: 1;
 
-            @include rwd(1921) {
+            @include rwd(1920) {
               width: 82px;
               height: 13px;
               top: 7px;
-              left: 35.8%;
+              left: 34.8%;
             }
 
             @include rwd(1100) {
               width: 66px;
               height: 10px;
               top: 15px;
-              left: 94.8%;
+              left: 64.8%;
             }
 
             @include rwd(768) {
@@ -4837,7 +1663,7 @@ div {
               left: 94.8%;
             }
 
-            @include rwd(500) {
+            @include rwd(480) {
               width: 34px;
               height: 5px;
               top: 12px;
@@ -4848,29 +1674,30 @@ div {
             height: 8px;
             background: rgba(126, 130, 0, .8);
             top: 1%;
-            left: 52%;
+            left: 48%;
             z-index: 2;
 
-            @include rwd(1921) {
+            @include rwd(1920) {
               width: 8px;
               height: 6px;
               top: 17px;
-              left: 37%;
+              left: 36%;
             }
 
             @include rwd(1100) {
               width: 6px;
               height: 5px;
               top: 22px;
-              left: 97%;
+              left: 68%;
             }
 
             @include rwd(768) {
               height: 4px;
               top: 14px;
+              left: 97%;
             }
 
-            @include rwd(500) {
+            @include rwd(480) {
               width: 2px;
               height: 3px;
               top: 35px;
@@ -4883,27 +1710,30 @@ div {
           width: 19px;
           height: 19px;
           bottom: -2.5%;
-          left: 41.3%;
+          left: 38.3%;
 
-          @include rwd(1921) {
+          @include rwd(1920) {
             width: 14px;
             height: 14px;
             bottom: 10px;
-            left: 28.5%;
+            left: 25.5%;
           }
 
           @include rwd(1100) {
             width: 11px;
             height: 11px;
-            left: 61.5%;
+            left: 48.5%;
             bottom: 23px;
           }
 
           @include rwd(768) {
+            width: 10px;
+            height: 10px;
             bottom: 12px;
+            left: 76.5%;
           }
 
-          @include rwd(500) {
+          @include rwd(480) {
             width: 6px;
             height: 6px;
             bottom: 17px;
@@ -4926,7 +1756,13 @@ div {
               margin-left: 5.5px;
             }
 
-            @include rwd(500) {
+            @include rwd(768) {
+              height: 10px;
+              width: 1px;
+              margin-left: 4.5px;
+            }
+
+            @include rwd(480) {
               width: 1px;
               height: 6px;
               margin-left: 3.5px;
@@ -4949,7 +1785,13 @@ div {
               margin-top: -7.5px;
             }
 
-            @include rwd(500) {
+            @include rwd(768) {
+              height: 1px;
+              width: 10px;
+              margin-top: -5.5px;
+            }
+
+            @include rwd(480) {
               width: 6px;
               height: 1px;
               margin-top: -4.5px;
@@ -4984,7 +1826,7 @@ div {
             line-height: 91px;
           }
 
-          @include rwd(500) {
+          @include rwd(480) {
             font-size: 64px;
             line-height: 72px;
           }
@@ -5010,7 +1852,20 @@ div {
         width: 100%;
         position: relative;
 
-        @include rwd(500) {
+        @include rwd(1920) {
+          margin-left: 35px;
+        }
+
+        @include rwd(1100) {
+          margin-left: 0;
+        }
+
+        @include rwd(768) {
+          padding-left: 15px;
+        }
+
+        @include rwd(480) {
+          padding-left: 0;
           margin-top: -10px;
         }
 
@@ -5028,7 +1883,6 @@ div {
           @include rwd(1921) {
             font-size: 77px;
             margin-top: -15px;
-            //margin-bottom: -20px;
           }
 
           @include rwd(1100) {
@@ -5042,13 +1896,9 @@ div {
             margin-top: 0;
           }
 
-          @include rwd(570) {
-            font-size: 40px;
-          }
-
-          @include rwd(500) {
+          @include rwd(480) {
             font-size: 32px;
-            line-height: 38px;
+            line-height: 32px;
           }
 
           &::before {
@@ -5077,10 +1927,14 @@ div {
       z-index: 5;
       position: relative;
 
-      @include rwd(1921) {
+      @include rwd(1920) {
         width: 486px;
         height: 106px;
-        margin-left: 20px;
+        margin-left: 55px;
+      }
+
+      @include rwd(1280) {
+        margin-left: 195px;
       }
 
       @include rwd(1100) {
@@ -5094,7 +1948,7 @@ div {
         height: 73px;
       }
 
-      @include rwd(500) {
+      @include rwd(480) {
         width: 230px;
         height: 50px;
       }
@@ -5120,7 +1974,7 @@ div {
           height: 73px;
         }
 
-        @include rwd(500) {
+        @include rwd(480) {
           width: 230px;
           height: 50px;
         }
@@ -5152,7 +2006,7 @@ div {
             left: 310px;
           }
 
-          @include rwd(500) {
+          @include rwd(480) {
             width: 7px;
             height: 7px;
             left: 220px;
@@ -5170,7 +2024,7 @@ div {
               margin-left: 5.5px;
             }
 
-            @include rwd(500) {
+            @include rwd(480) {
               width: 1px;
               height: 7px;
               margin-left: 3px;
@@ -5187,7 +2041,7 @@ div {
               margin-top: -8.5px;
             }
 
-            @include rwd(500) {
+            @include rwd(480) {
               width: 7px;
               height: 1px;
               margin-top: -4.5px;
@@ -5228,7 +2082,7 @@ div {
             line-height: 73px;
           }
 
-          @include rwd(500) {
+          @include rwd(480) {
             font-size: 17px;
             line-height: 50px;
           }
@@ -5250,7 +2104,7 @@ div {
             line-height: 89px;
           }
 
-          @include rwd(500) {
+          @include rwd(480) {
             font-size: 19px;
             line-height: 50px;
           }
@@ -5281,10 +2135,17 @@ div {
           margin-left: -180px;
         }
 
-        @include rwd(500) {
+        @include rwd(480) {
           width: 230px;
           height: 50px;
           margin-left: -125px;
+        }
+
+        @include rwd(480) {
+          width: 230px;
+          height: 50px;
+          margin-left: -119px;
+          top: -4px;
         }
       }
 
@@ -5317,10 +2178,15 @@ div {
           margin-left: -156px;
         }
 
-        @include rwd(500) {
+        @include rwd(480) {
           width: 230px;
           height: 50px;
           margin-left: -105px;
+        }
+
+        @include rwd(480) {
+          margin-left: -111px;
+          bottom: -4px;
         }
       }
 
@@ -5343,7 +2209,7 @@ div {
           top: 0;
         }
 
-        @include rwd(500) {
+        @include rwd(480) {
           left: 50%;
           margin-left: -115px;
           top: 0;
@@ -5366,7 +2232,7 @@ div {
           top: 0;
         }
 
-        @include rwd(500) {
+        @include rwd(480) {
           left: 50%;
           margin-left: -115px;
           top: 0;
@@ -5383,41 +2249,39 @@ div {
       flex-wrap: wrap;
       align-items: center;
 
-      @include rwd(1921) {
-        padding-right: 430px;
+      @include rwd(1920) {
+        padding: 0 55px;
         margin-top: 130px;
         margin-bottom: 85px;
       }
 
-      @include rwd(1440) {
-        padding-right: 0 ;
-      }
-
       @include rwd(1100) {
         justify-content: space-between;
-        padding-right: 0;
+        padding: 0 10px;
         margin-bottom: 45px;
         margin-top: 60px;
       }
 
       @include rwd(768) {
         flex-direction: column;
-        align-items: flex-start;
-        margin-bottom: 40px;
-        margin-top: 50px;
-        padding-left: 22%;
-      }
-
-      @include rwd(720) {
-        flex-direction: row;
         align-items: center;
         margin-bottom: 40px;
-        //padding-left: 0;
-        padding: 0 10px;
+        margin-top: 50px;
+        padding: 0 105px;
       }
 
+      //@include rwd(720) {
+      //  flex-direction: row;
+      //  align-items: center;
+      //  margin-bottom: 40px;
+      //  //padding-left: 0;
+      //  padding: 0 10px;
+      //}
+
       @include rwd(480) {
-        padding-left: 22%;
+        padding: 0 70px;
+        margin-top: 40px;
+        margin-bottom: 0;
       }
 
       .step {
@@ -5435,22 +2299,21 @@ div {
           margin-bottom: 30px;
         }
 
-        @include rwd(720) {
-          width: 30%;
-          justify-content: center;
-          padding-top: 0;
-          padding-bottom: 0;
-          //padding: 0 10px;
-          margin-bottom: 30px;
-        }
-
         @include rwd(480) {
           width: 100%;
           justify-content: flex-start;
         }
 
+        @include rwd(320) {
+          margin-bottom: 20px;
+        }
+
         &:last-child {
-          width: 27%;
+          width: 30%;
+
+          @include rwd(768) {
+            width: 100%;
+          }
 
           @include rwd(480) {
             width: 100%;
@@ -5487,10 +2350,10 @@ div {
               height: 55px;
             }
 
-            @include rwd(720) {
-              width: 59px;
-              height: 47px;
-            }
+            //@include rwd(720) {
+            //  width: 59px;
+            //  height: 47px;
+            //}
 
             @include rwd(480) {
               width: 48px;
@@ -5523,10 +2386,10 @@ div {
                 height: 41px;
               }
 
-              @include rwd(720) {
-                width: 44px;
-                height: 35px;
-              }
+              //@include rwd(720) {
+              //  width: 44px;
+              //  height: 35px;
+              //}
 
               @include rwd(480) {
                 width: 36px;
@@ -5558,10 +2421,10 @@ div {
                 height: 13px;
               }
 
-              @include rwd(720) {
-                width: 14px;
-                height: 11px;
-              }
+              //@include rwd(720) {
+              //  width: 14px;
+              //  height: 11px;
+              //}
 
               @include rwd(480) {
                 width: 11px;
@@ -5591,10 +2454,10 @@ div {
                 height: 23px;
               }
 
-              @include rwd(720) {
-                width: 24px;
-                height: 19px;
-              }
+              //@include rwd(720) {
+              //  width: 24px;
+              //  height: 19px;
+              //}
 
               @include rwd(480) {
                 width: 19px;
@@ -5619,6 +2482,7 @@ div {
               @include rwd(1100) {
                 width: 15px;
                 height: 12px;
+                left: -5px;
               }
 
               @include rwd(768) {
@@ -5626,10 +2490,10 @@ div {
                 height: 14px;
               }
 
-              @include rwd(720) {
-                width: 15px;
-                height: 12px;
-              }
+              //@include rwd(720) {
+              //  width: 15px;
+              //  height: 12px;
+              //}
 
               @include rwd(480) {
                 width: 12px;
@@ -5658,10 +2522,10 @@ div {
                 height: 39px;
               }
 
-              @include rwd(720) {
-                width: 43px;
-                height: 33px;
-              }
+              //@include rwd(720) {
+              //  width: 43px;
+              //  height: 33px;
+              //}
 
               @include rwd(480) {
                 width: 35px;
@@ -5692,10 +2556,10 @@ div {
                 height: 13px;
               }
 
-              @include rwd(720) {
-                width: 14px;
-                height: 11px;
-              }
+              //@include rwd(720) {
+              //  width: 14px;
+              //  height: 11px;
+              //}
 
               @include rwd(480) {
                 width: 11px;
@@ -5755,15 +2619,20 @@ div {
               transform: skew(15deg);
               z-index: 1;
 
+              @include rwd(1100) {
+                width: 12px;
+                height: 12px;
+              }
+
               @include rwd(768) {
                 width: 14px;
                 height: 14px;
               }
 
-              @include rwd(720) {
-                width: 12px;
-                height: 12px;
-              }
+              //@include rwd(720) {
+              //  width: 12px;
+              //  height: 12px;
+              //}
 
               .vertical {
                 width: 2px;
@@ -5771,16 +2640,22 @@ div {
                 background: #000;
                 margin-left: 8.5px;
 
+                @include rwd(1100) {
+                  width: 1px;
+                  height: 12px;
+                  margin-left: 5.5px;
+                }
+
                 @include rwd(768) {
                   width: 1px;
                   height: 14px;
                   margin-left: 6.5px;
                 }
 
-                @include rwd(720) {
-                  height: 12px;
-                  margin-left: 5.5px;
-                }
+                //@include rwd(720) {
+                //  height: 12px;
+                //  margin-left: 5.5px;
+                //}
               }
               .horizontal {
                 width: 19px;
@@ -5788,15 +2663,21 @@ div {
                 background: #000;
                 margin-top: -9.5px;
 
+                @include rwd(1100) {
+                  width: 12px;
+                  height: 1px;
+                  margin-top: -7.5px;
+                }
+
                 @include rwd(768) {
                   width: 14px;
                   height: 1px;
                   margin-top: -7.5px;
                 }
 
-                @include rwd(720) {
-                  width: 12px;
-                }
+                //@include rwd(720) {
+                //  width: 12px;
+                //}
               }
             }
           }
@@ -5817,6 +2698,7 @@ div {
           @include rwd(1100) {
             font-size: 24px;
             line-height: 55px;
+            font-weight: 300;
           }
 
           @include rwd(768) {
@@ -5825,11 +2707,11 @@ div {
             font-weight: 300;
           }
 
-          @include rwd(720) {
-            font-size: 24px;
-            line-height: 55px;
-            font-weight: 300;
-          }
+          //@include rwd(720) {
+          //  font-size: 24px;
+          //  line-height: 55px;
+          //  font-weight: 300;
+          //}
 
           @include rwd(480) {
             font-size: 20px;
@@ -5843,7 +2725,7 @@ div {
       align-items: center;
       box-sizing: border-box;
 
-      @include rwd2(1100) {
+      @include rwd2(1101) {
         display: none;
       }
 
@@ -5856,16 +2738,17 @@ div {
         margin-bottom: 10px;
       }
 
-      @include rwd(570) {
-        padding-right: 60px;
-      }
+      //@include rwd(570) {
+      //  padding-right: 60px;
+      //}
 
       @include rwd(480) {
         padding-right: 10%;
+        margin-bottom: 10px;
       }
 
       @include rwd(320) {
-        margin-bottom: -20px;
+        margin-bottom: 0;
       }
 
       .trophey-left__title {
@@ -5877,8 +2760,8 @@ div {
           width: 170px;
         }
 
-        @include rwd(550) {
-          width: 82px;
+        @include rwd(480) {
+          width: 114px;
         }
 
         h1 {
@@ -5897,7 +2780,11 @@ div {
           }
 
           @include rwd(768) {
-            font-size: 2.3vw;
+            font-size: 18px;
+          }
+
+          @include rwd(480) {
+            font-size: 10px;
           }
 
           @include rwd(320) {
@@ -5920,11 +2807,11 @@ div {
           }
 
           @include rwd(768) {
-            font-size: 2vw;
+            font-size: 15px;
           }
 
           @include rwd(480) {
-            font-size: 1.8vw;
+            font-size: 8px;
           }
 
           @include rwd(320) {
@@ -5936,6 +2823,10 @@ div {
       .trophey-img {
         margin: 0 20px;
         overflow: hidden;
+
+        @include rwd(1100) {
+          margin: 0 15px;
+        }
 
         @include rwd(768) {
           min-width: 60px;
@@ -5954,7 +2845,6 @@ div {
 
         img {
           width: 100%;
-          max-width: 100%;
           height: 110px;
 
           @include rwd(1100) {
@@ -5962,7 +2852,7 @@ div {
           }
 
           @include rwd(768) {
-            width: 80%;
+            //width: 80%;
             height: 100%;
           }
         }
@@ -5978,7 +2868,7 @@ div {
         }
 
         @include rwd(480) {
-          width: 45px;
+          width: 65px;
         }
 
         h1 {
@@ -5997,7 +2887,11 @@ div {
           }
 
           @include rwd(768) {
-            font-size: 2.3vw;
+            font-size: 18px;
+          }
+
+          @include rwd(480) {
+            font-size: 10px;
           }
 
           @include rwd(320) {
@@ -6020,15 +2914,11 @@ div {
           }
 
           @include rwd(768) {
-            font-size: 2vw;
-          }
-
-          @include rwd(500) {
-            font-size: 1.8vw;
+            font-size: 15px;
           }
 
           @include rwd(480) {
-            font-size: 2.2vw;
+            font-size: 8px;
           }
         }
       }
@@ -6053,6 +2943,10 @@ div {
       bottom: 0;
     }
 
+    @include rwd(480) {
+      bottom: -5px;
+    }
+
     p {
       font-size: 18px;
       letter-spacing: 0;
@@ -6062,6 +2956,7 @@ div {
       text-transform: uppercase;
 
       @include rwd(1100) {
+        font-size: 14px;
         text-align: center;
       }
 
@@ -6070,353 +2965,356 @@ div {
       }
 
       @include rwd(480) {
-        font-size: 2vw;
+        font-size: 10px;
+        line-height: 10px;
       }
     }
   }
 }
 
-.footer {
+
+.footer-wrapper {
   width: 100%;
   background: #000;
-  display: flex;
-  flex-flow: wrap;
-  justify-content: space-between;
-  align-items: center;
-  padding: 21px 90px;
 
-  @include rwd(1921) {
-    padding: 21px 65px;
-  }
-
-  @include rwd(1100) {
-    padding: 21px 200px;
-  }
-
-  @include rwd(720) {
-    padding: 21px 10px;
-  }
-
-  @include rwd(570) {
-    padding: 21px 120px;
-  }
-
-  @include rwd(480) {
-    padding: 21px 60px;
-  }
-
-  @include rwd(320) {
-    padding: 21px 10px;
-  }
-
-  &-pay {
+  .footer {
     display: flex;
+    flex-flow: wrap;
     justify-content: space-between;
     align-items: center;
-    box-sizing: border-box;
-    padding: 0;
+    padding: 21px 90px;
+
+    @include rwd(1920) {
+      padding: 21px 65px;
+    }
 
     @include rwd(1100) {
-      order: 3;
-      width: 100%;
-      justify-content: center;
-      margin-top: 25px;
+      max-width: 720px;
+      padding: 21px 0;
+      margin: 0 auto;
     }
 
     @include rwd(768) {
-      width: 57%;
-      justify-content: center;
-      margin-top: 30px;
+      max-width: 480px;
+      padding: 21px 60px;
     }
 
-    @include rwd(720) {
-      order: 3;
-    }
+    //@include rwd(570) {
+    //  padding: 21px 120px;
+    //}
 
     @include rwd(480) {
-      width: 90%;
-      justify-content: space-between;
-    }
-
-    @include rwd(400) {
-      order: 3;
-      width: 100%;
+      max-width: 320px;
+      padding: 21px 10px;
+      //padding: 21px 60px;
     }
 
     @include rwd(320) {
+      padding: 21px 10px;
+    }
+
+    &-pay {
+      display: flex;
       justify-content: space-between;
-      width: 85%;
-    }
+      align-items: center;
+      box-sizing: border-box;
+      padding: 0;
 
-    &__visa {
-      min-width: 46px;
+      @include rwd(1100) {
+        order: 3;
+        width: 100%;
+        justify-content: center;
+        margin-top: 25px;
+      }
 
       @include rwd(768) {
-        min-width: 36px;
+        width: 83%;
+        justify-content: space-between;
+        margin-top: 30px;
       }
 
       @include rwd(480) {
-        margin-right: 20px;
+        width: 88%;
+        justify-content: space-between;
       }
 
       @include rwd(320) {
-        max-width: 36px;
-        min-width: 30px;
-      }
-    }
-
-    &__mastercard {
-      min-width: 40px;
-
-      @include rwd(768) {
-        min-width: 36px;
+        justify-content: space-between;
+        width: 85%;
       }
 
-      @include rwd(480) {
-        margin-right: 20px;
+      &__visa {
+        min-width: 46px;
+
+        @include rwd(768) {
+          min-width: 36px;
+        }
+
+        @include rwd(480) {
+          margin-right: 20px;
+          min-width: 30px;
+          width: 36px;
+        }
+
+        //@include rwd(320) {
+        //  max-width: 36px;
+        //}
       }
-    }
 
-    &__qiwi {
-      min-width: 66px;
-
-      @include rwd(768) {
-        min-width: 60px;
-      }
-
-      @include rwd(480) {
+      &__mastercard {
         min-width: 40px;
-        margin-right: 20px;
-      }
-    }
 
-    &__ymoney {
-      min-width: 95px;
+        @include rwd(768) {
+          min-width: 36px;
+        }
 
-      @include rwd(768) {
-        min-width: 85px;
-      }
-
-      @include rwd(480) {
-        min-width: 50px;
-        margin-right: 0;
+        @include rwd(480) {
+          margin-right: 20px;
+          min-width: 30px;
+          width: 30px;
+        }
       }
 
-      @include rwd(400) {
-        margin-right: 0;
-      }
-    }
+      &__qiwi {
+        min-width: 66px;
 
-    & > div {
-      margin-right: 40px;
-      @include rwd(1921) {
-        margin-right: 30px;
-      }
+        @include rwd(768) {
+          min-width: 60px;
+        }
 
-      @include rwd(768) {
-        margin-right: 30px;
-      }
-
-      @include rwd(480) {
-        margin-right: 0;
+        @include rwd(480) {
+          width: 50px;
+          min-width: 40px;
+          margin-right: 20px;
+        }
       }
 
-      @include rwd(320) {
-        margin-right: 0;
+      &__ymoney {
+        min-width: 95px;
+
+        @include rwd(768) {
+          min-width: 85px;
+        }
+
+        @include rwd(480) {
+          min-width: 50px;
+          width: 70px;
+          margin-right: 0;
+        }
+
+        //@include rwd(400) {
+        //  margin-right: 0;
+        //}
       }
 
-      img {
-        width: 100%;
-      }
-    }
-  }
+      & > div {
+        margin-right: 40px;
+        @include rwd(1921) {
+          margin-right: 30px;
+        }
 
-  &-install {
-    display: flex;
-    align-items: center;
-    box-sizing: border-box;
+        @include rwd(768) {
+          margin-right: 30px;
+        }
 
-    @include rwd(1100) {
-      order: 1;
-      justify-content: center;
-      margin-right: -15%;
-    }
+        @include rwd(480) {
+          margin-right: 0
+        }
 
-    @include rwd(768) {
-      order: 0;
-      width: 100%;
-    }
-
-    @include rwd(720) {
-      order: 1;
-      margin-right: 0;
-      width: 45%;
-    }
-
-    @include rwd(480) {
-      order: 0;
-      width: 100%;
-    }
-
-    &__app {
-      margin-right: 20px;
-      min-width: 179px;
-
-      @include rwd(1921) {
-        margin-right: 12px;
-        max-width: 110px;
-      }
-      @include rwd(1100) {
-        min-width: 110px;
-      }
-
-      img {
-        width: 100%;
-      }
-    }
-
-    &__googlep {
-      margin-right: 20px;
-      min-width: 179px;
-
-      @include rwd(1921) {
-        margin-right: 12px;
-        max-width: 110px;
-      }
-      @include rwd(1100) {
-        margin-right: 0;
-        min-width: 110px;
-      }
-
-      img {
-        width: 100%;
-      }
-    }
-  }
-
-  &-warning {
-    margin-right: -20%;
-    box-sizing: border-box;
-    @include rwd(1921) {
-      margin-right: -15%;
-    }
-    @include rwd(1440) {
-      margin-right: 0;
-    }
-
-    @include rwd(1100) {
-      order: 0;
-    }
-
-    @include rwd(768) {
-      order: 2;
-      width: 10%;
-      margin-top: 30px;
-      margin-right: 25px;
-    }
-
-    @include rwd(720) {
-      order: 0;
-      width: 10%;
-      margin-top: 0;
-      max-width: 15px;
-      margin-right: 90px;
-    }
-
-    @include rwd(480) {
-      order: 2;
-      margin-right: 20px;
-      max-width: 15px;
-      margin-top: 25px;
-    }
-
-    @include rwd(400) {
-      width: 13%;
-      margin: 10px auto;
-      order: 2;
-    }
-
-    @include rwd(400) {
-      margin-top: 30px;
-    }
-
-    img {
-      width: 100%;
-      min-width: 41px;
-
-      @include rwd(1100) {
-        width: 80%;
-        min-width: 31px;
-      }
-
-      @include rwd(1100) {
-        //width: 80%;
-        min-width: 25px;
-      }
-    }
-  }
-  &-social {
-    display: flex;
-    align-items: center;
-    box-sizing: border-box;
-
-    @include rwd(1100) {
-      order: 2;
-    }
-
-    @include rwd(768) {
-      order: 1;
-      width: 100%;
-      justify-content: center;
-      margin-top: 30px;
-    }
-
-    @include rwd(720) {
-      order: 2;
-      width: 20%;
-      margin-top: 0;
-    }
-
-    @include rwd(480) {
-      order: 1;
-      width: 100%;
-      margin-top: 30px;
-    }
-
-    & > div {
-      max-width: 39px;
-
-      @include rwd(1100) {
-        min-width: 32px;
-      }
-
-      a {
-        display: block;
-        width: 100%;
-        height: 100%;
+        @include rwd(320) {
+          margin-right: 0;
+        }
 
         img {
           width: 100%;
-
-          @include rwd(1100) {
-            width: 82%;
-          }
         }
       }
     }
 
-    &__vk {
-      margin-right: 25px;
+    &-install {
+      display: flex;
+      align-items: center;
+      box-sizing: border-box;
 
       @include rwd(1100) {
+        order: 1;
+        justify-content: center;
+        margin-right: -15%;
+      }
+
+      @include rwd(768) {
+        order: 0;
+        width: 100%;
+      }
+      //
+      //@include rwd(720) {
+      //  order: 1;
+      //  margin-right: 0;
+      //  width: 45%;
+      //}
+
+      @include rwd(480) {
+        order: 0;
+        width: 100%;
+      }
+
+      &__app {
         margin-right: 20px;
+        min-width: 179px;
+
+        @include rwd(1921) {
+          margin-right: 12px;
+          max-width: 110px;
+        }
+        @include rwd(1100) {
+          min-width: 110px;
+        }
+
+        img {
+          width: 100%;
+        }
+      }
+
+      &__googlep {
+        margin-right: 20px;
+        min-width: 179px;
+
+        @include rwd(1921) {
+          margin-right: 12px;
+          max-width: 110px;
+        }
+        @include rwd(1100) {
+          margin-right: 0;
+          min-width: 110px;
+        }
+
+        img {
+          width: 100%;
+        }
       }
     }
-    &__twitter {
-      margin-right: 25px;
+
+    &-warning {
+      margin-right: -20%;
+      box-sizing: border-box;
+      @include rwd(1921) {
+        margin-right: -15%;
+      }
+      @include rwd(1440) {
+        margin-right: 0;
+      }
 
       @include rwd(1100) {
+        order: 0;
+      }
+
+      @include rwd(768) {
+        order: 2;
+        width: 10%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 30px;
+        margin-right: 25px;
+      }
+      //
+      //@include rwd(720) {
+      //  order: 0;
+      //  width: 10%;
+      //  margin-top: 0;
+      //  max-width: 15px;
+      //  margin-right: 90px;
+      //}
+
+      @include rwd(480) {
+        order: 2;
         margin-right: 20px;
+        max-width: 15px;
+        margin-top: 25px;
+      }
+
+      @include rwd(320) {
+        margin-top: 25px;
+      }
+
+      img {
+        width: 100%;
+        min-width: 41px;
+
+        @include rwd(1100) {
+          width: 80%;
+          min-width: 31px;
+        }
+
+        @include rwd(1100) {
+          //width: 80%;
+          min-width: 25px;
+        }
+      }
+    }
+    &-social {
+      display: flex;
+      align-items: center;
+      box-sizing: border-box;
+
+      @include rwd(1100) {
+        order: 2;
+      }
+
+      @include rwd(768) {
+        order: 1;
+        width: 100%;
+        justify-content: center;
+        margin-top: 30px;
+      }
+      //
+      //@include rwd(720) {
+      //  order: 2;
+      //  width: 20%;
+      //  margin-top: 0;
+      //}
+
+      @include rwd(480) {
+        order: 1;
+        width: 100%;
+        margin-top: 30px;
+      }
+
+      & > div {
+        max-width: 39px;
+
+        @include rwd(1100) {
+          min-width: 32px;
+        }
+
+        a {
+          display: block;
+          width: 100%;
+          height: 100%;
+
+          img {
+            width: 100%;
+
+            @include rwd(1100) {
+              width: 82%;
+            }
+          }
+        }
+      }
+
+      &__vk {
+        margin-right: 25px;
+
+        @include rwd(1100) {
+          margin-right: 20px;
+        }
+      }
+      &__twitter {
+        margin-right: 25px;
+
+        @include rwd(1100) {
+          margin-right: 20px;
+        }
       }
     }
   }
